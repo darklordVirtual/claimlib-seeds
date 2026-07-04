@@ -603,7 +603,7 @@ claims:
       monograph (Vovk et al. — its registrar seed did not verify and is
       honestly absent) and Angelopoulos & Bates (REF-007). Seeded from model
       knowledge; verified by deterministic computation at evidence time.
-    reproduce: "python3 theorems/evidence_conformal.py"
+    reproduce: "python3 theorems/evidence_conformal.py theorems/conformal.py"
 
   - id: THM-CONF-002
     statement: >
@@ -620,7 +620,7 @@ claims:
       definition; exhaustive for the stated pool sizes and grid only. Seeded
       from model knowledge; verified by deterministic computation at evidence
       time.
-    reproduce: "python3 theorems/evidence_conformal.py"
+    reproduce: "python3 theorems/evidence_conformal.py theorems/conformal.py"
 
   - id: THM-CONF-003
     statement: >
@@ -637,7 +637,7 @@ claims:
       the exchangeability rank argument (see REF-007; the Vovk monograph seed
       did not verify at the registrar). Seeded from model knowledge; verified
       by deterministic computation at evidence time.
-    reproduce: "python3 theorems/evidence_conformal.py"
+    reproduce: "python3 theorems/evidence_conformal.py theorems/conformal.py"
 
   - id: THM-CONF-004
     statement: >
@@ -657,7 +657,7 @@ claims:
       implementation ships in this bundle's code/ (conformal.py) for use_code
       vendoring. Seeded from model knowledge; verified by deterministic
       computation at evidence time.
-    reproduce: "python3 theorems/evidence_conformal.py"
+    reproduce: "python3 theorems/evidence_conformal.py theorems/conformal.py"
 
   - id: THM-LEAN-001
     statement: >

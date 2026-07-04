@@ -3,7 +3,7 @@
   "artifact": "cs_foundations.json",
   "artifact_sha256": "e22354fae3c82986c3e0a476454839f05960fc0a562a9294c88a764ba23dff1c",
   "script": "python3 theorems/evidence_cs_foundations.py",
-  "git_commit": "4bf4c8bdc1a4a47167b4d75bce3c9d1e3b8f5165",
-  "generated_at": "2026-07-04T23:35:21.805543+00:00",
+  "git_commit": "63eeb3bda0b1f970e869e67a39533056beb4c8fa",
+  "generated_at": "2026-07-04T23:43:47.830127+00:00",
   "produced_by": "human"
 }

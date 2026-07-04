@@ -417,7 +417,8 @@ def main() -> int:
         out.append(block("caveat", cav + " Seeded from model knowledge; "
                          "verified by deterministic computation at evidence "
                          "time.").rstrip())
-        out.append('    reproduce: "python3 theorems/evidence_conformal.py"')
+        out.append('    reproduce: "python3 theorems/evidence_conformal.py '
+                   'theorems/conformal.py"')
         out.append("")
 
     lt = lean["theorems"]
