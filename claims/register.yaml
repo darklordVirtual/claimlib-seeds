@@ -582,6 +582,83 @@ claims:
       deterministic computation at evidence time.
     reproduce: "python3 theorems/evidence_info_graphs.py"
 
+  - id: THM-CONF-001
+    statement: >
+      Split-conformal exact coverage identity: with distinct scores,
+      exchangeable coverage equals ceil((n+1)(1-a))/(n+1) for all n up to 12
+      and five alpha values — 60 full-enumeration checks, and the identity
+      satisfies >= 1-a in all 60 cases and < 1-a + 1/(n+1) in all 46 proper-
+      set cases, in exact rational arithmetic.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/conformal.json"
+    metrics:
+      identity_checks: 60
+      n_max: 12
+    caveat: >
+      The combinatorial finite-sample core of split conformal prediction,
+      verified by literal quantile computation over every test position — for
+      n <= 12 and the listed alphas only. The general theorem (any
+      exchangeable distribution, any n) is literature: the founding conformal
+      monograph (Vovk et al. — its registrar seed did not verify and is
+      honestly absent) and Angelopoulos & Bates (REF-007). Seeded from model
+      knowledge; verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_conformal.py"
+
+  - id: THM-CONF-002
+    statement: >
+      With TIED scores, split-conformal coverage remains >= 1-a: verified for
+      every multiset of size <= 7 over a 3-value grid and five alphas — 580
+      exhaustive checks, exact fractions.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/conformal.json"
+    metrics:
+      coverage_checks: 580
+    caveat: >
+      Ties only make the guarantee conservative under this quantile
+      definition; exhaustive for the stated pool sizes and grid only. Seeded
+      from model knowledge; verified by deterministic computation at evidence
+      time.
+    reproduce: "python3 theorems/evidence_conformal.py"
+
+  - id: THM-CONF-003
+    statement: >
+      Conformal p-values are super-uniform: P(p <= t) <= t verified exactly
+      for all rank configurations up to n = 12 and a 20-point t-grid — 240
+      checks.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/conformal.json"
+    metrics:
+      super_uniformity_checks: 240
+    caveat: >
+      Exact for the enumerated configurations; super-uniformity in general is
+      the exchangeability rank argument (see REF-007; the Vovk monograph seed
+      did not verify at the registrar). Seeded from model knowledge; verified
+      by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_conformal.py"
+
+  - id: THM-CONF-004
+    statement: >
+      End-to-end split-conformal instance: on a 13-point rational regression
+      pool with a fixed predictor, leave-one-out exchangeable coverage equals
+      the theoretical value exactly — 10/13 at alpha=1/4 and 12/13 at
+      alpha=1/10.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/conformal.json"
+    metrics:
+      pool_size: 13
+    caveat: >
+      One concrete pool with a FIXED (never refit) predictor — the
+      exchangeability the theorem needs. Refitting on calibration data voids
+      the guarantee; that boundary is the practical point. The reusable
+      implementation ships in this bundle's code/ (conformal.py) for use_code
+      vendoring. Seeded from model knowledge; verified by deterministic
+      computation at evidence time.
+    reproduce: "python3 theorems/evidence_conformal.py"
+
   - id: REF-001
     statement: >
       Time-uniform, nonparametric, nonasymptotic confidence sequences (2021)
@@ -930,6 +1007,26 @@ claims:
         sha256: ba6e9529cb0e61c7f399637aad5cadca78062c8fd987df4e4f073021b2128237
         file: "research/extracts/ref-021.md"
 
+  - id: REF-025
+    statement: >
+      Matrix Analysis (1985) is a registrar-verified work
+      (doi:10.1017/cbo9780511810817) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: Horn & Johnson — Perron-
+      Frobenius theory; context for THM-PF-001.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-025.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1017/cbo9780511810817 — https://doi.org/10.1017/cbo9780511810817"
+        sha256: 0ae302d35ac6ec882b952c294d7a1231b20f944affec83eef261a508e987a0f2
+        file: "research/extracts/ref-025.md"
+
   - id: REF-026
     statement: >
       Extensions of Lipschitz mappings into a Hilbert space (1984) is a
@@ -949,6 +1046,26 @@ claims:
       - source: "doi:10.1090/conm/026/737400 — https://doi.org/10.1090/conm/026/737400"
         sha256: 9869505c097ad70bd9ed556b1e2ea98e22a5870ee71978b9cd4c3b91f896a78c
         file: "research/extracts/ref-026.md"
+
+  - id: REF-027
+    statement: >
+      Asymptotic Statistics (1998) is a registrar-verified work
+      (doi:10.1017/cbo9780511802256) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: van der Vaart — Glivenko-
+      Cantelli and empirical processes; context for THM-GC-001.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-027.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1017/cbo9780511802256 — https://doi.org/10.1017/cbo9780511802256"
+        sha256: fc3ec4d9a3a27624ec500a6aff7226d4c9a15d803af97f4c1de6fc73fec0120d
+        file: "research/extracts/ref-027.md"
 
   - id: REF-029
     statement: >

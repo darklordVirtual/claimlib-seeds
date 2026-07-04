@@ -1,0 +1,44 @@
+{
+  "end_to_end": {
+    "alphas": {
+      "1/10": {
+        "coverage": "12/13",
+        "expected": "12/13"
+      },
+      "1/4": {
+        "coverage": "10/13",
+        "expected": "10/13"
+      }
+    },
+    "arithmetic": "exact rational",
+    "pool_size": 13,
+    "predictor": "fixed f(x) = x/2 + 1"
+  },
+  "identity_bounds": {
+    "alphas": [
+      "1/10",
+      "1/5",
+      "1/4",
+      "1/3",
+      "1/2"
+    ],
+    "arithmetic": "exact rational",
+    "identity_checks": 60,
+    "lower_bound_checks": 60,
+    "n_max": 12,
+    "upper_bound_checks": 46
+  },
+  "p_value": {
+    "arithmetic": "exact rational",
+    "n_max": 12,
+    "super_uniformity_checks": 240,
+    "t_grid_points": 20
+  },
+  "schema": "conformal_v1",
+  "ties": {
+    "arithmetic": "exact rational",
+    "coverage_checks": 580,
+    "max_pool_size": 7,
+    "value_grid": 3
+  }
+}

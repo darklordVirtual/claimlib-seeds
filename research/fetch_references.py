@@ -99,6 +99,8 @@ SEEDS = [
      None, "bronstein", 2021, "Bronstein et al. — equivariance program (research front; no bounded instance attempted)"),
     ("REF-034", "Topology and Data",
      None, "carlsson", 2009, "Carlsson — topological data analysis (research front; no bounded instance attempted)"),
+    ("REF-035", "Algorithmic Learning in a Random World",
+     None, "vovk", 2005, "Vovk, Gammerman & Shafer — the founding conformal-prediction monograph; context for THM-CONF-001..004"),
 ]
 
 

@@ -36,19 +36,14 @@
       "seed_title": "Lectures on the Curry-Howard Isomorphism"
     },
     {
-      "id": "REF-025",
-      "reason": "no registrar record with an agreeing title",
-      "seed_title": "Matrix Analysis"
-    },
-    {
-      "id": "REF-027",
-      "reason": "no registrar record with an agreeing title",
-      "seed_title": "Asymptotic Statistics"
-    },
-    {
       "id": "REF-028",
       "reason": "no registrar record with an agreeing title",
       "seed_title": "Probability and Computing: Randomization and Probabilistic Analysis in Algorithms and Data Structures"
+    },
+    {
+      "id": "REF-035",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Algorithmic Learning in a Random World"
     }
   ],
   "schema": "references_v2",
@@ -223,6 +218,16 @@
       "work_id": "doi:10.1017/cbo9780511804441",
       "year": 2004
     },
+    "REF-025": {
+      "accredited": false,
+      "extract": "research/extracts/ref-025.md",
+      "how": "crossref-title",
+      "title": "Matrix Analysis",
+      "url": "https://doi.org/10.1017/cbo9780511810817",
+      "why": "Horn & Johnson \u2014 Perron-Frobenius theory; context for THM-PF-001",
+      "work_id": "doi:10.1017/cbo9780511810817",
+      "year": 1985
+    },
     "REF-026": {
       "accredited": false,
       "extract": "research/extracts/ref-026.md",
@@ -232,6 +237,16 @@
       "why": "Johnson & Lindenstrauss \u2014 the JL lemma; context for THM-JL-001",
       "work_id": "doi:10.1090/conm/026/737400",
       "year": 1984
+    },
+    "REF-027": {
+      "accredited": false,
+      "extract": "research/extracts/ref-027.md",
+      "how": "crossref-title",
+      "title": "Asymptotic Statistics",
+      "url": "https://doi.org/10.1017/cbo9780511802256",
+      "why": "van der Vaart \u2014 Glivenko-Cantelli and empirical processes; context for THM-GC-001",
+      "work_id": "doi:10.1017/cbo9780511802256",
+      "year": 1998
     },
     "REF-029": {
       "accredited": false,
