@@ -337,7 +337,7 @@ def main() -> int:
          {"shrink_factor_10_to_10000": ig["gc"]["shrink_factor_10_to_10000"]},
          "One seeded sample path, float arithmetic — a convergence "
          "demonstration, not the a.s.-uniform-convergence theorem (van der "
-         "Vaart seed did not verify; honestly absent)."),
+         "Vaart, REF-027)."),
     ]
     for cid, level, stmt, metrics, cav in ig_claims:
         out.append(f"  - id: {cid}")

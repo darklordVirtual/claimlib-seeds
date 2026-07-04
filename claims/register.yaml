@@ -577,9 +577,9 @@ claims:
       shrink_factor_10_to_10000: 75.4
     caveat: >
       One seeded sample path, float arithmetic — a convergence demonstration,
-      not the a.s.-uniform-convergence theorem (van der Vaart seed did not
-      verify; honestly absent). Seeded from model knowledge; verified by
-      deterministic computation at evidence time.
+      not the a.s.-uniform-convergence theorem (van der Vaart, REF-027).
+      Seeded from model knowledge; verified by deterministic computation at
+      evidence time.
     reproduce: "python3 theorems/evidence_info_graphs.py"
 
   - id: THM-CONF-001
