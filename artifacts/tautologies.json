@@ -1,0 +1,272 @@
+{
+  "method": "exhaustive truth-table decision procedure",
+  "schema": "tautologies_v1",
+  "theorems": {
+    "THM-TAUT-001": {
+      "formula": [
+        "->",
+        "p",
+        "p"
+      ],
+      "n_assignments_checked": 2,
+      "n_atoms": 1,
+      "name": "identity",
+      "tautology": true
+    },
+    "THM-TAUT-002": {
+      "formula": [
+        "or",
+        "p",
+        [
+          "not",
+          "p"
+        ]
+      ],
+      "n_assignments_checked": 2,
+      "n_atoms": 1,
+      "name": "excluded middle",
+      "tautology": true
+    },
+    "THM-TAUT-003": {
+      "formula": [
+        "not",
+        [
+          "and",
+          "p",
+          [
+            "not",
+            "p"
+          ]
+        ]
+      ],
+      "n_assignments_checked": 2,
+      "n_atoms": 1,
+      "name": "non-contradiction",
+      "tautology": true
+    },
+    "THM-TAUT-004": {
+      "formula": [
+        "iff",
+        [
+          "not",
+          [
+            "not",
+            "p"
+          ]
+        ],
+        "p"
+      ],
+      "n_assignments_checked": 2,
+      "n_atoms": 1,
+      "name": "double negation",
+      "tautology": true
+    },
+    "THM-TAUT-005": {
+      "formula": [
+        "iff",
+        [
+          "->",
+          "p",
+          "q"
+        ],
+        [
+          "->",
+          [
+            "not",
+            "q"
+          ],
+          [
+            "not",
+            "p"
+          ]
+        ]
+      ],
+      "n_assignments_checked": 4,
+      "n_atoms": 2,
+      "name": "contraposition",
+      "tautology": true
+    },
+    "THM-TAUT-006": {
+      "formula": [
+        "iff",
+        [
+          "not",
+          [
+            "and",
+            "p",
+            "q"
+          ]
+        ],
+        [
+          "or",
+          [
+            "not",
+            "p"
+          ],
+          [
+            "not",
+            "q"
+          ]
+        ]
+      ],
+      "n_assignments_checked": 4,
+      "n_atoms": 2,
+      "name": "De Morgan (conjunction)",
+      "tautology": true
+    },
+    "THM-TAUT-007": {
+      "formula": [
+        "iff",
+        [
+          "not",
+          [
+            "or",
+            "p",
+            "q"
+          ]
+        ],
+        [
+          "and",
+          [
+            "not",
+            "p"
+          ],
+          [
+            "not",
+            "q"
+          ]
+        ]
+      ],
+      "n_assignments_checked": 4,
+      "n_atoms": 2,
+      "name": "De Morgan (disjunction)",
+      "tautology": true
+    },
+    "THM-TAUT-008": {
+      "formula": [
+        "->",
+        [
+          "->",
+          [
+            "->",
+            "p",
+            "q"
+          ],
+          "p"
+        ],
+        "p"
+      ],
+      "n_assignments_checked": 4,
+      "n_atoms": 2,
+      "name": "Peirce's law",
+      "tautology": true
+    },
+    "THM-TAUT-009": {
+      "formula": [
+        "iff",
+        [
+          "->",
+          "p",
+          "q"
+        ],
+        [
+          "or",
+          [
+            "not",
+            "p"
+          ],
+          "q"
+        ]
+      ],
+      "n_assignments_checked": 4,
+      "n_atoms": 2,
+      "name": "material implication",
+      "tautology": true
+    },
+    "THM-TAUT-010": {
+      "formula": [
+        "iff",
+        [
+          "->",
+          [
+            "and",
+            "p",
+            "q"
+          ],
+          "r"
+        ],
+        [
+          "->",
+          "p",
+          [
+            "->",
+            "q",
+            "r"
+          ]
+        ]
+      ],
+      "n_assignments_checked": 8,
+      "n_atoms": 3,
+      "name": "exportation",
+      "tautology": true
+    },
+    "THM-TAUT-011": {
+      "formula": [
+        "iff",
+        [
+          "and",
+          "p",
+          [
+            "or",
+            "q",
+            "r"
+          ]
+        ],
+        [
+          "or",
+          [
+            "and",
+            "p",
+            "q"
+          ],
+          [
+            "and",
+            "p",
+            "r"
+          ]
+        ]
+      ],
+      "n_assignments_checked": 8,
+      "n_atoms": 3,
+      "name": "distributivity (and over or)",
+      "tautology": true
+    },
+    "THM-TAUT-012": {
+      "formula": [
+        "->",
+        [
+          "and",
+          [
+            "->",
+            "p",
+            "q"
+          ],
+          [
+            "->",
+            "q",
+            "r"
+          ]
+        ],
+        [
+          "->",
+          "p",
+          "r"
+        ]
+      ],
+      "n_assignments_checked": 8,
+      "n_atoms": 3,
+      "name": "hypothetical syllogism (chain)",
+      "tautology": true
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "derivations": {
+    "hypothetical_syllogism": {
+      "proof": "theorems/proofs/hypothetical_syllogism.json",
+      "qed": true,
+      "steps_verified": 7,
+      "theorem": [
+        "->",
+        [
+          "->",
+          "q",
+          "r"
+        ],
+        [
+          "->",
+          [
+            "->",
+            "p",
+            "q"
+          ],
+          [
+            "->",
+            "p",
+            "r"
+          ]
+        ]
+      ]
+    }
+  },
+  "schema": "hilbert_v1",
+  "system": "Lukasiewicz A1-A3 + modus ponens"
+}

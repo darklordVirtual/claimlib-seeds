@@ -1,0 +1,5 @@
+{
+  "schema": "vericlaim_baseline_v1",
+  "description": "Known gate violations grandfathered during adoption. Each is reported as WARN and does not fail the gate. Remove entries as you fix them.",
+  "known_violations": []
+}

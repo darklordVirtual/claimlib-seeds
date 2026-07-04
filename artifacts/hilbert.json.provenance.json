@@ -1,0 +1,9 @@
+{
+  "schema": "vericlaim_provenance_v2",
+  "artifact": "hilbert.json",
+  "artifact_sha256": "b8c2fcbc899070f5d8b93af04fc5dccec89758275898bd18e4340b47cdc33996",
+  "script": "python3 theorems/evidence_hilbert.py",
+  "git_commit": null,
+  "generated_at": "2026-07-04T22:23:43.486169+00:00",
+  "produced_by": "human"
+}

@@ -1,0 +1,57 @@
+{
+  "name": "hypothetical_syllogism",
+  "description": "Fable-seeded 7-step Hilbert derivation of (q->r) -> ((p->q) -> (p->r)) from A1-A2 and modus ponens. Seeded from model knowledge; trusted ONLY because the fail-closed checker verifies every step.",
+  "theorem": ["->", ["->", "q", "r"], ["->", ["->", "p", "q"], ["->", "p", "r"]]],
+  "steps": [
+    {
+      "rule": "A2",
+      "comment": "A2 with phi=p, psi=q, chi=r",
+      "formula": ["->", ["->", "p", ["->", "q", "r"]],
+                        ["->", ["->", "p", "q"], ["->", "p", "r"]]]
+    },
+    {
+      "rule": "A1",
+      "comment": "A1 with phi=step1, psi=(q->r)",
+      "formula": ["->", ["->", ["->", "p", ["->", "q", "r"]],
+                               ["->", ["->", "p", "q"], ["->", "p", "r"]]],
+                        ["->", ["->", "q", "r"],
+                               ["->", ["->", "p", ["->", "q", "r"]],
+                                      ["->", ["->", "p", "q"], ["->", "p", "r"]]]]]
+    },
+    {
+      "rule": "MP",
+      "from": [1, 2],
+      "formula": ["->", ["->", "q", "r"],
+                        ["->", ["->", "p", ["->", "q", "r"]],
+                               ["->", ["->", "p", "q"], ["->", "p", "r"]]]]
+    },
+    {
+      "rule": "A2",
+      "comment": "A2 with phi=(q->r), psi=(p->(q->r)), chi=((p->q)->(p->r))",
+      "formula": ["->", ["->", ["->", "q", "r"],
+                               ["->", ["->", "p", ["->", "q", "r"]],
+                                      ["->", ["->", "p", "q"], ["->", "p", "r"]]]],
+                        ["->", ["->", ["->", "q", "r"], ["->", "p", ["->", "q", "r"]]],
+                               ["->", ["->", "q", "r"],
+                                      ["->", ["->", "p", "q"], ["->", "p", "r"]]]]]
+    },
+    {
+      "rule": "MP",
+      "from": [3, 4],
+      "formula": ["->", ["->", ["->", "q", "r"], ["->", "p", ["->", "q", "r"]]],
+                        ["->", ["->", "q", "r"],
+                               ["->", ["->", "p", "q"], ["->", "p", "r"]]]]
+    },
+    {
+      "rule": "A1",
+      "comment": "A1 with phi=(q->r), psi=p",
+      "formula": ["->", ["->", "q", "r"], ["->", "p", ["->", "q", "r"]]]
+    },
+    {
+      "rule": "MP",
+      "from": [6, 5],
+      "formula": ["->", ["->", "q", "r"],
+                        ["->", ["->", "p", "q"], ["->", "p", "r"]]]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "dropped": [],
+  "schema": "references_v1",
+  "verified": {
+    "REF-001": {
+      "extract": "research/extracts/ref-001.md",
+      "title": "Time-uniform, nonparametric, nonasymptotic confidence sequences",
+      "url": "https://arxiv.org/abs/1810.08240",
+      "why": "anytime-valid monitoring bounds; used by library bundle CLAIM-011",
+      "work_id": "arxiv:1810.08240",
+      "year": 2018
+    },
+    "REF-002": {
+      "extract": "research/extracts/ref-002.md",
+      "title": "Selective Classification for Deep Neural Networks",
+      "url": "https://arxiv.org/abs/1705.08500",
+      "why": "the canonical accuracy/coverage trade-off formulation",
+      "work_id": "arxiv:1705.08500",
+      "year": 2017
+    },
+    "REF-003": {
+      "extract": "research/extracts/ref-003.md",
+      "title": "On Calibration of Modern Neural Networks",
+      "url": "https://arxiv.org/abs/1706.04599",
+      "why": "temperature scaling and modern-miscalibration baseline",
+      "work_id": "arxiv:1706.04599",
+      "year": 2017
+    },
+    "REF-004": {
+      "extract": "research/extracts/ref-004.md",
+      "title": "Conformal Risk Control",
+      "url": "https://arxiv.org/abs/2208.02814",
+      "why": "distribution-free risk guarantees beyond coverage",
+      "work_id": "arxiv:2208.02814",
+      "year": 2022
+    },
+    "REF-005": {
+      "extract": "research/extracts/ref-005.md",
+      "title": "AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents",
+      "url": "https://arxiv.org/abs/2410.09024",
+      "why": "external agent-safety benchmark; used by library bundle CLAIM-002",
+      "work_id": "arxiv:2410.09024",
+      "year": 2024
+    },
+    "REF-006": {
+      "extract": "research/extracts/ref-006.md",
+      "title": "Attention Is All You Need",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "why": "the transformer architecture underlying modern LLMs",
+      "work_id": "arxiv:1706.03762",
+      "year": 2017
+    },
+    "REF-007": {
+      "extract": "research/extracts/ref-007.md",
+      "title": "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification",
+      "url": "https://arxiv.org/abs/2107.07511",
+      "why": "standard on-ramp to conformal prediction",
+      "work_id": "arxiv:2107.07511",
+      "year": 2021
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "bundle_id": "202a3798de38d72ae2bde2d709eea0062569c463b1c8fda416f15513082ca719",
+  "caveat": "Machine-checked by the example's own ~100-line checker, not by an independently audited kernel (Lean/Coq); the checker itself is property-tested in tests/test_theorem_example.py. The claim covers this one derivation only, not completeness of the axiom system.",
+  "claim_id": "CLAIM-THM-001",
+  "evidence_level": "machine_checked",
+  "files": {
+    "examples/theorem/evidence.py": "4616e7bf936f154a3085ebd10ee28bad3adc46b53ec41434c0a0a318b76b1b9c"
+  },
+  "note": "Files are byte-exact from the bundle; the generated binding test fails if they are edited. Fork explicitly by deleting the binding test.",
+  "source_commit": "05963e1e835ba8a3b15088d7bd1bdbaf4e178c43",
+  "source_repo": "github.com/darklordVirtual/vericlaim",
+  "statement": "The committed 5-step Hilbert-system derivation of p -> p (Lukasiewicz axioms A1-A2, modus ponens) is machine-checked: every step verifies as an axiom instance or a modus-ponens application, and the final step equals the declared theorem.\n"
+}

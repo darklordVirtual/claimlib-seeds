@@ -1,0 +1,9 @@
+{
+  "schema": "vericlaim_provenance_v2",
+  "artifact": "tautologies.json",
+  "artifact_sha256": "b68ad9b6e1ed29bb8489cb74825ff754cc124c8714aaf9dd67cbfe582ab64100",
+  "script": "python3 theorems/evidence_tautologies.py",
+  "git_commit": null,
+  "generated_at": "2026-07-04T22:23:43.430930+00:00",
+  "produced_by": "human"
+}

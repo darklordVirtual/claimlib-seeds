@@ -1,0 +1,9 @@
+{
+  "goldbach_even_numbers_verified": 49999,
+  "goldbach_limit": 100000,
+  "method": "exhaustive computation (sieve of Eratosthenes)",
+  "prime_limit": 10000,
+  "primes_below_limit": 1229,
+  "schema": "numbers_v1",
+  "twin_prime_pairs_below_limit": 205
+}
