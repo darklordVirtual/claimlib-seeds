@@ -335,6 +335,133 @@ claims:
       deterministic computation at evidence time.
     reproduce: "python3 theorems/evidence_ml_foundations.py"
 
+  - id: THM-NFL-001
+    statement: >
+      No-free-lunch instance: over all 16 target functions on a 4-point
+      domain, 3 genuinely different deterministic learners have identical
+      average off-training-set error 0.5, in exact rational arithmetic
+      (learners disagree on 8 functions).
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/cs_foundations.json"
+    metrics:
+      n_target_functions: 16
+      n_learners: 3
+    caveat: >
+      An exhaustive finite instance of Wolpert's NFL (REF-017), not the
+      general theorem over all domains and distributions. Seeded from model
+      knowledge; verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_cs_foundations.py"
+
+  - id: THM-KKT-001
+    statement: >
+      KKT conditions (stationarity, primal/dual feasibility, complementary
+      slackness) verified exactly at the analytic optimum of 49 constrained
+      quadratic problems, with exhaustive grid dominance confirming
+      optimality.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/cs_foundations.json"
+    metrics:
+      n_problems: 49
+    caveat: >
+      A 1-D family with a single inequality constraint — an instance check,
+      not the general KKT theorem (Boyd & Vandenberghe REF-021 is the standard
+      treatment). Seeded from model knowledge; verified by deterministic
+      computation at evidence time.
+    reproduce: "python3 theorems/evidence_cs_foundations.py"
+
+  - id: THM-VC-001
+    statement: >
+      The VC dimension of 1-D threshold classifiers is exactly 1 and of closed
+      intervals exactly 2: shattering is witnessed one size below and
+      exhaustively refuted at the next size, on order-canonical point sets.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/cs_foundations.json"
+    metrics:
+      thresholds_vc_dim: 1
+      intervals_vc_dim: 2
+    caveat: >
+      Exact combinatorial computation for two specific hypothesis classes;
+      behaviors depend only on point order, which the canonical sets exhaust.
+      Says nothing about other classes; VC generalization theory is cited as
+      REF-018. Seeded from model knowledge; verified by deterministic
+      computation at evidence time.
+    reproduce: "python3 theorems/evidence_cs_foundations.py"
+
+  - id: THM-EULER-001
+    statement: >
+      Over all 1086 labeled simple graphs on 4 and 5 vertices: the handshake
+      lemma holds exactly, and an Euler circuit exists (brute-force search)
+      precisely when the graph is connected with all degrees even — 0
+      mismatches.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/cs_foundations.json"
+    metrics:
+      n_graphs_checked: 1086
+    caveat: >
+      Exhaustive for <=5 vertices only; the general Euler theorem covers all
+      finite graphs and multigraphs. Seeded from model knowledge; verified by
+      deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_cs_foundations.py"
+
+  - id: THM-CH-001
+    statement: >
+      Curry-Howard instance: the committed 7-step Hilbert derivation of
+      hypothetical syllogism IS a well-typed applicative program — axiom
+      instances become typed constants (K=A1, S=A2), modus ponens becomes
+      application, and the term's type is exactly the theorem.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/cs_foundations.json"
+    metrics:
+      term_size: 7
+    caveat: >
+      Demonstrated for the implicational Hilbert/combinator fragment only; the
+      full correspondence (lambda calculus / natural deduction) is literature
+      (Sorensen & Urzyczyn seed did not verify at the registrar and is
+      honestly absent). Seeded from model knowledge; verified by deterministic
+      computation at evidence time.
+    reproduce: "python3 theorems/evidence_cs_foundations.py"
+
+  - id: THM-PF-001
+    statement: >
+      Perron-Frobenius instance: every one of the 4096 positive 2x2 integer
+      matrices (entries 1..8) has a real, positive, strictly dominant
+      eigenvalue with a strictly positive eigenvector — verified in exact
+      integer arithmetic.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/cs_foundations.json"
+    metrics:
+      n_matrices_checked: 4096
+    caveat: >
+      2x2 positive matrices only; the general theorem covers irreducible
+      nonnegative n x n matrices (Horn & Johnson REF-025). Seeded from model
+      knowledge; verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_cs_foundations.py"
+
+  - id: THM-NYQ-001
+    statement: >
+      Nyquist-Shannon instance: a degree-5 trigonometric polynomial sampled at
+      16 points (above the Nyquist rate) reconstructs by DFT interpolation
+      with max grid error 1.277e-15, while an undersampled aliased frequency
+      pair coincides on every sample.
+    evidence_level: benchmarked
+    artifact:
+      - "artifacts/cs_foundations.json"
+    metrics:
+      n_samples: 16
+      degree: 5
+    caveat: >
+      Float arithmetic (DFT/erf-class rounding) — hence benchmarked, not
+      machine_checked. A finite instance; the theorem itself concerns general
+      bandlimited functions (Shannon REF-019). Seeded from model knowledge;
+      verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_cs_foundations.py"
+
   - id: REF-001
     statement: >
       Time-uniform, nonparametric, nonasymptotic confidence sequences (2021)
@@ -558,4 +685,148 @@ claims:
       - source: "doi:10.1007/bf01700692 — https://doi.org/10.1007/bf01700692"
         sha256: a5a278864849d2d6ec7ff7ebe2e53645cffed9db3f3451046120794292633779
         file: "research/extracts/ref-015.md"
+
+  - id: REF-016
+    statement: >
+      Gödel, Escher, Bach: An Eternal Golden Braid (1980) is a registrar-
+      verified work (doi:10.2307/832610) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: Hofstadter — popular
+      exposition connecting Godel to computation (context, not a proof
+      source).
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-016.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.2307/832610 — https://doi.org/10.2307/832610"
+        sha256: 8d5432039cd72c97ef3ac8aa773b857d94b216f6956159e3561571e3e39b9e2d
+        file: "research/extracts/ref-016.md"
+
+  - id: REF-017
+    statement: >
+      The Lack of A Priori Distinctions Between Learning Algorithms (1996) is
+      a registrar-verified work (doi:10.1162/neco.1996.8.7.1341) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: Wolpert — the No Free Lunch theorem for learning; context for THM-
+      NFL-001.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-017.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1162/neco.1996.8.7.1341 — https://doi.org/10.1162/neco.1996.8.7.1341"
+        sha256: a13501bf09df30fef72edfbd966dc0c8060a56b011062cf0c80e0fa15ceba575
+        file: "research/extracts/ref-017.md"
+
+  - id: REF-018
+    statement: >
+      On the Uniform Convergence of Relative Frequencies of Events to Their
+      Probabilities (1971) is a registrar-verified work (doi:10.1137/1116025)
+      whose abstract extract is preserved hash-locked in this repository.
+      Curation note: Vapnik & Chervonenkis — VC dimension and uniform
+      convergence; context for THM-VC-001.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-018.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1137/1116025 — https://doi.org/10.1137/1116025"
+        sha256: 10380819cea0ed1f2ec6990d5daec1d68fec26760f0b6b9d4ab24266b164884a
+        file: "research/extracts/ref-018.md"
+
+  - id: REF-019
+    statement: >
+      A Mathematical Theory of Communication (1948) is a registrar-verified
+      work (doi:10.1002/j.1538-7305.1948.tb00917.x) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: Shannon 1948 —
+      information theory and the sampling context for THM-NYQ-001.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-019.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1002/j.1538-7305.1948.tb00917.x — https://doi.org/10.1002/j.1538-7305.1948.tb00917.x"
+        sha256: 9db0fca1c95d7b49a9f404e926b057349b55032d3a77d56c47e8bcadeaf3a8cc
+        file: "research/extracts/ref-019.md"
+
+  - id: REF-020
+    statement: >
+      Classes of recursively enumerable sets and their decision problems
+      (1953) is a registrar-verified work
+      (doi:10.1090/s0002-9947-1953-0053041-6) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: Rice's theorem
+      — undecidability of nontrivial semantic properties.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-020.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1090/s0002-9947-1953-0053041-6 — https://doi.org/10.1090/s0002-9947-1953-0053041-6"
+        sha256: f8aacbee1bdf4430ab9804d2be6bb1f46dabc8b848f099aeb9e01ce2c3da65cc
+        file: "research/extracts/ref-020.md"
+
+  - id: REF-021
+    statement: >
+      Convex Optimization (2004) is a registrar-verified work
+      (doi:10.1017/cbo9780511804441) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: Boyd & Vandenberghe — KKT
+      conditions; context for THM-KKT-001.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-021.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1017/cbo9780511804441 — https://doi.org/10.1017/cbo9780511804441"
+        sha256: ba6e9529cb0e61c7f399637aad5cadca78062c8fd987df4e4f073021b2128237
+        file: "research/extracts/ref-021.md"
+
+  - id: REF-025
+    statement: >
+      Matrix Analysis (1985) is a registrar-verified work
+      (doi:10.1017/cbo9780511810817) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: Horn & Johnson — Perron-
+      Frobenius theory; context for THM-PF-001.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-025.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1017/cbo9780511810817 — https://doi.org/10.1017/cbo9780511810817"
+        sha256: 0ae302d35ac6ec882b952c294d7a1231b20f944affec83eef261a508e987a0f2
+        file: "research/extracts/ref-025.md"
 

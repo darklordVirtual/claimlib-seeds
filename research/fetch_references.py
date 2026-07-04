@@ -61,6 +61,25 @@ SEEDS = [
      None, "godel", 1931, "Godel 1931 — the incompleteness theorems, original paper"),
     ("REF-016", "Gödel, Escher, Bach: An Eternal Golden Braid",
      None, "hofstadter", 1979, "Hofstadter — popular exposition connecting Godel to computation (context, not a proof source)"),
+    # --- batch 3: optimization, information/learning theory, graphs, logic ---
+    ("REF-017", "The Lack of A Priori Distinctions Between Learning Algorithms",
+     None, "wolpert", 1996, "Wolpert — the No Free Lunch theorem for learning; context for THM-NFL-001"),
+    ("REF-018", "On the Uniform Convergence of Relative Frequencies of Events to Their Probabilities",
+     None, "vapnik", 1971, "Vapnik & Chervonenkis — VC dimension and uniform convergence; context for THM-VC-001"),
+    ("REF-019", "A Mathematical Theory of Communication",
+     None, "shannon", 1948, "Shannon 1948 — information theory and the sampling context for THM-NYQ-001"),
+    ("REF-020", "Classes of Recursively Enumerable Sets and Their Decision Problems",
+     None, "rice", 1953, "Rice's theorem — undecidability of nontrivial semantic properties"),
+    ("REF-021", "Convex Optimization",
+     None, "boyd", 2004, "Boyd & Vandenberghe — KKT conditions; context for THM-KKT-001"),
+    ("REF-022", "Understanding Machine Learning: From Theory to Algorithms",
+     None, "shalev-shwartz", 2014, "Shalev-Shwartz & Ben-David — Rademacher/VC generalization theory"),
+    ("REF-023", "Introduction to Graph Theory",
+     None, "west", 2001, "West — Euler circuits and fundamental graph theory; context for THM-EULER-001"),
+    ("REF-024", "Lectures on the Curry-Howard Isomorphism",
+     None, "sorensen", 2006, "Sorensen & Urzyczyn — proofs-as-programs; context for THM-CH-001"),
+    ("REF-025", "Matrix Analysis",
+     None, "horn", 1985, "Horn & Johnson — Perron-Frobenius theory; context for THM-PF-001"),
 ]
 
 
@@ -95,9 +114,16 @@ def _lookup(title: str, doi: str | None, surname: str, year: int):
         except Exception as exc:  # noqa: BLE001
             return None, f"doi lookup failed: {exc}"
     try:
-        for w in crossref_search(title, 5):
-            if _record_agrees(title, surname, year, w):
-                return w, "crossref-title"
+        # generic titles drown in look-alikes: search with the author
+        # appended too, and scan more candidates — the guard still decides.
+        seen = []
+        for q in (f"{title} {surname}", title):
+            for w in crossref_search(q, 10):
+                if w["work_id"] in seen:
+                    continue
+                seen.append(w["work_id"])
+                if _record_agrees(title, surname, year, w):
+                    return w, "crossref-title"
     except Exception:  # noqa: BLE001 — fall through to arXiv
         pass
     time.sleep(3)

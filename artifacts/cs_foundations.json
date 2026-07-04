@@ -1,0 +1,56 @@
+{
+  "curry_howard": {
+    "derivations_typechecked": {
+      "hypothetical_syllogism": {
+        "term_size": 7,
+        "type_is_theorem": true
+      }
+    },
+    "fragment": "implicational Hilbert / typed combinators (K=A1, S=A2)"
+  },
+  "euler": {
+    "euler_criterion_mismatches": 0,
+    "handshake_lemma": "exact on all",
+    "n_graphs_checked": 1086,
+    "vertices": [
+      4,
+      5
+    ]
+  },
+  "kkt": {
+    "arithmetic": "exact rational",
+    "family": "min (x-a)^2 s.t. x<=b, integer a,b in [-3,3]",
+    "grid_dominance_points": 41,
+    "n_problems": 49
+  },
+  "nfl": {
+    "arithmetic": "exact rational",
+    "avg_offtrain_error_each": "1/2 (exact)",
+    "functions_where_learners_disagree": 8,
+    "n_learners": 3,
+    "n_target_functions": 16
+  },
+  "nyquist": {
+    "aliased_pair_gap_between_samples": 0.7654,
+    "aliased_pair_max_sample_gap": 6.799e-15,
+    "degree": 5,
+    "max_reconstruction_error": 1.277e-15,
+    "n_samples": 16,
+    "note": "float arithmetic -> graded benchmarked"
+  },
+  "perron": {
+    "arithmetic": "exact integer (square comparisons)",
+    "entry_range": [
+      1,
+      8
+    ],
+    "n_matrices_checked": 4096,
+    "size": "2x2"
+  },
+  "schema": "cs_foundations_v1",
+  "vc": {
+    "intervals_vc_dim": 2,
+    "method": "exhaustive labelings on order-canonical point sets",
+    "thresholds_vc_dim": 1
+  }
+}

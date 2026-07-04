@@ -21,9 +21,19 @@
       "seed_title": "Learning with Kernels"
     },
     {
-      "id": "REF-016",
+      "id": "REF-022",
       "reason": "no registrar record with an agreeing title",
-      "seed_title": "G\u00f6del, Escher, Bach: An Eternal Golden Braid"
+      "seed_title": "Understanding Machine Learning: From Theory to Algorithms"
+    },
+    {
+      "id": "REF-023",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Introduction to Graph Theory"
+    },
+    {
+      "id": "REF-024",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Lectures on the Curry-Howard Isomorphism"
     }
   ],
   "schema": "references_v2",
@@ -137,6 +147,76 @@
       "why": "Godel 1931 \u2014 the incompleteness theorems, original paper",
       "work_id": "doi:10.1007/bf01700692",
       "year": 1931
+    },
+    "REF-016": {
+      "accredited": true,
+      "extract": "research/extracts/ref-016.md",
+      "how": "crossref-title",
+      "title": "G\u00f6del, Escher, Bach: An Eternal Golden Braid",
+      "url": "https://doi.org/10.2307/832610",
+      "why": "Hofstadter \u2014 popular exposition connecting Godel to computation (context, not a proof source)",
+      "work_id": "doi:10.2307/832610",
+      "year": 1980
+    },
+    "REF-017": {
+      "accredited": true,
+      "extract": "research/extracts/ref-017.md",
+      "how": "crossref-title",
+      "title": "The Lack of A Priori Distinctions Between Learning Algorithms",
+      "url": "https://doi.org/10.1162/neco.1996.8.7.1341",
+      "why": "Wolpert \u2014 the No Free Lunch theorem for learning; context for THM-NFL-001",
+      "work_id": "doi:10.1162/neco.1996.8.7.1341",
+      "year": 1996
+    },
+    "REF-018": {
+      "accredited": true,
+      "extract": "research/extracts/ref-018.md",
+      "how": "crossref-title",
+      "title": "On the Uniform Convergence of Relative Frequencies of Events to Their Probabilities",
+      "url": "https://doi.org/10.1137/1116025",
+      "why": "Vapnik & Chervonenkis \u2014 VC dimension and uniform convergence; context for THM-VC-001",
+      "work_id": "doi:10.1137/1116025",
+      "year": 1971
+    },
+    "REF-019": {
+      "accredited": true,
+      "extract": "research/extracts/ref-019.md",
+      "how": "crossref-title",
+      "title": "A Mathematical Theory of Communication",
+      "url": "https://doi.org/10.1002/j.1538-7305.1948.tb00917.x",
+      "why": "Shannon 1948 \u2014 information theory and the sampling context for THM-NYQ-001",
+      "work_id": "doi:10.1002/j.1538-7305.1948.tb00917.x",
+      "year": 1948
+    },
+    "REF-020": {
+      "accredited": true,
+      "extract": "research/extracts/ref-020.md",
+      "how": "crossref-title",
+      "title": "Classes of recursively enumerable sets and their decision problems",
+      "url": "https://doi.org/10.1090/s0002-9947-1953-0053041-6",
+      "why": "Rice's theorem \u2014 undecidability of nontrivial semantic properties",
+      "work_id": "doi:10.1090/s0002-9947-1953-0053041-6",
+      "year": 1953
+    },
+    "REF-021": {
+      "accredited": false,
+      "extract": "research/extracts/ref-021.md",
+      "how": "crossref-title",
+      "title": "Convex Optimization",
+      "url": "https://doi.org/10.1017/cbo9780511804441",
+      "why": "Boyd & Vandenberghe \u2014 KKT conditions; context for THM-KKT-001",
+      "work_id": "doi:10.1017/cbo9780511804441",
+      "year": 2004
+    },
+    "REF-025": {
+      "accredited": false,
+      "extract": "research/extracts/ref-025.md",
+      "how": "crossref-title",
+      "title": "Matrix Analysis",
+      "url": "https://doi.org/10.1017/cbo9780511810817",
+      "why": "Horn & Johnson \u2014 Perron-Frobenius theory; context for THM-PF-001",
+      "work_id": "doi:10.1017/cbo9780511810817",
+      "year": 1985
     }
   }
 }
