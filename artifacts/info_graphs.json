@@ -1,0 +1,57 @@
+{
+  "gc": {
+    "seed": 7,
+    "shrink_factor_10_to_10000": 75.4,
+    "sup_distance_by_n": {
+      "10": 0.36412,
+      "100": 0.07563,
+      "1000": 0.04327,
+      "10000": 0.00483
+    },
+    "true_distribution": "uniform[0,1]"
+  },
+  "huffman": {
+    "alphabet": 4,
+    "arithmetic": "exact rational",
+    "denominator": 8,
+    "n_kraft_profiles_compared": 1073,
+    "n_sources_checked": 35
+  },
+  "inequalities": {
+    "arithmetic": "exact rational",
+    "chebyshev_checks": 1980,
+    "markov_checks": 2970,
+    "n_distributions": 495
+  },
+  "jl": {
+    "dim_from": 50,
+    "dim_to": 25,
+    "max_pairwise_distortion": 0.419,
+    "n_points": 20,
+    "seed": 42
+  },
+  "maxflow": {
+    "arithmetic": "exact integer",
+    "capacity_range": [
+      0,
+      3
+    ],
+    "n_networks_checked": 4096,
+    "nodes": 4
+  },
+  "ot1d": {
+    "arithmetic": "exact rational",
+    "bijections_per_pair": 24,
+    "cost": "|x-y|",
+    "n_support_pairs_checked": 4900,
+    "support_size": 4
+  },
+  "post": {
+    "and_or_closure_size": 4,
+    "method": "exhaustive composition to fixpoint",
+    "nand_closure_size": 16,
+    "nor_closure_size": 16,
+    "not_reachable_from_and_or": false
+  },
+  "schema": "info_graphs_v1"
+}

@@ -80,6 +80,25 @@ SEEDS = [
      None, "sorensen", 2006, "Sorensen & Urzyczyn — proofs-as-programs; context for THM-CH-001"),
     ("REF-025", "Matrix Analysis",
      None, "horn", 1985, "Horn & Johnson — Perron-Frobenius theory; context for THM-PF-001"),
+    # --- batch 4/5: dimensionality, information, graphs, research front ---
+    ("REF-026", "Extensions of Lipschitz mappings into a Hilbert space",
+     None, "johnson", 1984, "Johnson & Lindenstrauss — the JL lemma; context for THM-JL-001"),
+    ("REF-027", "Asymptotic Statistics",
+     None, "vaart", 1998, "van der Vaart — Glivenko-Cantelli and empirical processes; context for THM-GC-001"),
+    ("REF-028", "Probability and Computing: Randomization and Probabilistic Analysis in Algorithms and Data Structures",
+     None, "mitzenmacher", 2005, "Mitzenmacher & Upfal — Markov/Chebyshev in algorithm analysis; context for THM-INEQ-001"),
+    ("REF-029", "The Two-Valued Iterative Systems of Mathematical Logic",
+     None, "post", 1941, "Post — functional completeness; context for THM-POST-001"),
+    ("REF-030", "Maximal Flow Through a Network",
+     None, "ford", 1956, "Ford & Fulkerson — the max-flow min-cut theorem; context for THM-MFMC-001"),
+    ("REF-031", "Algebraic Geometry and Statistical Learning Theory",
+     None, "watanabe", 2009, "Watanabe — singular learning theory (research front; no bounded instance attempted)"),
+    ("REF-032", "Flow Matching for Generative Modeling",
+     None, "lipman", 2022, "Lipman et al. — flow matching / optimal-transport paths; 1-D OT instance is THM-OT-001"),
+    ("REF-033", "Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges",
+     None, "bronstein", 2021, "Bronstein et al. — equivariance program (research front; no bounded instance attempted)"),
+    ("REF-034", "Topology and Data",
+     None, "carlsson", 2009, "Carlsson — topological data analysis (research front; no bounded instance attempted)"),
 ]
 
 

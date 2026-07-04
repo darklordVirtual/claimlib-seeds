@@ -462,6 +462,126 @@ claims:
       verified by deterministic computation at evidence time.
     reproduce: "python3 theorems/evidence_cs_foundations.py"
 
+  - id: THM-HUF-001
+    statement: >
+      Huffman codes are optimal among ALL Kraft-satisfying prefix-code length
+      profiles for every one of the 35 rational sources on 4 symbols with
+      denominator 8 — exhaustive comparison against 1073 profiles, exact
+      fractions.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/info_graphs.json"
+    metrics:
+      n_sources_checked: 35
+    caveat: >
+      A bounded instance of source-coding optimality (4-symbol rational
+      sources); Shannon's entropy bound itself involves logarithms and is
+      cited, not computed (REF-019). Seeded from model knowledge; verified by
+      deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_info_graphs.py"
+
+  - id: THM-INEQ-001
+    statement: >
+      Markov's inequality (2970 checks) and Chebyshev's inequality (1980
+      checks, second-moment form) hold exactly for all 495 distributions on
+      {0..4} with denominator 8.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/info_graphs.json"
+    metrics:
+      n_distributions: 495
+    caveat: >
+      Exhaustive finite family in exact rationals — instances of the
+      inequalities, not their general measure-theoretic proofs (Mitzenmacher &
+      Upfal seed did not verify; honestly absent). Seeded from model
+      knowledge; verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_info_graphs.py"
+
+  - id: THM-POST-001
+    statement: >
+      Functional-completeness instance: composition closure from {NAND} alone
+      (and from {NOR} alone) reaches ALL 16 binary boolean functions, while
+      {AND, OR} closes at exactly 4 functions and never reaches NOT —
+      exhaustive fixpoint computation.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/info_graphs.json"
+    metrics:
+      nand_closure_size: 16
+      and_or_closure_size: 4
+    caveat: >
+      Binary (2-ary) function tables only; Post's full classification of all
+      clones is literature (REF-029). Seeded from model knowledge; verified by
+      deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_info_graphs.py"
+
+  - id: THM-MFMC-001
+    statement: >
+      Max-flow equals min-cut on every one of the 4096 four-node networks with
+      integer capacities 0..3 — exact integer flow augmentation vs exhaustive
+      cut enumeration, 0 mismatches.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/info_graphs.json"
+    metrics:
+      n_networks_checked: 4096
+    caveat: >
+      Exhaustive for one 4-node topology family; the general theorem (Ford &
+      Fulkerson, REF-030) covers arbitrary networks. Seeded from model
+      knowledge; verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_info_graphs.py"
+
+  - id: THM-OT-001
+    statement: >
+      1-D optimal transport instance: the sorted (monotone) matching is cost-
+      minimal against all 24 bijections for every one of the 4900 pairs of
+      4-point supports from an 8-point grid, cost |x-y|, exact fractions.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/info_graphs.json"
+    metrics:
+      n_support_pairs_checked: 4900
+    caveat: >
+      Discrete uniform 1-D case only — the classic monotone-coupling fact
+      underlying optimal-transport paths in flow matching (REF-032); general
+      Monge-Kantorovich theory is literature. Seeded from model knowledge;
+      verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_info_graphs.py"
+
+  - id: THM-JL-001
+    statement: >
+      Johnson-Lindenstrauss instance: a seeded random projection from R^50 to
+      R^25 preserved all pairwise distances of 20 points within measured max
+      distortion 0.419.
+    evidence_level: benchmarked
+    artifact:
+      - "artifacts/info_graphs.json"
+    metrics:
+      max_pairwise_distortion: 0.419
+    caveat: >
+      One seeded draw, float arithmetic — a demonstration, not the lemma's
+      probabilistic guarantee (REF-026). The measured 0.42 distortion at k=25
+      is honest about how loose small-k projections are. Seeded from model
+      knowledge; verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_info_graphs.py"
+
+  - id: THM-GC-001
+    statement: >
+      Glivenko-Cantelli instance: the empirical-CDF sup-distance to the true
+      uniform CDF shrinks by a factor 75.4 from n=10 to n=10000 (seeded
+      draws).
+    evidence_level: benchmarked
+    artifact:
+      - "artifacts/info_graphs.json"
+    metrics:
+      shrink_factor_10_to_10000: 75.4
+    caveat: >
+      One seeded sample path, float arithmetic — a convergence demonstration,
+      not the a.s.-uniform-convergence theorem (van der Vaart seed did not
+      verify; honestly absent). Seeded from model knowledge; verified by
+      deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_info_graphs.py"
+
   - id: REF-001
     statement: >
       Time-uniform, nonparametric, nonasymptotic confidence sequences (2021)
@@ -810,15 +930,15 @@ claims:
         sha256: ba6e9529cb0e61c7f399637aad5cadca78062c8fd987df4e4f073021b2128237
         file: "research/extracts/ref-021.md"
 
-  - id: REF-025
+  - id: REF-026
     statement: >
-      Matrix Analysis (1985) is a registrar-verified work
-      (doi:10.1017/cbo9780511810817) whose abstract extract is preserved hash-
-      locked in this repository. Curation note: Horn & Johnson — Perron-
-      Frobenius theory; context for THM-PF-001.
+      Extensions of Lipschitz mappings into a Hilbert space (1984) is a
+      registrar-verified work (doi:10.1090/conm/026/737400) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      Johnson & Lindenstrauss — the JL lemma; context for THM-JL-001.
     evidence_level: theoretical
     artifact:
-      - "research/extracts/ref-025.md"
+      - "research/extracts/ref-026.md"
     caveat: >
       A bibliographic claim only: the registrar record exists and the
       committed extract is hash-locked. Asserts NOTHING about the correctness
@@ -826,7 +946,129 @@ claims:
       reviewed venue version may exist but is not asserted. Title was Fable-
       seeded; metadata is registrar-fetched.
     literature:
-      - source: "doi:10.1017/cbo9780511810817 — https://doi.org/10.1017/cbo9780511810817"
-        sha256: 0ae302d35ac6ec882b952c294d7a1231b20f944affec83eef261a508e987a0f2
-        file: "research/extracts/ref-025.md"
+      - source: "doi:10.1090/conm/026/737400 — https://doi.org/10.1090/conm/026/737400"
+        sha256: 9869505c097ad70bd9ed556b1e2ea98e22a5870ee71978b9cd4c3b91f896a78c
+        file: "research/extracts/ref-026.md"
+
+  - id: REF-029
+    statement: >
+      The Two-Valued Iterative Systems of Mathematical Logic. (AM-5) (1942) is
+      a registrar-verified work (doi:10.1515/9781400882366) whose abstract
+      extract is preserved hash-locked in this repository. Curation note: Post
+      — functional completeness; context for THM-POST-001.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-029.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1515/9781400882366 — https://doi.org/10.1515/9781400882366"
+        sha256: e82eff98003e5d3393f231a065b9fb7b9a301d921cadfc23380edb9c46fdcc34
+        file: "research/extracts/ref-029.md"
+
+  - id: REF-030
+    statement: >
+      Maximal Flow Through a Network (1956) is a registrar-verified work
+      (doi:10.4153/cjm-1956-045-5) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: Ford & Fulkerson — the max-
+      flow min-cut theorem; context for THM-MFMC-001.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-030.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.4153/cjm-1956-045-5 — https://doi.org/10.4153/cjm-1956-045-5"
+        sha256: b360e069497e249edba01584bf7e12d89f7648b17397d00df727185e12df01b1
+        file: "research/extracts/ref-030.md"
+
+  - id: REF-031
+    statement: >
+      Algebraic Geometry and Statistical Learning Theory (2009) is a
+      registrar-verified work (doi:10.1017/cbo9780511800474) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      Watanabe — singular learning theory (research front; no bounded instance
+      attempted).
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-031.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1017/cbo9780511800474 — https://doi.org/10.1017/cbo9780511800474"
+        sha256: a0a29a3b8889f9e02114489ea5419331e3299fa08b350a5ceb492ffb1ce17fa9
+        file: "research/extracts/ref-031.md"
+
+  - id: REF-032
+    statement: >
+      Flow Matching for Generative Modeling (2022) is a registrar-verified
+      work (arxiv:2210.02747) whose abstract extract is preserved hash-locked
+      in this repository. Curation note: Lipman et al. — flow matching /
+      optimal-transport paths; 1-D OT instance is THM-OT-001.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-032.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2210.02747 — https://arxiv.org/abs/2210.02747"
+        sha256: ec15e68722cf57e684a7c4d060662091515ecdbba6c34d7d8c837f7c552430f5
+        file: "research/extracts/ref-032.md"
+
+  - id: REF-033
+    statement: >
+      Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges
+      (2021) is a registrar-verified work (arxiv:2104.13478) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      Bronstein et al. — equivariance program (research front; no bounded
+      instance attempted).
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-033.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2104.13478 — https://arxiv.org/abs/2104.13478"
+        sha256: df05a920a1b55be5be2fed04100ceb9bea5866cb23d3bedd3f66deb43cd1be88
+        file: "research/extracts/ref-033.md"
+
+  - id: REF-034
+    statement: >
+      Topology and data (2009) is a registrar-verified work
+      (doi:10.1090/s0273-0979-09-01249-x) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: Carlsson — topological
+      data analysis (research front; no bounded instance attempted).
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-034.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1090/s0273-0979-09-01249-x — https://doi.org/10.1090/s0273-0979-09-01249-x"
+        sha256: 315fd2d209610e269980d84e9355e686176ed7b36536cb72f900cc7802ad5561
+        file: "research/extracts/ref-034.md"
 

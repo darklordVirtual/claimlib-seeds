@@ -34,6 +34,21 @@
       "id": "REF-024",
       "reason": "no registrar record with an agreeing title",
       "seed_title": "Lectures on the Curry-Howard Isomorphism"
+    },
+    {
+      "id": "REF-025",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Matrix Analysis"
+    },
+    {
+      "id": "REF-027",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Asymptotic Statistics"
+    },
+    {
+      "id": "REF-028",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Probability and Computing: Randomization and Probabilistic Analysis in Algorithms and Data Structures"
     }
   ],
   "schema": "references_v2",
@@ -208,15 +223,75 @@
       "work_id": "doi:10.1017/cbo9780511804441",
       "year": 2004
     },
-    "REF-025": {
+    "REF-026": {
       "accredited": false,
-      "extract": "research/extracts/ref-025.md",
+      "extract": "research/extracts/ref-026.md",
       "how": "crossref-title",
-      "title": "Matrix Analysis",
-      "url": "https://doi.org/10.1017/cbo9780511810817",
-      "why": "Horn & Johnson \u2014 Perron-Frobenius theory; context for THM-PF-001",
-      "work_id": "doi:10.1017/cbo9780511810817",
-      "year": 1985
+      "title": "Extensions of Lipschitz mappings into a Hilbert space",
+      "url": "https://doi.org/10.1090/conm/026/737400",
+      "why": "Johnson & Lindenstrauss \u2014 the JL lemma; context for THM-JL-001",
+      "work_id": "doi:10.1090/conm/026/737400",
+      "year": 1984
+    },
+    "REF-029": {
+      "accredited": false,
+      "extract": "research/extracts/ref-029.md",
+      "how": "crossref-title",
+      "title": "The Two-Valued Iterative Systems of Mathematical Logic. (AM-5)",
+      "url": "https://doi.org/10.1515/9781400882366",
+      "why": "Post \u2014 functional completeness; context for THM-POST-001",
+      "work_id": "doi:10.1515/9781400882366",
+      "year": 1942
+    },
+    "REF-030": {
+      "accredited": true,
+      "extract": "research/extracts/ref-030.md",
+      "how": "crossref-title",
+      "title": "Maximal Flow Through a Network",
+      "url": "https://doi.org/10.4153/cjm-1956-045-5",
+      "why": "Ford & Fulkerson \u2014 the max-flow min-cut theorem; context for THM-MFMC-001",
+      "work_id": "doi:10.4153/cjm-1956-045-5",
+      "year": 1956
+    },
+    "REF-031": {
+      "accredited": false,
+      "extract": "research/extracts/ref-031.md",
+      "how": "crossref-title",
+      "title": "Algebraic Geometry and Statistical Learning Theory",
+      "url": "https://doi.org/10.1017/cbo9780511800474",
+      "why": "Watanabe \u2014 singular learning theory (research front; no bounded instance attempted)",
+      "work_id": "doi:10.1017/cbo9780511800474",
+      "year": 2009
+    },
+    "REF-032": {
+      "accredited": false,
+      "extract": "research/extracts/ref-032.md",
+      "how": "arxiv-title-phrase",
+      "title": "Flow Matching for Generative Modeling",
+      "url": "https://arxiv.org/abs/2210.02747",
+      "why": "Lipman et al. \u2014 flow matching / optimal-transport paths; 1-D OT instance is THM-OT-001",
+      "work_id": "arxiv:2210.02747",
+      "year": 2022
+    },
+    "REF-033": {
+      "accredited": false,
+      "extract": "research/extracts/ref-033.md",
+      "how": "arxiv-title-phrase",
+      "title": "Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges",
+      "url": "https://arxiv.org/abs/2104.13478",
+      "why": "Bronstein et al. \u2014 equivariance program (research front; no bounded instance attempted)",
+      "work_id": "arxiv:2104.13478",
+      "year": 2021
+    },
+    "REF-034": {
+      "accredited": true,
+      "extract": "research/extracts/ref-034.md",
+      "how": "crossref-title",
+      "title": "Topology and data",
+      "url": "https://doi.org/10.1090/s0273-0979-09-01249-x",
+      "why": "Carlsson \u2014 topological data analysis (research front; no bounded instance attempted)",
+      "work_id": "doi:10.1090/s0273-0979-09-01249-x",
+      "year": 2009
     }
   }
 }
