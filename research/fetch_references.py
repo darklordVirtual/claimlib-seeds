@@ -1,13 +1,12 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Fetch registrar-verified records for Fable-seeded research references.
+"""Fetch registrar-verified records for seeded research references.
 
-THE SEEDING CONTRACT: the titles below were proposed from model knowledge
-(Claude Fable). A title is a SEARCH SEED, never a citation — each one is
-looked up on arXiv by exact title phrase, the returned record must agree
-with the seeded title (strict token guard), and only the REGISTRAR'S
-metadata + abstract is committed as an extract. A seed with no agreeing
-registrar record is dropped and reported; nothing is ever written from
-memory.
+THE SEEDING CONTRACT: titles (and any DOIs) below are SEEDS — proposed from
+model knowledge or supplied by the curator — never citations. Each seed is
+resolved against a registrar (DOI lookup, Crossref title search, arXiv
+title-phrase search, in that order) and the returned record must AGREE with
+the seeded title under the strict token guard. Only the registrar's
+metadata is committed; a seed nothing agrees with is dropped and reported.
 
     PYTHONPATH=/Users/stian/vericlaim python3 research/fetch_references.py
 """
@@ -21,67 +20,140 @@ from pathlib import Path
 
 sys.path.insert(0, "/Users/stian/vericlaim/integrations/library")
 from biblio_curate import titles_agree  # noqa: E402
-from litfetch import _http_get, parse_arxiv_atom  # noqa: E402
+from litfetch import _http_get, crossref_search, parse_arxiv_atom, parse_crossref  # noqa: E402
 
-# Fable-seeded (id, title, why it belongs in the library) — seeds, not truth.
+# (id, title-seed, optional doi-seed, expected-surname, expected-year, why).
+# Everything is a SEED: the resolved record must agree on TITLE (strict token
+# guard), carry the expected AUTHOR surname, and land within 2 years of the
+# expected YEAR — title alone proved insufficient live (a 2025 critique
+# titled "Is Attention All You Need?", a book REVIEW of GEB, and an
+# unrelated Apress chapter all passed the title guard).
 SEEDS = [
     ("REF-001", "Time-uniform, nonparametric, nonasymptotic confidence sequences",
-     "anytime-valid monitoring bounds; used by library bundle CLAIM-011"),
+     None, "howard", 2021, "anytime-valid monitoring bounds; used by library bundle CLAIM-011"),
     ("REF-002", "Selective classification for deep neural networks",
-     "the canonical accuracy/coverage trade-off formulation"),
+     None, "geifman", 2017, "the canonical accuracy/coverage trade-off formulation"),
     ("REF-003", "On Calibration of Modern Neural Networks",
-     "temperature scaling and modern-miscalibration baseline"),
+     None, "guo", 2017, "temperature scaling and modern-miscalibration baseline"),
     ("REF-004", "Conformal Risk Control",
-     "distribution-free risk guarantees beyond coverage"),
+     None, "angelopoulos", 2022, "distribution-free risk guarantees beyond coverage"),
     ("REF-005", "AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents",
-     "external agent-safety benchmark; used by library bundle CLAIM-002"),
+     None, "andriushchenko", 2024, "external agent-safety benchmark; used by library bundle CLAIM-002"),
     ("REF-006", "Attention Is All You Need",
-     "the transformer architecture underlying modern LLMs"),
+     None, "vaswani", 2017, "the transformer architecture underlying modern LLMs"),
     ("REF-007", "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification",
-     "standard on-ramp to conformal prediction"),
+     None, "angelopoulos", 2021, "standard on-ramp to conformal prediction"),
+    ("REF-008", "Multilayer feedforward networks are universal approximators",
+     None, "hornik", 1989, "Hornik/Stinchcombe/White 1989 — the universal approximation theorem; context for THM-UAT-001"),
+    ("REF-009", "Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services",
+     "10.1145/564585.564601", "gilbert", 2002, "Gilbert & Lynch 2002 — the CAP theorem, formally proved"),
+    ("REF-010", "Flow diagrams, turing machines and languages with only two formation rules",
+     "10.1145/355592.365646", "bohm", 1966, "Bohm & Jacopini 1966 — the structured program theorem"),
+    ("REF-011", "Pattern Recognition and Machine Learning",
+     None, "bishop", 2006, "Bishop 2006 — Bayes-based ML; context for THM-BAYES-001"),
+    ("REF-012", "All of Statistics: A Concise Course in Statistical Inference",
+     None, "wasserman", 2004, "Wasserman — CLT and inference; context for THM-CLT-001"),
+    ("REF-013", "Introduction to Algorithms",
+     None, "cormen", 2009, "CLRS — the master theorem; context for THM-MASTER-001"),
+    ("REF-014", "Learning with Kernels",
+     None, "scholkopf", 2002, "Scholkopf & Smola — Mercer's theorem and the kernel trick"),
+    ("REF-015", "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I",
+     None, "godel", 1931, "Godel 1931 — the incompleteness theorems, original paper"),
+    ("REF-016", "Gödel, Escher, Bach: An Eternal Golden Braid",
+     None, "hofstadter", 1979, "Hofstadter — popular exposition connecting Godel to computation (context, not a proof source)"),
 ]
+
+
+def _norm(s: str) -> str:
+    import unicodedata
+    return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
+
+
+def _record_agrees(seed_title, surname, year, work) -> bool:
+    """Title tokens + author surname + year window — all three, always."""
+    if not titles_agree(seed_title, work["title"]):
+        return False
+    if not any(_norm(surname) in _norm(a) for a in work.get("authors", [])):
+        return False
+    wy = work.get("year")
+    return isinstance(wy, int) and abs(wy - year) <= 2
+
+
+def _lookup(title: str, doi: str | None, surname: str, year: int):
+    """Registrar resolution order: DOI -> Crossref title -> arXiv phrase.
+    Every path ends at the same title+author+year guard."""
+    if doi:
+        try:
+            works = parse_crossref(_http_get("https://api.crossref.org/works/"
+                                             + urllib.parse.quote(doi)))
+            if works and _record_agrees(title, surname, year, works[0]):
+                return works[0], "doi"
+            if works:
+                return None, (f"DOI seed resolves to {works[0]['title']!r} "
+                              f"({works[0].get('year')}) — fails the "
+                              f"title+author+year guard")
+        except Exception as exc:  # noqa: BLE001
+            return None, f"doi lookup failed: {exc}"
+    try:
+        for w in crossref_search(title, 5):
+            if _record_agrees(title, surname, year, w):
+                return w, "crossref-title"
+    except Exception:  # noqa: BLE001 — fall through to arXiv
+        pass
+    time.sleep(3)
+    try:
+        q = urllib.parse.quote(f'ti:"{title}"')
+        for w in parse_arxiv_atom(_http_get(
+                "https://export.arxiv.org/api/query?search_query="
+                + q + "&max_results=3")):
+            if _record_agrees(title, surname, year, w):
+                return w, "arxiv-title-phrase"
+    except Exception as exc:  # noqa: BLE001
+        return None, f"arxiv lookup failed: {exc}"
+    return None, "no registrar record with an agreeing title"
 
 
 def main() -> int:
     out_dir = Path(__file__).resolve().parent / "extracts"
     out_dir.mkdir(exist_ok=True)
-    index = {}
-    dropped = []
-    for rid, title, why in SEEDS:
-        q = urllib.parse.quote(f'ti:"{title}"')
-        works = parse_arxiv_atom(_http_get(
-            f"https://export.arxiv.org/api/query?search_query={q}&max_results=3"))
-        found = next((w for w in works if titles_agree(title, w["title"])), None)
+    index, dropped = {}, []
+    for rid, title, doi, surname, year, why in SEEDS:
+        found, how = _lookup(title, doi, surname, year)
         if found is None:
-            dropped.append((rid, title))
-            print(f"[DROPPED] {rid}: no registrar record agrees with seeded "
-                  f"title {title!r} — the seed dies here, honestly")
-            time.sleep(3)
+            dropped.append((rid, title, how))
+            print(f"[DROPPED] {rid}: {how} — the seed dies here, honestly")
+            time.sleep(1)
             continue
+        acc = ("peer-reviewed venue" if found.get("accredited")
+               else found.get("source_type", "?"))
         extract = (
             f"# {found['title']}\n\n"
-            f"REGISTRAR-VERIFIED metadata (arXiv, retrieved at build time); the\n"
-            f"seeded title was only a search key. This work supports *context*\n"
-            f"for library claims — it proves nothing about them.\n\n"
+            f"REGISTRAR-VERIFIED metadata (via {how}, retrieved at build "
+            f"time); the seed was only a search key. This work supports "
+            f"*context* for library claims — it proves nothing about them.\n\n"
             f"- id: {found['work_id']}\n"
             f"- authors: {', '.join(found['authors'][:6])}"
             f"{' et al.' if len(found['authors']) > 6 else ''}\n"
             f"- year: {found['year']}\n"
-            f"- source_type: {found['source_type']} (arXiv preprint record; a\n"
-            f"  peer-reviewed venue version may exist — not asserted here)\n"
+            f"- venue: {found.get('venue') or 'n/a'}\n"
+            f"- source_type: {found['source_type']} ({acc})\n"
             f"- url: {found['url']}\n"
             f"- curation note: {why}\n\n"
-            f"## Abstract (registrar snapshot)\n\n{found['abstract']}\n")
+            f"## Abstract (registrar snapshot)\n\n"
+            f"{found['abstract'] or '(registrar record carries no abstract)'}\n")
         (out_dir / f"{rid.lower()}.md").write_text(extract, encoding="utf-8")
         index[rid] = {"work_id": found["work_id"], "title": found["title"],
                       "year": found["year"], "url": found["url"],
+                      "how": how, "accredited": bool(found.get("accredited")),
                       "extract": f"research/extracts/{rid.lower()}.md",
                       "why": why}
-        print(f"[OK] {rid}: {found['work_id']} — {found['title'][:55]}")
-        time.sleep(3)
+        print(f"[OK] {rid}: {found['work_id']} ({how}, {acc}) — "
+              f"{found['title'][:50]}")
+        time.sleep(2)
     (out_dir.parent / "references.json").write_text(
-        json.dumps({"schema": "references_v1", "verified": index,
-                    "dropped": [{"id": r, "seed_title": t} for r, t in dropped]},
+        json.dumps({"schema": "references_v2", "verified": index,
+                    "dropped": [{"id": r, "seed_title": t, "reason": why}
+                                for r, t, why in dropped]},
                    indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"[OK] {len(index)} verified, {len(dropped)} dropped")
     return 0

@@ -260,12 +260,87 @@ claims:
       time, never recalled from model memory.
     reproduce: "python3 numbers/evidence_numbers.py"
 
+  - id: THM-BAYES-001
+    statement: >
+      Bayes' product identity P(A|B)P(B) = P(B|A)P(A) holds in exact rational
+      arithmetic for every one of the 455 joint distributions on two binary
+      events with probability denominator 12 (exhaustive family).
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/ml_foundations.json"
+    metrics:
+      n_joint_distributions_checked: 455
+    caveat: >
+      An exhaustive bounded family verified with exact fractions — an instance
+      check of the identity, NOT the measure-theoretic theorem. The general
+      result is definitional given conditional probability; see REF-011-class
+      literature for the standard treatment. Seeded from model knowledge;
+      verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_ml_foundations.py"
+
+  - id: THM-UAT-001
+    statement: >
+      An explicitly constructed one-hidden-layer ReLU network with 65 units
+      approximates sin on [0, pi] with maximum error below 0.001 across all
+      10001 grid points (measured 0.00030109).
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/ml_foundations.json"
+    metrics:
+      hidden_units: 65
+      grid_points: 10001
+    caveat: >
+      A constructive bounded INSTANCE of universal approximation (piecewise-
+      linear interpolation realized as a ReLU network, constructed not
+      trained; error measured on a fixed grid, not the continuum) — not
+      Hornik's theorem, which is cited as REF-008. Seeded from model
+      knowledge; verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_ml_foundations.py"
+
+  - id: THM-MASTER-001
+    statement: >
+      The three canonical divide-and-conquer recurrences (binary search, merge
+      sort, and T(n)=4T(n/2)+n) match their closed-form solutions exactly, in
+      integer arithmetic, for all n = 2^k up to k = 30.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/ml_foundations.json"
+    metrics:
+      k_max: 30
+      recurrences_verified: 3
+    caveat: >
+      Exact bounded verification of specific closed forms — consistent with,
+      but not a proof of, the general master theorem (an asymptotic statement
+      no finite computation can prove). CLRS is the standard reference; its
+      registrar seed did not verify and is honestly absent. Seeded from model
+      knowledge; verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_ml_foundations.py"
+
+  - id: THM-CLT-001
+    statement: >
+      For sums of n fair dice with n in [1, 2, 4, 8, 16, 32], the Kolmogorov
+      distance between the exact standardized sum distribution and the normal
+      CDF decreases strictly, ending at 0.000813 for n = 32.
+    evidence_level: benchmarked
+    artifact:
+      - "artifacts/ml_foundations.json"
+    metrics:
+      final_distance: 0.000813
+      n_max: 32
+    caveat: >
+      A computed convergence DEMONSTRATION on one distribution family (exact
+      pmf via fractions; normal CDF via float erf — hence benchmarked, not
+      machine_checked). Not the central limit theorem, which no finite
+      computation proves. Seeded from model knowledge; verified by
+      deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_ml_foundations.py"
+
   - id: REF-001
     statement: >
-      Time-uniform, nonparametric, nonasymptotic confidence sequences (2018)
-      is a registrar-verified work (arxiv:1810.08240) whose abstract extract
-      is preserved hash-locked in this repository. Curation note: anytime-
-      valid monitoring bounds; used by library bundle CLAIM-011.
+      Time-uniform, nonparametric, nonasymptotic confidence sequences (2021)
+      is a registrar-verified work (doi:10.1214/20-aos1991) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      anytime-valid monitoring bounds; used by library bundle CLAIM-011.
     evidence_level: theoretical
     artifact:
       - "research/extracts/ref-001.md"
@@ -276,8 +351,8 @@ claims:
       reviewed venue version may exist but is not asserted. Title was Fable-
       seeded; metadata is registrar-fetched.
     literature:
-      - source: "arxiv:1810.08240 — https://arxiv.org/abs/1810.08240"
-        sha256: 8ee3647e74c91e7ef9818ac5e5c552cefad74804e0be5e3d9256d464d9c4046b
+      - source: "doi:10.1214/20-aos1991 — https://doi.org/10.1214/20-aos1991"
+        sha256: c7283cc390d5f6b980652c2dcba86dcd5c5be1c00a6e86a93a426042775e18fa
         file: "research/extracts/ref-001.md"
 
   - id: REF-002
@@ -297,7 +372,7 @@ claims:
       seeded; metadata is registrar-fetched.
     literature:
       - source: "arxiv:1705.08500 — https://arxiv.org/abs/1705.08500"
-        sha256: c02e23a613568e9887c873ff61a9aca031a2e0e4f977443d315e657c6ce32de0
+        sha256: da28e48e54d24c55512d5787280d23729c0f0e5f9f9f4eaa7ca8e061ee0974c4
         file: "research/extracts/ref-002.md"
 
   - id: REF-003
@@ -317,7 +392,7 @@ claims:
       seeded; metadata is registrar-fetched.
     literature:
       - source: "arxiv:1706.04599 — https://arxiv.org/abs/1706.04599"
-        sha256: 5cf88aa8e885dc5cf570eca4230c97961fb5ffdce702243d65b7b9dfd211aeda
+        sha256: 18dbc67f97ed2c79c6976f14f0c394eaa1bcc7f0c7c1d05280d87ce76fd68ff5
         file: "research/extracts/ref-003.md"
 
   - id: REF-004
@@ -337,7 +412,7 @@ claims:
       seeded; metadata is registrar-fetched.
     literature:
       - source: "arxiv:2208.02814 — https://arxiv.org/abs/2208.02814"
-        sha256: 1f371c511bb31443ada6ecb3d2e50e3b78266f4ba82ed360d3ff20b96b230ae9
+        sha256: 35b1aa697bc6937478b80b7f848887407bf2ba70469e6208eba50cee16867fe2
         file: "research/extracts/ref-004.md"
 
   - id: REF-005
@@ -357,7 +432,7 @@ claims:
       seeded; metadata is registrar-fetched.
     literature:
       - source: "arxiv:2410.09024 — https://arxiv.org/abs/2410.09024"
-        sha256: 6a2ef9b36b64996cf9e3f0cc4999f9c3f8d8619fd3933a113a760d66292a31ff
+        sha256: bf570cf42d0d633f890b84423af2c12c2b24be609669642e4d547e6eaaf2a151
         file: "research/extracts/ref-005.md"
 
   - id: REF-006
@@ -377,7 +452,7 @@ claims:
       seeded; metadata is registrar-fetched.
     literature:
       - source: "arxiv:1706.03762 — https://arxiv.org/abs/1706.03762"
-        sha256: 63134beacf2527afe2490c06c5f185f660d96417da7c2f4c6f66cb12a69bb8e9
+        sha256: e8908d937b67ccdee7afbf87510b74669c623f617ebc58705080f965f2d7190a
         file: "research/extracts/ref-006.md"
 
   - id: REF-007
@@ -398,6 +473,89 @@ claims:
       seeded; metadata is registrar-fetched.
     literature:
       - source: "arxiv:2107.07511 — https://arxiv.org/abs/2107.07511"
-        sha256: c21cafb07f48896cb5290be46ecf48a7c1459beef25de977901aff99285dbf3b
+        sha256: 6dcf3c96ab6545ebb1301f800f4c16d2b3b1c8a03d89aa711e2f8358e0c82ea8
         file: "research/extracts/ref-007.md"
+
+  - id: REF-008
+    statement: >
+      Multilayer feedforward networks are universal approximators (1989) is a
+      registrar-verified work (doi:10.1016/0893-6080(89)90020-8) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: Hornik/Stinchcombe/White 1989 — the universal approximation
+      theorem; context for THM-UAT-001.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-008.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1016/0893-6080(89)90020-8 — https://doi.org/10.1016/0893-6080(89)90020-8"
+        sha256: d6e832ab09c6194367db8a30f3822e4cea6d48d471ade09bb3b1b96fe1ea1beb
+        file: "research/extracts/ref-008.md"
+
+  - id: REF-009
+    statement: >
+      Brewer's conjecture and the feasibility of consistent, available,
+      partition-tolerant web services (2002) is a registrar-verified work
+      (doi:10.1145/564585.564601) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: Gilbert & Lynch 2002 — the CAP
+      theorem, formally proved.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-009.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/564585.564601 — https://doi.org/10.1145/564585.564601"
+        sha256: 29dc0d0bc4416adef0b909e586f1c348c0bba751367bd1c6539720d978e9e783
+        file: "research/extracts/ref-009.md"
+
+  - id: REF-010
+    statement: >
+      Flow diagrams, turing machines and languages with only two formation
+      rules (1966) is a registrar-verified work (doi:10.1145/355592.365646)
+      whose abstract extract is preserved hash-locked in this repository.
+      Curation note: Bohm & Jacopini 1966 — the structured program theorem.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-010.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/355592.365646 — https://doi.org/10.1145/355592.365646"
+        sha256: e3807754f1bc2b672db50f50ac960580b7a36d71e2a14e169da14100a9e32fa7
+        file: "research/extracts/ref-010.md"
+
+  - id: REF-015
+    statement: >
+      Über formal unentscheidbare Sätze der Principia Mathematica und
+      verwandter Systeme I (1931) is a registrar-verified work
+      (doi:10.1007/bf01700692) whose abstract extract is preserved hash-locked
+      in this repository. Curation note: Godel 1931 — the incompleteness
+      theorems, original paper.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-015.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1007/bf01700692 — https://doi.org/10.1007/bf01700692"
+        sha256: a5a278864849d2d6ec7ff7ebe2e53645cffed9db3f3451046120794292633779
+        file: "research/extracts/ref-015.md"
 

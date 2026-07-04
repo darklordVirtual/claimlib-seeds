@@ -1,17 +1,47 @@
 {
-  "dropped": [],
-  "schema": "references_v1",
+  "dropped": [
+    {
+      "id": "REF-011",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Pattern Recognition and Machine Learning"
+    },
+    {
+      "id": "REF-012",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "All of Statistics: A Concise Course in Statistical Inference"
+    },
+    {
+      "id": "REF-013",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Introduction to Algorithms"
+    },
+    {
+      "id": "REF-014",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Learning with Kernels"
+    },
+    {
+      "id": "REF-016",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "G\u00f6del, Escher, Bach: An Eternal Golden Braid"
+    }
+  ],
+  "schema": "references_v2",
   "verified": {
     "REF-001": {
+      "accredited": true,
       "extract": "research/extracts/ref-001.md",
+      "how": "crossref-title",
       "title": "Time-uniform, nonparametric, nonasymptotic confidence sequences",
-      "url": "https://arxiv.org/abs/1810.08240",
+      "url": "https://doi.org/10.1214/20-aos1991",
       "why": "anytime-valid monitoring bounds; used by library bundle CLAIM-011",
-      "work_id": "arxiv:1810.08240",
-      "year": 2018
+      "work_id": "doi:10.1214/20-aos1991",
+      "year": 2021
     },
     "REF-002": {
+      "accredited": false,
       "extract": "research/extracts/ref-002.md",
+      "how": "arxiv-title-phrase",
       "title": "Selective Classification for Deep Neural Networks",
       "url": "https://arxiv.org/abs/1705.08500",
       "why": "the canonical accuracy/coverage trade-off formulation",
@@ -19,7 +49,9 @@
       "year": 2017
     },
     "REF-003": {
+      "accredited": false,
       "extract": "research/extracts/ref-003.md",
+      "how": "arxiv-title-phrase",
       "title": "On Calibration of Modern Neural Networks",
       "url": "https://arxiv.org/abs/1706.04599",
       "why": "temperature scaling and modern-miscalibration baseline",
@@ -27,7 +59,9 @@
       "year": 2017
     },
     "REF-004": {
+      "accredited": false,
       "extract": "research/extracts/ref-004.md",
+      "how": "arxiv-title-phrase",
       "title": "Conformal Risk Control",
       "url": "https://arxiv.org/abs/2208.02814",
       "why": "distribution-free risk guarantees beyond coverage",
@@ -35,7 +69,9 @@
       "year": 2022
     },
     "REF-005": {
+      "accredited": false,
       "extract": "research/extracts/ref-005.md",
+      "how": "arxiv-title-phrase",
       "title": "AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents",
       "url": "https://arxiv.org/abs/2410.09024",
       "why": "external agent-safety benchmark; used by library bundle CLAIM-002",
@@ -43,7 +79,9 @@
       "year": 2024
     },
     "REF-006": {
+      "accredited": false,
       "extract": "research/extracts/ref-006.md",
+      "how": "arxiv-title-phrase",
       "title": "Attention Is All You Need",
       "url": "https://arxiv.org/abs/1706.03762",
       "why": "the transformer architecture underlying modern LLMs",
@@ -51,12 +89,54 @@
       "year": 2017
     },
     "REF-007": {
+      "accredited": false,
       "extract": "research/extracts/ref-007.md",
+      "how": "arxiv-title-phrase",
       "title": "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification",
       "url": "https://arxiv.org/abs/2107.07511",
       "why": "standard on-ramp to conformal prediction",
       "work_id": "arxiv:2107.07511",
       "year": 2021
+    },
+    "REF-008": {
+      "accredited": true,
+      "extract": "research/extracts/ref-008.md",
+      "how": "crossref-title",
+      "title": "Multilayer feedforward networks are universal approximators",
+      "url": "https://doi.org/10.1016/0893-6080(89)90020-8",
+      "why": "Hornik/Stinchcombe/White 1989 \u2014 the universal approximation theorem; context for THM-UAT-001",
+      "work_id": "doi:10.1016/0893-6080(89)90020-8",
+      "year": 1989
+    },
+    "REF-009": {
+      "accredited": true,
+      "extract": "research/extracts/ref-009.md",
+      "how": "doi",
+      "title": "Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services",
+      "url": "https://doi.org/10.1145/564585.564601",
+      "why": "Gilbert & Lynch 2002 \u2014 the CAP theorem, formally proved",
+      "work_id": "doi:10.1145/564585.564601",
+      "year": 2002
+    },
+    "REF-010": {
+      "accredited": true,
+      "extract": "research/extracts/ref-010.md",
+      "how": "doi",
+      "title": "Flow diagrams, turing machines and languages with only two formation rules",
+      "url": "https://doi.org/10.1145/355592.365646",
+      "why": "Bohm & Jacopini 1966 \u2014 the structured program theorem",
+      "work_id": "doi:10.1145/355592.365646",
+      "year": 1966
+    },
+    "REF-015": {
+      "accredited": true,
+      "extract": "research/extracts/ref-015.md",
+      "how": "crossref-title",
+      "title": "\u00dcber formal unentscheidbare S\u00e4tze der Principia Mathematica und verwandter Systeme I",
+      "url": "https://doi.org/10.1007/bf01700692",
+      "why": "Godel 1931 \u2014 the incompleteness theorems, original paper",
+      "work_id": "doi:10.1007/bf01700692",
+      "year": 1931
     }
   }
 }

@@ -1,0 +1,43 @@
+{
+  "bayes": {
+    "arithmetic": "exact rational (fractions)",
+    "denominator": 12,
+    "n_joint_distributions_checked": 455
+  },
+  "clt": {
+    "final_distance": 0.000813,
+    "kolmogorov_distance": {
+      "1": 0.054241,
+      "2": 0.016355,
+      "4": 0.00709,
+      "8": 0.003355,
+      "16": 0.001631,
+      "32": 0.000813
+    },
+    "n_ladder": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "pmf_arithmetic": "exact rational; normal CDF via math.erf (float)",
+    "strictly_decreasing": true
+  },
+  "master": {
+    "arithmetic": "exact integers",
+    "k_max": 30,
+    "largest_n": 1073741824,
+    "recurrences_verified": 3
+  },
+  "schema": "ml_foundations_v1",
+  "uat": {
+    "grid_points": 10001,
+    "hidden_units": 65,
+    "max_grid_error": 0.00030109,
+    "max_grid_error_below": 0.001,
+    "ok": true,
+    "target": "sin on [0, pi]"
+  }
+}
