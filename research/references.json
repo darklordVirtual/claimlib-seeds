@@ -307,6 +307,16 @@
       "why": "Carlsson \u2014 topological data analysis (research front; no bounded instance attempted)",
       "work_id": "doi:10.1090/s0273-0979-09-01249-x",
       "year": 2009
+    },
+    "REF-036": {
+      "accredited": true,
+      "extract": "research/extracts/ref-036.md",
+      "how": "crossref-title",
+      "title": "The Lean 4 Theorem Prover and Programming Language",
+      "url": "https://doi.org/10.1007/978-3-030-79876-5_37",
+      "why": "de Moura & Ullrich \u2014 the kernel that checks THM-LEAN-001..003",
+      "work_id": "doi:10.1007/978-3-030-79876-5_37",
+      "year": 2021
     }
   }
 }

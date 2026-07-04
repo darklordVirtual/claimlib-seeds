@@ -3,7 +3,7 @@
   "artifact": "tautologies.json",
   "artifact_sha256": "b68ad9b6e1ed29bb8489cb74825ff754cc124c8714aaf9dd67cbfe582ab64100",
   "script": "python3 theorems/evidence_tautologies.py",
-  "git_commit": "86f8fdded190e246cd415182a5816b13250e1f00",
-  "generated_at": "2026-07-04T23:15:49.624294+00:00",
+  "git_commit": "4bf4c8bdc1a4a47167b4d75bce3c9d1e3b8f5165",
+  "generated_at": "2026-07-04T23:35:21.454257+00:00",
   "produced_by": "human"
 }

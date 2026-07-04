@@ -3,7 +3,7 @@
   "artifact": "numbers.json",
   "artifact_sha256": "5f6ccc853b1a216189e95e969fa91860a4e6d405d14343a45a0e07b03db98ca3",
   "script": "python3 numbers/evidence_numbers.py",
-  "git_commit": "86f8fdded190e246cd415182a5816b13250e1f00",
-  "generated_at": "2026-07-04T23:15:49.768890+00:00",
+  "git_commit": "4bf4c8bdc1a4a47167b4d75bce3c9d1e3b8f5165",
+  "generated_at": "2026-07-04T23:35:21.608256+00:00",
   "produced_by": "human"
 }

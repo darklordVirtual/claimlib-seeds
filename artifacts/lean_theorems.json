@@ -1,0 +1,127 @@
+{
+  "checker": "Lean 4 kernel (core, no mathlib)",
+  "lean_version": "Lean (version 4.31.0, arm64-apple-darwin24.6.0, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
+  "n_constructive": 10,
+  "n_theorems": 20,
+  "schema": "lean_theorems_v1",
+  "source": "theorems/lean/Theorems.lean",
+  "theorems": {
+    "and_distrib_or": {
+      "axioms": [],
+      "constructive": true
+    },
+    "contraposition": {
+      "axioms": [],
+      "constructive": true
+    },
+    "contraposition_converse": {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "constructive": false
+    },
+    "de_morgan_and": {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "constructive": false
+    },
+    "de_morgan_or": {
+      "axioms": [],
+      "constructive": true
+    },
+    "double_negation": {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "constructive": false
+    },
+    "drinker": {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "constructive": false
+    },
+    "excluded_middle": {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "constructive": false
+    },
+    "exists_or": {
+      "axioms": [],
+      "constructive": true
+    },
+    "exportation": {
+      "axioms": [],
+      "constructive": true
+    },
+    "forall_and": {
+      "axioms": [],
+      "constructive": true
+    },
+    "hyp_syllogism": {
+      "axioms": [],
+      "constructive": true
+    },
+    "identity": {
+      "axioms": [],
+      "constructive": true
+    },
+    "material_implication": {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "constructive": false
+    },
+    "nat_add_assoc": {
+      "axioms": [],
+      "constructive": true
+    },
+    "nat_add_comm": {
+      "axioms": [
+        "propext"
+      ],
+      "constructive": false
+    },
+    "not_exists_iff_forall_not": {
+      "axioms": [],
+      "constructive": true
+    },
+    "not_forall_iff_exists_not": {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "constructive": false
+    },
+    "peirce": {
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "constructive": false
+    },
+    "sum_odds_eq_square": {
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ],
+      "constructive": false
+    }
+  }
+}

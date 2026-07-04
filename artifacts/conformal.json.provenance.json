@@ -3,7 +3,7 @@
   "artifact": "conformal.json",
   "artifact_sha256": "79100d8f1e581a27012f68d0c13fb6c162cfec9ad8d93bd75122898cf9c6dab1",
   "script": "python3 theorems/evidence_conformal.py",
-  "git_commit": "86f8fdded190e246cd415182a5816b13250e1f00",
-  "generated_at": "2026-07-04T23:15:50.950116+00:00",
+  "git_commit": "4bf4c8bdc1a4a47167b4d75bce3c9d1e3b8f5165",
+  "generated_at": "2026-07-04T23:35:22.765525+00:00",
   "produced_by": "human"
 }

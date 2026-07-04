@@ -659,6 +659,77 @@ claims:
       computation at evidence time.
     reproduce: "python3 theorems/evidence_conformal.py"
 
+  - id: THM-LEAN-001
+    statement: >
+      12 classical propositional theorems (identity, hypothetical syllogism,
+      contraposition both ways, double negation, excluded middle, Peirce's
+      law, both De Morgan laws, material implication, exportation,
+      distributivity) are proved for ALL propositions and accepted by the Lean
+      4 kernel; 6 of them fully constructively.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/lean_theorems.json"
+      - "theorems/lean/Theorems.lean"
+    metrics:
+      n_theorems: 12
+    caveat: >
+      Universally quantified over Prop — no longer bounded instances. Checked
+      by the Lean 4 kernel — an independently developed, widely audited
+      checker, unlike the bespoke checkers behind the bounded batteries; axiom
+      footprints (propext/Classical.choice/Quot.sound where classical) are
+      recorded per theorem in the artifact. Proofs seeded from model
+      knowledge; the kernel rejected the first drinker attempt (a Lean-3-ism),
+      which is the seeding contract working. Lean toolchain is a build-time
+      dependency for reproduce only.
+    reproduce: "python3 theorems/evidence_lean.py"
+
+  - id: THM-LEAN-002
+    statement: >
+      5 quantifier theorems — the quantifier-negation dualities, forall/exists
+      distribution, and the drinker paradox — are proved for all types and
+      predicates and accepted by the Lean 4 kernel.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/lean_theorems.json"
+      - "theorems/lean/Theorems.lean"
+    metrics:
+      n_theorems: 5
+    caveat: >
+      First-order quantifier reasoning over arbitrary types; the drinker
+      paradox and not-forall direction are classical (Classical.choice in the
+      recorded footprint). Checked by the Lean 4 kernel — an independently
+      developed, widely audited checker, unlike the bespoke checkers behind
+      the bounded batteries; axiom footprints
+      (propext/Classical.choice/Quot.sound where classical) are recorded per
+      theorem in the artifact. Proofs seeded from model knowledge; the kernel
+      rejected the first drinker attempt (a Lean-3-ism), which is the seeding
+      contract working. Lean toolchain is a build-time dependency for
+      reproduce only.
+    reproduce: "python3 theorems/evidence_lean.py"
+
+  - id: THM-LEAN-003
+    statement: >
+      3 arithmetic theorems over ALL natural numbers — commutativity and
+      associativity of addition proved by induction, and the sum of the first
+      n odd numbers equals n^2 — accepted by the Lean 4 kernel.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/lean_theorems.json"
+      - "theorems/lean/Theorems.lean"
+    metrics:
+      n_theorems: 3
+    caveat: >
+      Proved by induction over the whole of Nat — an infinite domain, which no
+      bounded battery could cover. Checked by the Lean 4 kernel — an
+      independently developed, widely audited checker, unlike the bespoke
+      checkers behind the bounded batteries; axiom footprints
+      (propext/Classical.choice/Quot.sound where classical) are recorded per
+      theorem in the artifact. Proofs seeded from model knowledge; the kernel
+      rejected the first drinker attempt (a Lean-3-ism), which is the seeding
+      contract working. Lean toolchain is a build-time dependency for
+      reproduce only.
+    reproduce: "python3 theorems/evidence_lean.py"
+
   - id: REF-001
     statement: >
       Time-uniform, nonparametric, nonasymptotic confidence sequences (2021)
@@ -1188,4 +1259,24 @@ claims:
       - source: "doi:10.1090/s0273-0979-09-01249-x — https://doi.org/10.1090/s0273-0979-09-01249-x"
         sha256: 315fd2d209610e269980d84e9355e686176ed7b36536cb72f900cc7802ad5561
         file: "research/extracts/ref-034.md"
+
+  - id: REF-036
+    statement: >
+      The Lean 4 Theorem Prover and Programming Language (2021) is a
+      registrar-verified work (doi:10.1007/978-3-030-79876-5_37) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: de Moura & Ullrich — the kernel that checks THM-LEAN-001..003.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-036.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1007/978-3-030-79876-5_37 — https://doi.org/10.1007/978-3-030-79876-5_37"
+        sha256: 28a90947fbd0740f3a4bd623bc15e0c5d35b576ca7ea4441b06ee1cd67204464
+        file: "research/extracts/ref-036.md"
 

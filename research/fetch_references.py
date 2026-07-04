@@ -101,6 +101,8 @@ SEEDS = [
      None, "carlsson", 2009, "Carlsson — topological data analysis (research front; no bounded instance attempted)"),
     ("REF-035", "Algorithmic Learning in a Random World",
      None, "vovk", 2005, "Vovk, Gammerman & Shafer — the founding conformal-prediction monograph; context for THM-CONF-001..004"),
+    ("REF-036", "The Lean 4 Theorem Prover and Programming Language",
+     None, "moura", 2021, "de Moura & Ullrich — the kernel that checks THM-LEAN-001..003"),
 ]
 
 
