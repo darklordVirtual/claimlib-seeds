@@ -1562,3 +1562,142 @@ claims:
         sha256: ed6b886c13198360964917c65ae05369a1edc0615677c7bdf536c5f215c78010
         file: "research/extracts/ref-050.md"
 
+  - id: REF-051
+    statement: >
+      Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable
+      Claims (2020) is a registrar-verified work (arxiv:2004.07213) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: the verifiable-claims agenda VeriClaim operationalizes in CI.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-051.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2004.07213 — https://arxiv.org/abs/2004.07213"
+        sha256: be85e2e5259c6e072d6d02efc3798425417e4b3aa9a7e6334722084e90b14a35
+        file: "research/extracts/ref-051.md"
+
+  - id: REF-052
+    statement: >
+      Model Cards for Model Reporting (2019) is a registrar-verified work
+      (doi:10.1145/3287560.3287596) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: structured model disclosure —
+      governance documentation standard.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-052.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/3287560.3287596 — https://doi.org/10.1145/3287560.3287596"
+        sha256: e911c9a547e1a85f2619a42aae129783810b933e905779bbc07b353c41a61a4d
+        file: "research/extracts/ref-052.md"
+
+  - id: REF-053
+    statement: >
+      Datasheets for datasets (2021) is a registrar-verified work
+      (doi:10.1145/3458723) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: dataset provenance disclosure.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-053.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/3458723 — https://doi.org/10.1145/3458723"
+        sha256: c2685b3f1de68cdfe9bd1a5a5c2288d74b2861df55286bfcd205c1f1fcb3e060
+        file: "research/extracts/ref-053.md"
+
+  - id: REF-055
+    statement: >
+      Frontier AI Regulation: Managing Emerging Risks to Public Safety (2023)
+      is a registrar-verified work (arxiv:2307.03718) whose abstract extract
+      is preserved hash-locked in this repository. Curation note: regulatory
+      instruments for frontier models.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-055.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2307.03718 — https://arxiv.org/abs/2307.03718"
+        sha256: 71d84db24ac1636b31cbc737dacdd75d33c57114c2cd668e4aa4b9512c1c8a41
+        file: "research/extracts/ref-055.md"
+
+  - id: REF-056
+    statement: >
+      Managing extreme AI risks amid rapid progress (2024) is a registrar-
+      verified work (doi:10.1126/science.adn0117) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: consensus risk-
+      management agenda (Science).
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-056.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1126/science.adn0117 — https://doi.org/10.1126/science.adn0117"
+        sha256: d936bd9ff1bf7e451010f7312a916a64e0cd3128321c71062b2e3b2666880640
+        file: "research/extracts/ref-056.md"
+
+  - id: REF-057
+    statement: >
+      Open Problems in Technical AI Governance (2024) is a registrar-verified
+      work (arxiv:2407.14981) whose abstract extract is preserved hash-locked
+      in this repository. Curation note: the technical governance research
+      map.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-057.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2407.14981 — https://arxiv.org/abs/2407.14981"
+        sha256: 18e5e1b4287bfb5dd42fcfd0c9b52d4be61338ab72d6d3a168b79be3c431a1dd
+        file: "research/extracts/ref-057.md"
+
+  - id: REF-058
+    statement: >
+      Auditing Large Language Models: A Three-Layered Approach (2023) is a
+      registrar-verified work (doi:10.2139/ssrn.4361607) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      governance/model/application audit layers — REMORA-relevant.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-058.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.2139/ssrn.4361607 — https://doi.org/10.2139/ssrn.4361607"
+        sha256: b1926b3a9d1e936e4893f3632c20209b871996036b002888eea87d58dc62dfe5
+        file: "research/extracts/ref-058.md"
+

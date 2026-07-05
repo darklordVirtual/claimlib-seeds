@@ -133,6 +133,23 @@ SEEDS = [
      None, "lewis", 2020, "grounding generation in retrieval — the RAG baseline"),
     ("REF-050", "Toy Models of Superposition",
      None, "elhage", 2022, "mechanistic interpretability of feature superposition"),
+    # --- batch C: AI governance & accountability ---
+    ("REF-051", "Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable Claims",
+     None, "brundage", 2020, "the verifiable-claims agenda VeriClaim operationalizes in CI"),
+    ("REF-052", "Model Cards for Model Reporting",
+     None, "mitchell", 2019, "structured model disclosure — governance documentation standard"),
+    ("REF-053", "Datasheets for Datasets",
+     None, "gebru", 2021, "dataset provenance disclosure"),
+    ("REF-054", "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?",
+     None, "bender", 2021, "scaling-risk critique; documentation-debt argument"),
+    ("REF-055", "Frontier AI Regulation: Managing Emerging Risks to Public Safety",
+     None, "anderljung", 2023, "regulatory instruments for frontier models"),
+    ("REF-056", "Managing extreme AI risks amid rapid progress",
+     None, "bengio", 2024, "consensus risk-management agenda (Science)"),
+    ("REF-057", "Open Problems in Technical AI Governance",
+     None, "reuel", 2024, "the technical governance research map"),
+    ("REF-058", "Auditing large language models: a three-layered approach",
+     None, "mokander", 2023, "governance/model/application audit layers — REMORA-relevant"),
 ]
 
 

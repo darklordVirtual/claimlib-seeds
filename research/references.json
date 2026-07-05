@@ -44,6 +44,11 @@
       "id": "REF-035",
       "reason": "no registrar record with an agreeing title",
       "seed_title": "Algorithmic Learning in a Random World"
+    },
+    {
+      "id": "REF-054",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?"
     }
   ],
   "schema": "references_v2",
@@ -457,6 +462,76 @@
       "why": "mechanistic interpretability of feature superposition",
       "work_id": "arxiv:2209.10652",
       "year": 2022
+    },
+    "REF-051": {
+      "accredited": false,
+      "extract": "research/extracts/ref-051.md",
+      "how": "arxiv-title-phrase",
+      "title": "Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable Claims",
+      "url": "https://arxiv.org/abs/2004.07213",
+      "why": "the verifiable-claims agenda VeriClaim operationalizes in CI",
+      "work_id": "arxiv:2004.07213",
+      "year": 2020
+    },
+    "REF-052": {
+      "accredited": true,
+      "extract": "research/extracts/ref-052.md",
+      "how": "crossref-title",
+      "title": "Model Cards for Model Reporting",
+      "url": "https://doi.org/10.1145/3287560.3287596",
+      "why": "structured model disclosure \u2014 governance documentation standard",
+      "work_id": "doi:10.1145/3287560.3287596",
+      "year": 2019
+    },
+    "REF-053": {
+      "accredited": true,
+      "extract": "research/extracts/ref-053.md",
+      "how": "crossref-title",
+      "title": "Datasheets for datasets",
+      "url": "https://doi.org/10.1145/3458723",
+      "why": "dataset provenance disclosure",
+      "work_id": "doi:10.1145/3458723",
+      "year": 2021
+    },
+    "REF-055": {
+      "accredited": false,
+      "extract": "research/extracts/ref-055.md",
+      "how": "arxiv-title-phrase",
+      "title": "Frontier AI Regulation: Managing Emerging Risks to Public Safety",
+      "url": "https://arxiv.org/abs/2307.03718",
+      "why": "regulatory instruments for frontier models",
+      "work_id": "arxiv:2307.03718",
+      "year": 2023
+    },
+    "REF-056": {
+      "accredited": true,
+      "extract": "research/extracts/ref-056.md",
+      "how": "crossref-title",
+      "title": "Managing extreme AI risks amid rapid progress",
+      "url": "https://doi.org/10.1126/science.adn0117",
+      "why": "consensus risk-management agenda (Science)",
+      "work_id": "doi:10.1126/science.adn0117",
+      "year": 2024
+    },
+    "REF-057": {
+      "accredited": false,
+      "extract": "research/extracts/ref-057.md",
+      "how": "arxiv-title-phrase",
+      "title": "Open Problems in Technical AI Governance",
+      "url": "https://arxiv.org/abs/2407.14981",
+      "why": "the technical governance research map",
+      "work_id": "arxiv:2407.14981",
+      "year": 2024
+    },
+    "REF-058": {
+      "accredited": true,
+      "extract": "research/extracts/ref-058.md",
+      "how": "crossref-title",
+      "title": "Auditing Large Language Models: A Three-Layered Approach",
+      "url": "https://doi.org/10.2139/ssrn.4361607",
+      "why": "governance/model/application audit layers \u2014 REMORA-relevant",
+      "work_id": "doi:10.2139/ssrn.4361607",
+      "year": 2023
     }
   }
 }
