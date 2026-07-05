@@ -150,6 +150,20 @@ SEEDS = [
      None, "reuel", 2024, "the technical governance research map"),
     ("REF-058", "Auditing large language models: a three-layered approach",
      None, "mokander", 2023, "governance/model/application audit layers — REMORA-relevant"),
+    # --- batch D: enterprise architecture & the TOGAF lineage ---
+    # TOGAF itself is an Open Group standard without a registrar record with
+    # named authors — it cannot pass the guards and is honestly absent; the
+    # scholarly lineage below carries the field.
+    ("REF-059", "A framework for information systems architecture",
+     None, "zachman", 1987, "Zachman — the framework TOGAF and enterprise architecture descend from"),
+    ("REF-060", "Enterprise Architecture at Work",
+     None, "lankhorst", 2005, "Lankhorst — EA modelling/analysis (ArchiMate lineage)"),
+    ("REF-061", "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+     None, "tabassi", 2023, "NIST AI RMF — the enterprise AI governance baseline REM-024..031 aligns to"),
+    ("REF-062", "Enterprise Architecture as Strategy: Creating a Foundation for Business Execution",
+     None, "ross", 2006, "Ross, Weill & Robertson — EA as operating-model foundation"),
+    ("REF-063", "Who Needs an Architect?",
+     None, "fowler", 2003, "Fowler — architecture as shared understanding, not artifacts"),
 ]
 
 

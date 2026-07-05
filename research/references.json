@@ -49,6 +49,16 @@
       "id": "REF-054",
       "reason": "no registrar record with an agreeing title",
       "seed_title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?"
+    },
+    {
+      "id": "REF-060",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Enterprise Architecture at Work"
+    },
+    {
+      "id": "REF-062",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Enterprise Architecture as Strategy: Creating a Foundation for Business Execution"
     }
   ],
   "schema": "references_v2",
@@ -532,6 +542,36 @@
       "why": "governance/model/application audit layers \u2014 REMORA-relevant",
       "work_id": "doi:10.2139/ssrn.4361607",
       "year": 2023
+    },
+    "REF-059": {
+      "accredited": true,
+      "extract": "research/extracts/ref-059.md",
+      "how": "crossref-title",
+      "title": "A framework for information systems architecture",
+      "url": "https://doi.org/10.1147/sj.263.0276",
+      "why": "Zachman \u2014 the framework TOGAF and enterprise architecture descend from",
+      "work_id": "doi:10.1147/sj.263.0276",
+      "year": 1987
+    },
+    "REF-061": {
+      "accredited": false,
+      "extract": "research/extracts/ref-061.md",
+      "how": "crossref-title",
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "url": "https://doi.org/10.6028/nist.ai.100-1",
+      "why": "NIST AI RMF \u2014 the enterprise AI governance baseline REM-024..031 aligns to",
+      "work_id": "doi:10.6028/nist.ai.100-1",
+      "year": 2023
+    },
+    "REF-063": {
+      "accredited": true,
+      "extract": "research/extracts/ref-063.md",
+      "how": "crossref-title",
+      "title": "Design - Who needs an architect?",
+      "url": "https://doi.org/10.1109/ms.2003.1231144",
+      "why": "Fowler \u2014 architecture as shared understanding, not artifacts",
+      "work_id": "doi:10.1109/ms.2003.1231144",
+      "year": 2003
     }
   }
 }

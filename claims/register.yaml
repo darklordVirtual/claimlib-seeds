@@ -1701,3 +1701,63 @@ claims:
         sha256: b1926b3a9d1e936e4893f3632c20209b871996036b002888eea87d58dc62dfe5
         file: "research/extracts/ref-058.md"
 
+  - id: REF-059
+    statement: >
+      A framework for information systems architecture (1987) is a registrar-
+      verified work (doi:10.1147/sj.263.0276) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: Zachman — the
+      framework TOGAF and enterprise architecture descend from.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-059.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1147/sj.263.0276 — https://doi.org/10.1147/sj.263.0276"
+        sha256: 0b435dcc01662c543ea009e5e46d30f477f9110fa86759a34980ef9921ee04ea
+        file: "research/extracts/ref-059.md"
+
+  - id: REF-061
+    statement: >
+      Artificial Intelligence Risk Management Framework (AI RMF 1.0) (2023) is
+      a registrar-verified work (doi:10.6028/nist.ai.100-1) whose abstract
+      extract is preserved hash-locked in this repository. Curation note: NIST
+      AI RMF — the enterprise AI governance baseline REM-024..031 aligns to.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-061.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.6028/nist.ai.100-1 — https://doi.org/10.6028/nist.ai.100-1"
+        sha256: 9e6ae76ed116df724d68ddb7be2ef23671689320c75422864b675abc9c98ba97
+        file: "research/extracts/ref-061.md"
+
+  - id: REF-063
+    statement: >
+      Design - Who needs an architect? (2003) is a registrar-verified work
+      (doi:10.1109/ms.2003.1231144) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: Fowler — architecture as
+      shared understanding, not artifacts.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-063.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1109/ms.2003.1231144 — https://doi.org/10.1109/ms.2003.1231144"
+        sha256: 55a9634fb6e7dce5c0ef84ee521b06ec68962c3a63888f434f5b7b42b4bf867b
+        file: "research/extracts/ref-063.md"
+
