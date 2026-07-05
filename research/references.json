@@ -387,6 +387,76 @@
       "why": "adversarial verification as an oversight mechanism",
       "work_id": "arxiv:1805.00899",
       "year": 2018
+    },
+    "REF-044": {
+      "accredited": false,
+      "extract": "research/extracts/ref-044.md",
+      "how": "arxiv-title-phrase",
+      "title": "Scaling Laws for Neural Language Models",
+      "url": "https://arxiv.org/abs/2001.08361",
+      "why": "the power-law compute/data/parameter relations",
+      "work_id": "arxiv:2001.08361",
+      "year": 2020
+    },
+    "REF-045": {
+      "accredited": true,
+      "extract": "research/extracts/ref-045.md",
+      "how": "crossref-title",
+      "title": "Training Compute-Optimal Large Language Models",
+      "url": "https://doi.org/10.52202/068431-2176",
+      "why": "Chinchilla \u2014 data/parameter rebalancing of scaling",
+      "work_id": "doi:10.52202/068431-2176",
+      "year": 2022
+    },
+    "REF-046": {
+      "accredited": false,
+      "extract": "research/extracts/ref-046.md",
+      "how": "arxiv-title-phrase",
+      "title": "Emergent Abilities of Large Language Models",
+      "url": "https://arxiv.org/abs/2206.07682",
+      "why": "capability discontinuities with scale \u2014 governance-relevant",
+      "work_id": "arxiv:2206.07682",
+      "year": 2022
+    },
+    "REF-047": {
+      "accredited": true,
+      "extract": "research/extracts/ref-047.md",
+      "how": "crossref-title",
+      "title": "Chain-Of-Thought Prompting Elicits Reasoning in Large Language Models",
+      "url": "https://doi.org/10.52202/068431-1800",
+      "why": "reasoning elicitation by intermediate steps",
+      "work_id": "doi:10.52202/068431-1800",
+      "year": 2022
+    },
+    "REF-048": {
+      "accredited": false,
+      "extract": "research/extracts/ref-048.md",
+      "how": "arxiv-title-phrase",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "url": "https://arxiv.org/abs/2106.09685",
+      "why": "parameter-efficient adaptation standard",
+      "work_id": "arxiv:2106.09685",
+      "year": 2021
+    },
+    "REF-049": {
+      "accredited": false,
+      "extract": "research/extracts/ref-049.md",
+      "how": "arxiv-title-phrase",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "why": "grounding generation in retrieval \u2014 the RAG baseline",
+      "work_id": "arxiv:2005.11401",
+      "year": 2020
+    },
+    "REF-050": {
+      "accredited": false,
+      "extract": "research/extracts/ref-050.md",
+      "how": "arxiv-title-phrase",
+      "title": "Toy Models of Superposition",
+      "url": "https://arxiv.org/abs/2209.10652",
+      "why": "mechanistic interpretability of feature superposition",
+      "work_id": "arxiv:2209.10652",
+      "year": 2022
     }
   }
 }

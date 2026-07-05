@@ -118,6 +118,21 @@ SEEDS = [
      None, "burns", 2023, "supervising models stronger than the supervisor — scalable-oversight core"),
     ("REF-043", "AI safety via debate",
      None, "irving", 2018, "adversarial verification as an oversight mechanism"),
+    # --- batch B: scaling, reasoning, interpretability ---
+    ("REF-044", "Scaling Laws for Neural Language Models",
+     None, "kaplan", 2020, "the power-law compute/data/parameter relations"),
+    ("REF-045", "Training Compute-Optimal Large Language Models",
+     None, "hoffmann", 2022, "Chinchilla — data/parameter rebalancing of scaling"),
+    ("REF-046", "Emergent Abilities of Large Language Models",
+     None, "wei", 2022, "capability discontinuities with scale — governance-relevant"),
+    ("REF-047", "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+     None, "wei", 2022, "reasoning elicitation by intermediate steps"),
+    ("REF-048", "LoRA: Low-Rank Adaptation of Large Language Models",
+     None, "hu", 2021, "parameter-efficient adaptation standard"),
+    ("REF-049", "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+     None, "lewis", 2020, "grounding generation in retrieval — the RAG baseline"),
+    ("REF-050", "Toy Models of Superposition",
+     None, "elhage", 2022, "mechanistic interpretability of feature superposition"),
 ]
 
 

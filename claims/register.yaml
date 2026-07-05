@@ -1422,3 +1422,143 @@ claims:
         sha256: f30f0313bd5fd246653c9a4ed03816dca2d26a781c98003a520176c30e34b55a
         file: "research/extracts/ref-043.md"
 
+  - id: REF-044
+    statement: >
+      Scaling Laws for Neural Language Models (2020) is a registrar-verified
+      work (arxiv:2001.08361) whose abstract extract is preserved hash-locked
+      in this repository. Curation note: the power-law compute/data/parameter
+      relations.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-044.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2001.08361 — https://arxiv.org/abs/2001.08361"
+        sha256: 33fbc1b02973882ac27265f23e3a9d0111193271ed516165c30d0965648bc564
+        file: "research/extracts/ref-044.md"
+
+  - id: REF-045
+    statement: >
+      Training Compute-Optimal Large Language Models (2022) is a registrar-
+      verified work (doi:10.52202/068431-2176) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: Chinchilla —
+      data/parameter rebalancing of scaling.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-045.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/068431-2176 — https://doi.org/10.52202/068431-2176"
+        sha256: 76babb6bed2a22587988fe4a9215fd43494b0e6dd65b54531074aa088e9776b2
+        file: "research/extracts/ref-045.md"
+
+  - id: REF-046
+    statement: >
+      Emergent Abilities of Large Language Models (2022) is a registrar-
+      verified work (arxiv:2206.07682) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: capability
+      discontinuities with scale — governance-relevant.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-046.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2206.07682 — https://arxiv.org/abs/2206.07682"
+        sha256: 2da403a48e51803231e8dbd1b4f684a2ae5dd64e3812754bc11a6399f9bf9d1b
+        file: "research/extracts/ref-046.md"
+
+  - id: REF-047
+    statement: >
+      Chain-Of-Thought Prompting Elicits Reasoning in Large Language Models
+      (2022) is a registrar-verified work (doi:10.52202/068431-1800) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: reasoning elicitation by intermediate steps.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-047.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/068431-1800 — https://doi.org/10.52202/068431-1800"
+        sha256: f646befcaa7dad1c22bb98ef11d29d5d1a9529dec56de4973fa111d3b5fcc11e
+        file: "research/extracts/ref-047.md"
+
+  - id: REF-048
+    statement: >
+      LoRA: Low-Rank Adaptation of Large Language Models (2021) is a
+      registrar-verified work (arxiv:2106.09685) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: parameter-
+      efficient adaptation standard.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-048.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2106.09685 — https://arxiv.org/abs/2106.09685"
+        sha256: f0b0b69c7d14aa5192b759aad7f409974c407830f57914a3109d25aeb41f2734
+        file: "research/extracts/ref-048.md"
+
+  - id: REF-049
+    statement: >
+      Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (2020)
+      is a registrar-verified work (arxiv:2005.11401) whose abstract extract
+      is preserved hash-locked in this repository. Curation note: grounding
+      generation in retrieval — the RAG baseline.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-049.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2005.11401 — https://arxiv.org/abs/2005.11401"
+        sha256: 696b4a6b6ab8ea665d3de09e146d690e935c27b440e4db3b2f2fe4eebc8b5164
+        file: "research/extracts/ref-049.md"
+
+  - id: REF-050
+    statement: >
+      Toy Models of Superposition (2022) is a registrar-verified work
+      (arxiv:2209.10652) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: mechanistic interpretability of feature
+      superposition.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-050.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2209.10652 — https://arxiv.org/abs/2209.10652"
+        sha256: ed6b886c13198360964917c65ae05369a1edc0615677c7bdf536c5f215c78010
+        file: "research/extracts/ref-050.md"
+
