@@ -1280,3 +1280,145 @@ claims:
         sha256: 28a90947fbd0740f3a4bd623bc15e0c5d35b576ca7ea4441b06ee1cd67204464
         file: "research/extracts/ref-036.md"
 
+  - id: REF-037
+    statement: >
+      Training Language Models to Follow Instructions with Human Feedback
+      (2022) is a registrar-verified work (doi:10.52202/068431-2011) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: InstructGPT — RLHF as the alignment baseline of modern assistants.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-037.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/068431-2011 — https://doi.org/10.52202/068431-2011"
+        sha256: 2300418d033f986d907eb1419c8282f7e7011183071f746fa876cc8d2df214e5
+        file: "research/extracts/ref-037.md"
+
+  - id: REF-038
+    statement: >
+      Constitutional AI: Harmlessness from AI Feedback (2022) is a registrar-
+      verified work (arxiv:2212.08073) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: principle-guided self-
+      critique replacing human harm labels.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-038.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2212.08073 — https://arxiv.org/abs/2212.08073"
+        sha256: 28568e5968a58a1944137b7174ea1c88da479cd768c285510e084f9a0f38500e
+        file: "research/extracts/ref-038.md"
+
+  - id: REF-039
+    statement: >
+      Direct Preference Optimization: Your Language Model is Secretly a Reward
+      Model (2023) is a registrar-verified work (doi:10.52202/075280-2338)
+      whose abstract extract is preserved hash-locked in this repository.
+      Curation note: preference optimization without an explicit reward model.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-039.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/075280-2338 — https://doi.org/10.52202/075280-2338"
+        sha256: 44e945a6f6355754d3c241e4333cdb689f7cfec0c9b50162d78c6662b24c5777
+        file: "research/extracts/ref-039.md"
+
+  - id: REF-040
+    statement: >
+      Concrete Problems in AI Safety (2016) is a registrar-verified work
+      (arxiv:1606.06565) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: the agenda paper that framed practical
+      safety research.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-040.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1606.06565 — https://arxiv.org/abs/1606.06565"
+        sha256: 85d6b49bbc1f3a7ac2b4952932dd67ba62dfbb1b524cafe22801646de9c136cc
+        file: "research/extracts/ref-040.md"
+
+  - id: REF-041
+    statement: >
+      Sleeper Agents: Training Deceptive LLMs that Persist Through Safety
+      Training (2024) is a registrar-verified work (arxiv:2401.05566) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: deceptive behavior surviving safety training — core threat model
+      for gating.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-041.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2401.05566 — https://arxiv.org/abs/2401.05566"
+        sha256: bb4e83f155831ad163e86601bc6703698a39874760e513aab2e273a834d2e3a7
+        file: "research/extracts/ref-041.md"
+
+  - id: REF-042
+    statement: >
+      Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak
+      Supervision (2023) is a registrar-verified work (arxiv:2312.09390) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: supervising models stronger than the supervisor — scalable-
+      oversight core.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-042.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2312.09390 — https://arxiv.org/abs/2312.09390"
+        sha256: 6338a8e57f12aa82c020490e99121112161ecb01e90f7104a24e82a121b2f133
+        file: "research/extracts/ref-042.md"
+
+  - id: REF-043
+    statement: >
+      AI safety via debate (2018) is a registrar-verified work
+      (arxiv:1805.00899) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: adversarial verification as an oversight
+      mechanism.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-043.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1805.00899 — https://arxiv.org/abs/1805.00899"
+        sha256: f30f0313bd5fd246653c9a4ed03816dca2d26a781c98003a520176c30e34b55a
+        file: "research/extracts/ref-043.md"
+

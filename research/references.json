@@ -317,6 +317,76 @@
       "why": "de Moura & Ullrich \u2014 the kernel that checks THM-LEAN-001..003",
       "work_id": "doi:10.1007/978-3-030-79876-5_37",
       "year": 2021
+    },
+    "REF-037": {
+      "accredited": true,
+      "extract": "research/extracts/ref-037.md",
+      "how": "crossref-title",
+      "title": "Training Language Models to Follow Instructions with Human Feedback",
+      "url": "https://doi.org/10.52202/068431-2011",
+      "why": "InstructGPT \u2014 RLHF as the alignment baseline of modern assistants",
+      "work_id": "doi:10.52202/068431-2011",
+      "year": 2022
+    },
+    "REF-038": {
+      "accredited": false,
+      "extract": "research/extracts/ref-038.md",
+      "how": "arxiv-title-phrase",
+      "title": "Constitutional AI: Harmlessness from AI Feedback",
+      "url": "https://arxiv.org/abs/2212.08073",
+      "why": "principle-guided self-critique replacing human harm labels",
+      "work_id": "arxiv:2212.08073",
+      "year": 2022
+    },
+    "REF-039": {
+      "accredited": true,
+      "extract": "research/extracts/ref-039.md",
+      "how": "crossref-title",
+      "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "url": "https://doi.org/10.52202/075280-2338",
+      "why": "preference optimization without an explicit reward model",
+      "work_id": "doi:10.52202/075280-2338",
+      "year": 2023
+    },
+    "REF-040": {
+      "accredited": false,
+      "extract": "research/extracts/ref-040.md",
+      "how": "arxiv-title-phrase",
+      "title": "Concrete Problems in AI Safety",
+      "url": "https://arxiv.org/abs/1606.06565",
+      "why": "the agenda paper that framed practical safety research",
+      "work_id": "arxiv:1606.06565",
+      "year": 2016
+    },
+    "REF-041": {
+      "accredited": false,
+      "extract": "research/extracts/ref-041.md",
+      "how": "arxiv-title-phrase",
+      "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+      "url": "https://arxiv.org/abs/2401.05566",
+      "why": "deceptive behavior surviving safety training \u2014 core threat model for gating",
+      "work_id": "arxiv:2401.05566",
+      "year": 2024
+    },
+    "REF-042": {
+      "accredited": false,
+      "extract": "research/extracts/ref-042.md",
+      "how": "arxiv-title-phrase",
+      "title": "Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision",
+      "url": "https://arxiv.org/abs/2312.09390",
+      "why": "supervising models stronger than the supervisor \u2014 scalable-oversight core",
+      "work_id": "arxiv:2312.09390",
+      "year": 2023
+    },
+    "REF-043": {
+      "accredited": false,
+      "extract": "research/extracts/ref-043.md",
+      "how": "arxiv-title-phrase",
+      "title": "AI safety via debate",
+      "url": "https://arxiv.org/abs/1805.00899",
+      "why": "adversarial verification as an oversight mechanism",
+      "work_id": "arxiv:1805.00899",
+      "year": 2018
     }
   }
 }

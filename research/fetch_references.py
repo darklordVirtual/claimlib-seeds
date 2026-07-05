@@ -103,6 +103,21 @@ SEEDS = [
      None, "vovk", 2005, "Vovk, Gammerman & Shafer — the founding conformal-prediction monograph; context for THM-CONF-001..004"),
     ("REF-036", "The Lean 4 Theorem Prover and Programming Language",
      None, "moura", 2021, "de Moura & Ullrich — the kernel that checks THM-LEAN-001..003"),
+    # --- batch A: alignment & safety landmarks ---
+    ("REF-037", "Training language models to follow instructions with human feedback",
+     None, "ouyang", 2022, "InstructGPT — RLHF as the alignment baseline of modern assistants"),
+    ("REF-038", "Constitutional AI: Harmlessness from AI Feedback",
+     None, "bai", 2022, "principle-guided self-critique replacing human harm labels"),
+    ("REF-039", "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+     None, "rafailov", 2023, "preference optimization without an explicit reward model"),
+    ("REF-040", "Concrete Problems in AI Safety",
+     None, "amodei", 2016, "the agenda paper that framed practical safety research"),
+    ("REF-041", "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+     None, "hubinger", 2024, "deceptive behavior surviving safety training — core threat model for gating"),
+    ("REF-042", "Weak-to-Strong Generalization: Eliciting Strong Capabilities with Weak Supervision",
+     None, "burns", 2023, "supervising models stronger than the supervisor — scalable-oversight core"),
+    ("REF-043", "AI safety via debate",
+     None, "irving", 2018, "adversarial verification as an oversight mechanism"),
 ]
 
 
