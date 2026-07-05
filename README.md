@@ -1,6 +1,9 @@
-# claimlib-seeds
+# What if an AI could only say things a machine has verified?
 
-Model-seeded, machine-verified knowledge for the vericlaim claims library.
+This library is that experiment, running: every theorem, number and citation
+here was PROPOSED by a model — and exists only because a proof checker,
+exhaustive computation or academic registrar approved it. The proposals that
+failed are documented too. Zero trust in the proposer, by construction.
 
 **The seeding contract:** formulas, derivations and reference titles here
 were proposed from model knowledge (Claude Fable). Nothing is trusted
