@@ -1761,3 +1761,185 @@ claims:
         sha256: 55a9634fb6e7dce5c0ef84ee521b06ec68962c3a63888f434f5b7b42b4bf867b
         file: "research/extracts/ref-063.md"
 
+  - id: REF-064
+    statement: >
+      Reflections on trusting trust (1984) is a registrar-verified work
+      (doi:10.1145/358198.358210) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: the compiler-backdoor argument
+      — the root problem vericlaim's provenance chain addresses.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-064.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/358198.358210 — https://doi.org/10.1145/358198.358210"
+        sha256: 6167ee494a71a063172fd45ae04469d0f34524cb1e8dcaf81e0effeda954ab17
+        file: "research/extracts/ref-064.md"
+
+  - id: REF-065
+    statement: >
+      The protection of information in computer systems (1975) is a registrar-
+      verified work (doi:10.1109/proc.1975.9939) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: Saltzer &
+      Schroeder — the design principles (fail-safe defaults = our fail
+      closed).
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-065.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1109/proc.1975.9939 — https://doi.org/10.1109/proc.1975.9939"
+        sha256: 611c5d6147456b0bb8a8223f36a0ed9b75e7ad39e5a243a2d2bec9bc047d60cb
+        file: "research/extracts/ref-065.md"
+
+  - id: REF-066
+    statement: >
+      Intriguing properties of neural networks (2013) is a registrar-verified
+      work (arxiv:1312.6199) whose abstract extract is preserved hash-locked
+      in this repository. Curation note: the discovery of adversarial
+      examples.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-066.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1312.6199 — https://arxiv.org/abs/1312.6199"
+        sha256: 2672570c8e95bbc9414dd6987ce8bc20e870ca6ee7028d515b776fcd601f158e
+        file: "research/extracts/ref-066.md"
+
+  - id: REF-067
+    statement: >
+      Explaining and Harnessing Adversarial Examples (2014) is a registrar-
+      verified work (arxiv:1412.6572) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: FGSM — adversarial
+      vulnerability as linearity.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-067.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1412.6572 — https://arxiv.org/abs/1412.6572"
+        sha256: 2a56a72b19f1921db843ef2bc518e9e72dd8fb57b95f952c0d48a9bc329c32d6
+        file: "research/extracts/ref-067.md"
+
+  - id: REF-068
+    statement: >
+      Extracting Training Data from Large Language Models (2020) is a
+      registrar-verified work (arxiv:2012.07805) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: memorization
+      leakage — LLM data-security baseline.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-068.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2012.07805 — https://arxiv.org/abs/2012.07805"
+        sha256: 2c6e84cc3094db75e81ea218ff2b5de4670e15fbe9c4741b3f54a08466d7e515
+        file: "research/extracts/ref-068.md"
+
+  - id: REF-069
+    statement: >
+      Universal and Transferable Adversarial Attacks on Aligned Language
+      Models (2023) is a registrar-verified work (arxiv:2307.15043) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: GCG jailbreaks — transferable attacks on alignment.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-069.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2307.15043 — https://arxiv.org/abs/2307.15043"
+        sha256: fd0dd66af10f8ffd4efd3deef47cfe95c1eca2c07993a0ea013c3279a035a8cc
+        file: "research/extracts/ref-069.md"
+
+  - id: REF-070
+    statement: >
+      Not What You've Signed Up For: Compromising Real-World LLM-Integrated
+      Applications with Indirect Prompt Injection (2023) is a registrar-
+      verified work (doi:10.1145/3605764.3623985) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: indirect prompt
+      injection — the agent-security threat REMORA gates against.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-070.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/3605764.3623985 — https://doi.org/10.1145/3605764.3623985"
+        sha256: c827db30345c37555e805193b5b2e32b51f49bf7947716289805e0e567f6fb13
+        file: "research/extracts/ref-070.md"
+
+  - id: REF-071
+    statement: >
+      Calibrating Noise to Sensitivity in Private Data Analysis (2006) is a
+      registrar-verified work (doi:10.1007/11681878_14) whose abstract extract
+      is preserved hash-locked in this repository. Curation note: differential
+      privacy — the definition.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-071.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1007/11681878_14 — https://doi.org/10.1007/11681878_14"
+        sha256: 67be7e49b72990bc3d1fbe13b2bb4091f6aa8a952cd3b66b7aa061dd462afc85
+        file: "research/extracts/ref-071.md"
+
+  - id: REF-072
+    statement: >
+      Deep Learning with Differential Privacy (2016) is a registrar-verified
+      work (doi:10.1145/2976749.2978318) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: DP-SGD — private training
+      in practice.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-072.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/2976749.2978318 — https://doi.org/10.1145/2976749.2978318"
+        sha256: fd5c66ea83f9894631d7642e986f70597df9927032dd70ecbea6294c8378d20e
+        file: "research/extracts/ref-072.md"
+

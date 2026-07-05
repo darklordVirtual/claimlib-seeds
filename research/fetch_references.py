@@ -164,6 +164,27 @@ SEEDS = [
      None, "ross", 2006, "Ross, Weill & Robertson — EA as operating-model foundation"),
     ("REF-063", "Who Needs an Architect?",
      None, "fowler", 2003, "Fowler — architecture as shared understanding, not artifacts"),
+    # --- batch E: security — classics, ML attacks, privacy ---
+    ("REF-064", "Reflections on Trusting Trust",
+     None, "thompson", 1984, "the compiler-backdoor argument — the root problem vericlaim's provenance chain addresses"),
+    ("REF-065", "The Protection of Information in Computer Systems",
+     None, "saltzer", 1975, "Saltzer & Schroeder — the design principles (fail-safe defaults = our fail closed)"),
+    ("REF-066", "Intriguing properties of neural networks",
+     None, "szegedy", 2013, "the discovery of adversarial examples"),
+    ("REF-067", "Explaining and Harnessing Adversarial Examples",
+     None, "goodfellow", 2014, "FGSM — adversarial vulnerability as linearity"),
+    ("REF-068", "Extracting Training Data from Large Language Models",
+     None, "carlini", 2020, "memorization leakage — LLM data-security baseline"),
+    ("REF-069", "Universal and Transferable Adversarial Attacks on Aligned Language Models",
+     None, "zou", 2023, "GCG jailbreaks — transferable attacks on alignment"),
+    ("REF-070", "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+     None, "greshake", 2023, "indirect prompt injection — the agent-security threat REMORA gates against"),
+    ("REF-071", "Calibrating Noise to Sensitivity in Private Data Analysis",
+     None, "dwork", 2006, "differential privacy — the definition"),
+    ("REF-072", "Deep Learning with Differential Privacy",
+     None, "abadi", 2016, "DP-SGD — private training in practice"),
+    ("REF-073", "Understanding the Mirai Botnet",
+     None, "antonakakis", 2017, "IoT botnet anatomy — context for the Luftfiber UDM incident class"),
 ]
 
 

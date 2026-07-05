@@ -59,6 +59,11 @@
       "id": "REF-062",
       "reason": "no registrar record with an agreeing title",
       "seed_title": "Enterprise Architecture as Strategy: Creating a Foundation for Business Execution"
+    },
+    {
+      "id": "REF-073",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Understanding the Mirai Botnet"
     }
   ],
   "schema": "references_v2",
@@ -572,6 +577,96 @@
       "why": "Fowler \u2014 architecture as shared understanding, not artifacts",
       "work_id": "doi:10.1109/ms.2003.1231144",
       "year": 2003
+    },
+    "REF-064": {
+      "accredited": true,
+      "extract": "research/extracts/ref-064.md",
+      "how": "crossref-title",
+      "title": "Reflections on trusting trust",
+      "url": "https://doi.org/10.1145/358198.358210",
+      "why": "the compiler-backdoor argument \u2014 the root problem vericlaim's provenance chain addresses",
+      "work_id": "doi:10.1145/358198.358210",
+      "year": 1984
+    },
+    "REF-065": {
+      "accredited": true,
+      "extract": "research/extracts/ref-065.md",
+      "how": "crossref-title",
+      "title": "The protection of information in computer systems",
+      "url": "https://doi.org/10.1109/proc.1975.9939",
+      "why": "Saltzer & Schroeder \u2014 the design principles (fail-safe defaults = our fail closed)",
+      "work_id": "doi:10.1109/proc.1975.9939",
+      "year": 1975
+    },
+    "REF-066": {
+      "accredited": false,
+      "extract": "research/extracts/ref-066.md",
+      "how": "arxiv-title-phrase",
+      "title": "Intriguing properties of neural networks",
+      "url": "https://arxiv.org/abs/1312.6199",
+      "why": "the discovery of adversarial examples",
+      "work_id": "arxiv:1312.6199",
+      "year": 2013
+    },
+    "REF-067": {
+      "accredited": false,
+      "extract": "research/extracts/ref-067.md",
+      "how": "arxiv-title-phrase",
+      "title": "Explaining and Harnessing Adversarial Examples",
+      "url": "https://arxiv.org/abs/1412.6572",
+      "why": "FGSM \u2014 adversarial vulnerability as linearity",
+      "work_id": "arxiv:1412.6572",
+      "year": 2014
+    },
+    "REF-068": {
+      "accredited": false,
+      "extract": "research/extracts/ref-068.md",
+      "how": "arxiv-title-phrase",
+      "title": "Extracting Training Data from Large Language Models",
+      "url": "https://arxiv.org/abs/2012.07805",
+      "why": "memorization leakage \u2014 LLM data-security baseline",
+      "work_id": "arxiv:2012.07805",
+      "year": 2020
+    },
+    "REF-069": {
+      "accredited": false,
+      "extract": "research/extracts/ref-069.md",
+      "how": "arxiv-title-phrase",
+      "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models",
+      "url": "https://arxiv.org/abs/2307.15043",
+      "why": "GCG jailbreaks \u2014 transferable attacks on alignment",
+      "work_id": "arxiv:2307.15043",
+      "year": 2023
+    },
+    "REF-070": {
+      "accredited": true,
+      "extract": "research/extracts/ref-070.md",
+      "how": "crossref-title",
+      "title": "Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+      "url": "https://doi.org/10.1145/3605764.3623985",
+      "why": "indirect prompt injection \u2014 the agent-security threat REMORA gates against",
+      "work_id": "doi:10.1145/3605764.3623985",
+      "year": 2023
+    },
+    "REF-071": {
+      "accredited": true,
+      "extract": "research/extracts/ref-071.md",
+      "how": "crossref-title",
+      "title": "Calibrating Noise to Sensitivity in Private Data Analysis",
+      "url": "https://doi.org/10.1007/11681878_14",
+      "why": "differential privacy \u2014 the definition",
+      "work_id": "doi:10.1007/11681878_14",
+      "year": 2006
+    },
+    "REF-072": {
+      "accredited": true,
+      "extract": "research/extracts/ref-072.md",
+      "how": "crossref-title",
+      "title": "Deep Learning with Differential Privacy",
+      "url": "https://doi.org/10.1145/2976749.2978318",
+      "why": "DP-SGD \u2014 private training in practice",
+      "work_id": "doi:10.1145/2976749.2978318",
+      "year": 2016
     }
   }
 }
