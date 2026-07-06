@@ -37,6 +37,7 @@ def main() -> int:
     vm = json.loads((ROOT / "artifacts" / "verifier_math.json").read_text())
     dt = json.loads((ROOT / "artifacts" / "decision_theory.json").read_text())
     gov = json.loads((ROOT / "artifacts" / "governance_map.json").read_text())
+    coup = json.loads((ROOT / "artifacts" / "identity_coupling.json").read_text())
     ctrl = json.loads((ROOT / "artifacts" / "control_register.json").read_text())
     assure = json.loads((ROOT / "artifacts" / "assurance_ea_copilot.json").read_text())
 
@@ -601,6 +602,73 @@ def main() -> int:
         out.append(block("caveat", cav).rstrip())
         out.append('    reproduce: "python3 governance/evidence_framework_map.py '
                    'governance/framework_map.py"')
+        out.append("")
+
+    coupling_claims = [
+        ("CLAIM-COUPLE-001", "measured",
+         f"Cross-cloud coupling crosswalk: across {coup['clouds']} clouds (AWS, "
+         f"Azure, GCP, OpenShift) and {coup['coupling_dimensions']} identity/"
+         f"policy coupling dimensions (workload identity federation, human "
+         f"authentication, authorization policy-as-code, secrets management, "
+         f"observability/audit, service-to-service mTLS), all {coup['cells']} "
+         f"cells name a concrete native mechanism and couple on "
+         f"{coup['open_standards']} open standards (OIDC, OAuth2, RFC 8693 token "
+         f"exchange, SAML2, SCIM2, JWT, X.509/mTLS, SPIFFE, OPA/Rego, Cedar, "
+         f"CEL, OpenTelemetry, CloudEvents) via {coup['standard_edges']} edges — "
+         f"and every dimension is anchored by at least "
+         f"{coup['min_portable_standards_per_dimension']} standard(s) shared "
+         f"across >=2 clouds, so each seam is verifiably vendor-neutral. "
+         f"Verified fail-closed.",
+         {"clouds": coup["clouds"],
+          "coupling_dimensions": coup["coupling_dimensions"],
+          "cells": coup["cells"],
+          "open_standards": coup["open_standards"],
+          "standard_edges": coup["standard_edges"]},
+         "A reusable building block for portable, multi-cloud AI governance: "
+         "couple the control plane on the open standards each cloud already "
+         "speaks and treat native services (Entra WIF, GCP Workload Identity "
+         "Federation, AWS IAM Roles Anywhere/IRSA, OpenShift OAuth) as adapters. "
+         "It is an ARCHITECTURE TRACEABILITY aid over publicly documented "
+         "mechanisms — NOT a security design review, NOT a certification, and "
+         "NOT evidence that any deployment is correctly configured; native "
+         "service names are current at authoring time and clouds rename/add "
+         "services. The checkable property is internal completeness and "
+         "cross-cloud standard-sharing; the standards themselves are the "
+         "authority, preserved hash-locked in the literature catalog."),
+    ]
+    for cid, level, stmt, metrics, cav in coupling_claims:
+        out.append(f"  - id: {cid}")
+        out.append(block("statement", stmt).rstrip())
+        out.append(f"    evidence_level: {level}")
+        out.append("    artifact:")
+        out.append('      - "artifacts/identity_coupling.json"')
+        out.append("    metrics:")
+        for k, v in metrics.items():
+            out.append(f"      {k}: {v}")
+        out.append(block("caveat", cav).rstrip())
+        out.append('    reproduce: "python3 governance/evidence_identity_coupling.py '
+                   'governance/identity_coupling.py"')
+        # Hash-locked authoritative standards behind the crosswalk. source is
+        # the canonical spec ID; the committed curator note is hashed here so a
+        # silent edit to it fails the literature-integrity check. A citation is
+        # context, never evidence — the artifact above is the evidence.
+        standards_lit = [
+            ("rfc:6749", "refs/standards/oauth2-rfc6749.md"),
+            ("spec:openid-connect-core-1.0", "refs/standards/oidc-core.md"),
+            ("rfc:8693", "refs/standards/token-exchange-rfc8693.md"),
+            ("rfc:8705", "refs/standards/oauth-mtls-rfc8705.md"),
+            ("spec:spiffe", "refs/standards/spiffe.md"),
+            ("spec:open-policy-agent", "refs/standards/opa-rego.md"),
+            ("spec:cedar-policy", "refs/standards/cedar.md"),
+            ("doi:10.6028/NIST.SP.800-207", "refs/standards/nist-sp-800-207-zero-trust.md"),
+            ("rfc:7643", "refs/standards/scim-rfc7643-7644.md"),
+        ]
+        out.append("    literature:")
+        for source, rel in standards_lit:
+            sha = hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
+            out.append(f'      - source: "{source}"')
+            out.append(f"        sha256: {sha}")
+            out.append(f"        file: {rel}")
         out.append("")
 
     ops_claims = [

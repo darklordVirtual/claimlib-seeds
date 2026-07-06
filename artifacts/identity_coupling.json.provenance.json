@@ -1,0 +1,9 @@
+{
+  "schema": "vericlaim_provenance_v2",
+  "artifact": "identity_coupling.json",
+  "artifact_sha256": "f7543dfa16576a253733acf0e5fade8af4624f6d7dbcbedc82247d3a4a539379",
+  "script": "python3 governance/evidence_identity_coupling.py",
+  "git_commit": "949b7d69ea47c2c83bbfcb7d7f9d5465fe849bcf",
+  "generated_at": "2026-07-06T10:22:42.107452+00:00",
+  "produced_by": "human"
+}

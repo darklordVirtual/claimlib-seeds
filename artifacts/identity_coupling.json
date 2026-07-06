@@ -1,0 +1,37 @@
+{
+  "cells": 24,
+  "clouds": 4,
+  "coupling_dimensions": 6,
+  "min_portable_standards_per_dimension": 2,
+  "open_standards": 13,
+  "portable_anchors": {
+    "authorization_policy": [
+      "CEL",
+      "Rego_OPA"
+    ],
+    "human_authentication": [
+      "OAuth2",
+      "OIDC",
+      "SAML2",
+      "SCIM2"
+    ],
+    "observability_audit": [
+      "CloudEvents",
+      "OpenTelemetry"
+    ],
+    "secrets_management": [
+      "OIDC",
+      "mTLS_X509"
+    ],
+    "service_identity_mtls": [
+      "SPIFFE",
+      "mTLS_X509"
+    ],
+    "workload_identity_federation": [
+      "JWT",
+      "OAuth2_token_exchange",
+      "OIDC"
+    ]
+  },
+  "standard_edges": 59
+}

@@ -837,6 +837,68 @@ claims:
       verified deterministically at evidence time.
     reproduce: "python3 governance/evidence_framework_map.py governance/framework_map.py"
 
+  - id: CLAIM-COUPLE-001
+    statement: >
+      Cross-cloud coupling crosswalk: across 4 clouds (AWS, Azure, GCP,
+      OpenShift) and 6 identity/policy coupling dimensions (workload identity
+      federation, human authentication, authorization policy-as-code, secrets
+      management, observability/audit, service-to-service mTLS), all 24 cells
+      name a concrete native mechanism and couple on 13 open standards (OIDC,
+      OAuth2, RFC 8693 token exchange, SAML2, SCIM2, JWT, X.509/mTLS, SPIFFE,
+      OPA/Rego, Cedar, CEL, OpenTelemetry, CloudEvents) via 59 edges — and
+      every dimension is anchored by at least 2 standard(s) shared across >=2
+      clouds, so each seam is verifiably vendor-neutral. Verified fail-closed.
+    evidence_level: measured
+    artifact:
+      - "artifacts/identity_coupling.json"
+    metrics:
+      clouds: 4
+      coupling_dimensions: 6
+      cells: 24
+      open_standards: 13
+      standard_edges: 59
+    caveat: >
+      A reusable building block for portable, multi-cloud AI governance:
+      couple the control plane on the open standards each cloud already speaks
+      and treat native services (Entra WIF, GCP Workload Identity Federation,
+      AWS IAM Roles Anywhere/IRSA, OpenShift OAuth) as adapters. It is an
+      ARCHITECTURE TRACEABILITY aid over publicly documented mechanisms — NOT
+      a security design review, NOT a certification, and NOT evidence that any
+      deployment is correctly configured; native service names are current at
+      authoring time and clouds rename/add services. The checkable property is
+      internal completeness and cross-cloud standard-sharing; the standards
+      themselves are the authority, preserved hash-locked in the literature
+      catalog.
+    reproduce: "python3 governance/evidence_identity_coupling.py governance/identity_coupling.py"
+    literature:
+      - source: "rfc:6749"
+        sha256: 8e8d0ccf097ed9a9810940b2cf1d812b0e405ebd299f1f727dd655c8962bedac
+        file: refs/standards/oauth2-rfc6749.md
+      - source: "spec:openid-connect-core-1.0"
+        sha256: 642c067222d3e082a39443aae2e8de56c8112358450105b2b5be1bac09777279
+        file: refs/standards/oidc-core.md
+      - source: "rfc:8693"
+        sha256: 0febe73ba9eeff82ef0191ec75c02a1983cf6ca5e5f36038be99630e27f37c7c
+        file: refs/standards/token-exchange-rfc8693.md
+      - source: "rfc:8705"
+        sha256: 7078cec8611dceae064dd68fbe569c46726943f0afab367889dd8a2bd8f7f4f6
+        file: refs/standards/oauth-mtls-rfc8705.md
+      - source: "spec:spiffe"
+        sha256: 394d1c01b1f8d19fad2c4a7be375927a3c80d51b75c4914cd96ba2d743544bbf
+        file: refs/standards/spiffe.md
+      - source: "spec:open-policy-agent"
+        sha256: 623e8496a731f8e6c33a60b64dc1691184fc7f901d7882b498062afcd0b43d73
+        file: refs/standards/opa-rego.md
+      - source: "spec:cedar-policy"
+        sha256: fdf11c0f7b6db76bba1e455940d2b2fb212a96ac9e5af6f787f60e955d9bfb23
+        file: refs/standards/cedar.md
+      - source: "doi:10.6028/NIST.SP.800-207"
+        sha256: 80f047ce550001a17c5937005a672302d00e9bec8fc82643b3c804cb9fa4a4bf
+        file: refs/standards/nist-sp-800-207-zero-trust.md
+      - source: "rfc:7643"
+        sha256: 1440118b2efab3ae5bd94417e37d5aa51d77850a7f932bbb46febf48087f3a29
+        file: refs/standards/scim-rfc7643-7644.md
+
   - id: CLAIM-CTRL-001
     statement: >
       Operative control register: 14 AI controls (all approved), each with a
