@@ -1,0 +1,71 @@
+{
+  "control_objectives": 10,
+  "coverage": {
+    "data_governance": [
+      "EU_AI_Act_high_risk.data_and_data_governance",
+      "NIST_AI_RMF_1.0.MAP",
+      "NIST_CSF_2.0.IDENTIFY",
+      "NIST_Privacy_Framework.IDENTIFY_P"
+    ],
+    "fairness_nondiscrimination": [
+      "EU_AI_Act_high_risk.data_and_data_governance",
+      "NIST_AI_RMF_1.0.MEASURE"
+    ],
+    "governance_accountability": [
+      "ISO_IEC_42001.context",
+      "ISO_IEC_42001.leadership",
+      "ISO_IEC_42001.support",
+      "NIST_AI_RMF_1.0.GOVERN",
+      "NIST_CSF_2.0.GOVERN",
+      "NIST_Privacy_Framework.GOVERN_P"
+    ],
+    "human_oversight": [
+      "EU_AI_Act_high_risk.human_oversight",
+      "ISO_IEC_42001.operation",
+      "NIST_AI_RMF_1.0.MANAGE"
+    ],
+    "logging_traceability": [
+      "EU_AI_Act_high_risk.record_keeping",
+      "NIST_CSF_2.0.DETECT"
+    ],
+    "monitoring_postmarket": [
+      "ISO_IEC_42001.improvement",
+      "ISO_IEC_42001.performance_evaluation",
+      "NIST_AI_RMF_1.0.MANAGE",
+      "NIST_AI_RMF_1.0.MEASURE",
+      "NIST_CSF_2.0.DETECT",
+      "NIST_CSF_2.0.RECOVER",
+      "NIST_CSF_2.0.RESPOND"
+    ],
+    "privacy_dataprotection": [
+      "NIST_CSF_2.0.PROTECT",
+      "NIST_Privacy_Framework.CONTROL_P",
+      "NIST_Privacy_Framework.IDENTIFY_P",
+      "NIST_Privacy_Framework.PROTECT_P"
+    ],
+    "risk_management": [
+      "EU_AI_Act_high_risk.risk_management_system",
+      "ISO_IEC_42001.planning",
+      "NIST_AI_RMF_1.0.GOVERN",
+      "NIST_AI_RMF_1.0.MANAGE",
+      "NIST_AI_RMF_1.0.MAP",
+      "NIST_CSF_2.0.IDENTIFY"
+    ],
+    "robustness_accuracy": [
+      "EU_AI_Act_high_risk.accuracy_robustness_cybersecurity",
+      "ISO_IEC_42001.operation",
+      "NIST_AI_RMF_1.0.MEASURE",
+      "NIST_CSF_2.0.PROTECT"
+    ],
+    "transparency_documentation": [
+      "EU_AI_Act_high_risk.technical_documentation",
+      "EU_AI_Act_high_risk.transparency",
+      "NIST_AI_RMF_1.0.MAP",
+      "NIST_Privacy_Framework.COMMUNICATE_P"
+    ]
+  },
+  "framework_elements": 29,
+  "frameworks": 5,
+  "mapping_edges": 42,
+  "min_frameworks_per_objective": 2
+}

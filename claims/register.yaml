@@ -808,6 +808,35 @@ claims:
       time.
     reproduce: "python3 theorems/evidence_decision_theory.py theorems/decision_theory.py"
 
+  - id: CLAIM-GOV-001
+    statement: >
+      Governance crosswalk: the public top-level structure of 5 frameworks
+      (NIST AI RMF 1.0, NIST CSF 2.0, EU AI Act high-risk requirements,
+      ISO/IEC 42001, NIST Privacy Framework) — 29 elements — maps to 10 shared
+      control objectives via 42 edges with FULL bidirectional coverage: no
+      orphan element and no uncovered objective, and every objective is
+      demanded by at least 2 frameworks — verified fail-closed.
+    evidence_level: measured
+    artifact:
+      - "artifacts/governance_map.json"
+    metrics:
+      frameworks: 5
+      control_objectives: 10
+      framework_elements: 29
+      mapping_edges: 42
+    caveat: >
+      A reusable frontier-governance building block (vendor via the library's
+      use_code): read which control objectives each regime demands and check
+      your own control set against the crosswalk. It is a TRACEABILITY aid
+      over public framework STRUCTURE only — NOT legal advice, NOT a
+      compliance certification, NOT evidence any specific control is correctly
+      implemented; article/clause specifics beyond the well-known top level
+      are out of scope. The frameworks themselves are preserved hash-locked in
+      the vericlaim literature catalog. Seeded from public framework
+      knowledge; the checkable property is internal coverage consistency,
+      verified deterministically at evidence time.
+    reproduce: "python3 governance/evidence_framework_map.py governance/framework_map.py"
+
   - id: THM-LEAN-001
     statement: >
       12 classical propositional theorems (identity, hypothetical syllogism,
@@ -3196,4 +3225,566 @@ claims:
       - source: "arxiv:2408.03314 — https://arxiv.org/abs/2408.03314"
         sha256: 79ee5bad944563035e856c189761abe62b2d399e8e7aae959220de5482b946aa
         file: "research/extracts/ref-129.md"
+
+  - id: REF-130
+    statement: >
+      Large Language Models Are Zero-Shot Reasoners (2022) is a registrar-
+      verified work (doi:10.52202/068431-1613) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: 'let's think
+      step by step' — zero-shot CoT.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-130.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/068431-1613 — https://doi.org/10.52202/068431-1613"
+        sha256: 9472db0d275de3dcf95f41e0875e7393d9db1b05ef0d89c4ae05ee2b49d1772a
+        file: "research/extracts/ref-130.md"
+
+  - id: REF-131
+    statement: >
+      DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via
+      Reinforcement Learning (2025) is a registrar-verified work
+      (arxiv:2501.12948) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: RL-trained reasoning — the open R1
+      recipe.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-131.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2501.12948 — https://arxiv.org/abs/2501.12948"
+        sha256: 2dc9b90f5fdf46dff1631ffb0e9d24a63c77ed479681048b3c33fd5adc64f415
+        file: "research/extracts/ref-131.md"
+
+  - id: REF-132
+    statement: >
+      Reasoning with Language Model is Planning with World Model (2023) is a
+      registrar-verified work (doi:10.18653/v1/2023.emnlp-main.507) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: RAP — search over an LLM's own world model.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-132.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.18653/v1/2023.emnlp-main.507 — https://doi.org/10.18653/v1/2023.emnlp-main.507"
+        sha256: e9eb68a025038df25d8f1ef09914e3551d6a6512390c5b4fc3c1b8e7eb1bca35
+        file: "research/extracts/ref-132.md"
+
+  - id: REF-133
+    statement: >
+      Voyager: An Open-Ended Embodied Agent with Large Language Models (2023)
+      is a registrar-verified work (arxiv:2305.16291) whose abstract extract
+      is preserved hash-locked in this repository. Curation note: open-ended
+      skill acquisition — lifelong agent learning.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-133.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2305.16291 — https://arxiv.org/abs/2305.16291"
+        sha256: 8cc8c78ccd5a7001755517d8b49b5e42dbe493e7e0b3e526da46b85016481d8c
+        file: "research/extracts/ref-133.md"
+
+  - id: REF-134
+    statement: >
+      Generative Agents: Interactive Simulacra of Human Behavior (2023) is a
+      registrar-verified work (doi:10.1145/3586183.3606763) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      memory+reflection+planning agents — believable behavior.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-134.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/3586183.3606763 — https://doi.org/10.1145/3586183.3606763"
+        sha256: aa314ebaca88806ee57cf3c60bfc9104db40720f7753d0ef2991057347b097d0
+        file: "research/extracts/ref-134.md"
+
+  - id: REF-135
+    statement: >
+      SWE-agent: Agent-Computer Interfaces Enable Automated Software
+      Engineering (2024) is a registrar-verified work
+      (doi:10.52202/079017-1601) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: agent-computer interface
+      design for real SWE tasks.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-135.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/079017-1601 — https://doi.org/10.52202/079017-1601"
+        sha256: 828ac19ff0b4e5844cf349e772938b0f0b27846fcce84386c0d2b6dfda8be8ef
+        file: "research/extracts/ref-135.md"
+
+  - id: REF-136
+    statement: >
+      Grokking: Generalization Beyond Overfitting on Small Algorithmic
+      Datasets (2022) is a registrar-verified work (arxiv:2201.02177) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: delayed generalization — the grokking phenomenon.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-136.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2201.02177 — https://arxiv.org/abs/2201.02177"
+        sha256: 8fde153d421d5b04c7832af565e6c431de6468de0e1b15440e11d0ec6c96ecab
+        file: "research/extracts/ref-136.md"
+
+  - id: REF-137
+    statement: >
+      In-context Learning and Induction Heads (2022) is a registrar-verified
+      work (arxiv:2209.11895) whose abstract extract is preserved hash-locked
+      in this repository. Curation note: the mechanistic account of in-context
+      learning.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-137.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2209.11895 — https://arxiv.org/abs/2209.11895"
+        sha256: dd0ec592582b1d5bff5ff99c928ac2c12f677ce1fdd39a0beb129da9552d4e0a
+        file: "research/extracts/ref-137.md"
+
+  - id: REF-138
+    statement: >
+      Are Emergent Abilities of Large Language Models a Mirage? (2023) is a
+      registrar-verified work (doi:10.52202/075280-2425) whose abstract
+      extract is preserved hash-locked in this repository. Curation note: the
+      honest counterpoint: emergence as a metric artifact.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-138.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/075280-2425 — https://doi.org/10.52202/075280-2425"
+        sha256: 232b47f48c25ca592e8b187b43967ab17e7cbd61f081301ee21d04e356793dec
+        file: "research/extracts/ref-138.md"
+
+  - id: REF-139
+    statement: >
+      Mastering Atari, Go, chess and shogi by planning with a learned model
+      (2020) is a registrar-verified work (doi:10.1038/s41586-020-03051-4)
+      whose abstract extract is preserved hash-locked in this repository.
+      Curation note: MuZero — planning with a learned world model.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-139.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1038/s41586-020-03051-4 — https://doi.org/10.1038/s41586-020-03051-4"
+        sha256: d42faed4c4d9bbd436f72a18d9d0abdb7d9de9df9fc54f662a53742338609289
+        file: "research/extracts/ref-139.md"
+
+  - id: REF-140
+    statement: >
+      Decision Transformer: Reinforcement Learning via Sequence Modeling
+      (2021) is a registrar-verified work (arxiv:2106.01345) whose abstract
+      extract is preserved hash-locked in this repository. Curation note: RL
+      as conditional sequence modeling.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-140.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2106.01345 — https://arxiv.org/abs/2106.01345"
+        sha256: 00e330a75353d6878eddab06bbe70f4549cfd87ef2a6b954513b401c9199c821
+        file: "research/extracts/ref-140.md"
+
+  - id: REF-141
+    statement: >
+      Mamba: Linear-Time Sequence Modeling with Selective State Spaces (2023)
+      is a registrar-verified work (arxiv:2312.00752) whose abstract extract
+      is preserved hash-locked in this repository. Curation note: selective
+      state spaces — a Transformer alternative.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-141.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2312.00752 — https://arxiv.org/abs/2312.00752"
+        sha256: 15484ce6dba5730926440a3a7c4da856faaea6a24309fa9d2f7c43cbfb7ea055
+        file: "research/extracts/ref-141.md"
+
+  - id: REF-142
+    statement: >
+      Efficiently Modeling Long Sequences with Structured State Spaces (2021)
+      is a registrar-verified work (arxiv:2111.00396) whose abstract extract
+      is preserved hash-locked in this repository. Curation note: S4 — the
+      state-space-model line for long context.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-142.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2111.00396 — https://arxiv.org/abs/2111.00396"
+        sha256: bcf85ae728931f0f7eff13042d4e7d0a7c133afb6ad193c33f4cab77e03a96e7
+        file: "research/extracts/ref-142.md"
+
+  - id: REF-143
+    statement: >
+      Learning Transferable Visual Models From Natural Language Supervision
+      (2021) is a registrar-verified work (arxiv:2103.00020) whose abstract
+      extract is preserved hash-locked in this repository. Curation note: CLIP
+      — contrastive image-text representation.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-143.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2103.00020 — https://arxiv.org/abs/2103.00020"
+        sha256: 7b46679785ae9636fc8ba327fad9a7a2f3888d2c1f1c818b6170e5fed6b85b28
+        file: "research/extracts/ref-143.md"
+
+  - id: REF-144
+    statement: >
+      An Image is Worth 16x16 Words: Transformers for Image Recognition at
+      Scale (2020) is a registrar-verified work (arxiv:2010.11929) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: ViT — transformers for vision.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-144.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2010.11929 — https://arxiv.org/abs/2010.11929"
+        sha256: 5edc256c1c084bbbbd4d3bb341f09345807438a591fcf11ae285a5a681235f7b
+        file: "research/extracts/ref-144.md"
+
+  - id: REF-145
+    statement: >
+      Flamingo: A Visual Language Model for Few-Shot Learning (2022) is a
+      registrar-verified work (doi:10.52202/068431-1723) whose abstract
+      extract is preserved hash-locked in this repository. Curation note: few-
+      shot multimodal in-context learning.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-145.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/068431-1723 — https://doi.org/10.52202/068431-1723"
+        sha256: 921f3844a0e7ba89a1173865b5fcaa92b48d54ace9cd60303dd9552f6b6f14e4
+        file: "research/extracts/ref-145.md"
+
+  - id: REF-146
+    statement: >
+      Sparks of Artificial General Intelligence: Early experiments with GPT-4
+      (2023) is a registrar-verified work (arxiv:2303.12712) whose abstract
+      extract is preserved hash-locked in this repository. Curation note: the
+      AGI-claims paper — read alongside REF-138's caution.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-146.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2303.12712 — https://arxiv.org/abs/2303.12712"
+        sha256: 676f4ac268e62957b6ce3c7f1f2f64d7c1f1e0ce09e6fbb9e3ddef3ec3d2d7e4
+        file: "research/extracts/ref-146.md"
+
+  - id: REF-147
+    statement: >
+      Levels of AGI for Operationalizing Progress on the Path to AGI (2023) is
+      a registrar-verified work (arxiv:2311.02462) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: a taxonomy for
+      AGI progress — capability x autonomy.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-147.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2311.02462 — https://arxiv.org/abs/2311.02462"
+        sha256: 88fe03052b80e823559e4fc24cef467a80c7ad72769649059fc6044226e8db40
+        file: "research/extracts/ref-147.md"
+
+  - id: REF-148
+    statement: >
+      Discovering Language Model Behaviors with Model-Written Evaluations
+      (2022) is a registrar-verified work (arxiv:2212.09251) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      scaling evals by having models write them.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-148.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2212.09251 — https://arxiv.org/abs/2212.09251"
+        sha256: 87e89d5636ccc7542091c6472022592bdd89364999925140e2ef8b1b6492f03c
+        file: "research/extracts/ref-148.md"
+
+  - id: REF-149
+    statement: >
+      Representation Engineering: A Top-Down Approach to AI Transparency
+      (2023) is a registrar-verified work (arxiv:2310.01405) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      reading and steering internal representations.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-149.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2310.01405 — https://arxiv.org/abs/2310.01405"
+        sha256: dda5adc0f97b383f48bb7a80e71fb4c15eb4fc066f98f9ff6981e94f6ba4b3e2
+        file: "research/extracts/ref-149.md"
+
+  - id: REF-150
+    statement: >
+      Studying Large Language Model Generalization with Influence Functions
+      (2023) is a registrar-verified work (arxiv:2308.03296) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      which training data drove a behavior — influence functions.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-150.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2308.03296 — https://arxiv.org/abs/2308.03296"
+        sha256: 5f4afba267a6bc712983a9c5d6f6ce1246627f780edabc075083f5ee6332e551
+        file: "research/extracts/ref-150.md"
+
+  - id: REF-151
+    statement: >
+      Measuring Progress on Scalable Oversight for Large Language Models
+      (2022) is a registrar-verified work (arxiv:2211.03540) whose abstract
+      extract is preserved hash-locked in this repository. Curation note: can
+      humans supervise superhuman models? the sandwich method.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-151.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2211.03540 — https://arxiv.org/abs/2211.03540"
+        sha256: 6a657822cb115beb7459eb88faf79872f42f4957595de6a5fea103eef1063467
+        file: "research/extracts/ref-151.md"
+
+  - id: REF-152
+    statement: >
+      Graph of Thoughts: Solving Elaborate Problems with Large Language Models
+      (2024) is a registrar-verified work (doi:10.1609/aaai.v38i16.29720)
+      whose abstract extract is preserved hash-locked in this repository.
+      Curation note: reasoning as an arbitrary graph, not just a tree.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-152.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1609/aaai.v38i16.29720 — https://doi.org/10.1609/aaai.v38i16.29720"
+        sha256: 6a23b03610ecbedc621d36a779abf19206c7c8658d921d62e619ae96af75b61f
+        file: "research/extracts/ref-152.md"
+
+  - id: REF-153
+    statement: >
+      The Platonic Representation Hypothesis (2024) is a registrar-verified
+      work (arxiv:2405.07987) whose abstract extract is preserved hash-locked
+      in this repository. Curation note: models converge to a shared
+      representation of reality.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-153.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2405.07987 — https://arxiv.org/abs/2405.07987"
+        sha256: 30258a75acd764a1db572446e8bf8d6d2fcc9254659577ddb5dc6c9996e5b03d
+        file: "research/extracts/ref-153.md"
+
+  - id: REF-154
+    statement: >
+      Mastering diverse control tasks through world models (2025) is a
+      registrar-verified work (doi:10.1038/s41586-025-08744-2) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      DreamerV3 — one world-model agent across domains.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-154.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1038/s41586-025-08744-2 — https://doi.org/10.1038/s41586-025-08744-2"
+        sha256: 3b7ef1d62808af4e9d7793726509c07e29663a9d8f85ca63da118fb67066150e
+        file: "research/extracts/ref-154.md"
+
+  - id: REF-155
+    statement: >
+      RWKV: Reinventing RNNs for the Transformer Era (2023) is a registrar-
+      verified work (doi:10.18653/v1/2023.findings-emnlp.936) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      attention-free recurrence at transformer quality.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-155.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.18653/v1/2023.findings-emnlp.936 — https://doi.org/10.18653/v1/2023.findings-emnlp.936"
+        sha256: aa7672b860789c3f00b470f61ace46f2e9b085884c6158b34544c62ae70c8e7d
+        file: "research/extracts/ref-155.md"
+
+  - id: REF-156
+    statement: >
+      AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation
+      (2023) is a registrar-verified work (arxiv:2308.08155) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      multi-agent conversation as an application framework.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-156.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2308.08155 — https://arxiv.org/abs/2308.08155"
+        sha256: 62f5ca157772f1b1feaf4de92c7d506c78ee07f300bbe52a866d418e1556b472
+        file: "research/extracts/ref-156.md"
+
+  - id: REF-157
+    statement: >
+      Chain-of-Thought Reasoning Without Prompting (2024) is a registrar-
+      verified work (doi:10.52202/079017-2123) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: eliciting
+      latent reasoning by decoding, not prompting.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-157.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/079017-2123 — https://doi.org/10.52202/079017-2123"
+        sha256: a763e4d6567f6826ae579c2bff73c486e7ad37d5ba40581cbd1ee7db8a71d244
+        file: "research/extracts/ref-157.md"
 

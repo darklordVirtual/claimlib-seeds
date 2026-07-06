@@ -1222,6 +1222,286 @@
       "why": "test-time compute beats parameter scale \u2014 capability another way",
       "work_id": "arxiv:2408.03314",
       "year": 2024
+    },
+    "REF-130": {
+      "accredited": true,
+      "extract": "research/extracts/ref-130.md",
+      "how": "crossref-title",
+      "title": "Large Language Models Are Zero-Shot Reasoners",
+      "url": "https://doi.org/10.52202/068431-1613",
+      "why": "'let's think step by step' \u2014 zero-shot CoT",
+      "work_id": "doi:10.52202/068431-1613",
+      "year": 2022
+    },
+    "REF-131": {
+      "accredited": false,
+      "extract": "research/extracts/ref-131.md",
+      "how": "arxiv-title-phrase",
+      "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2501.12948",
+      "why": "RL-trained reasoning \u2014 the open R1 recipe",
+      "work_id": "arxiv:2501.12948",
+      "year": 2025
+    },
+    "REF-132": {
+      "accredited": true,
+      "extract": "research/extracts/ref-132.md",
+      "how": "crossref-title",
+      "title": "Reasoning with Language Model is Planning with World Model",
+      "url": "https://doi.org/10.18653/v1/2023.emnlp-main.507",
+      "why": "RAP \u2014 search over an LLM's own world model",
+      "work_id": "doi:10.18653/v1/2023.emnlp-main.507",
+      "year": 2023
+    },
+    "REF-133": {
+      "accredited": false,
+      "extract": "research/extracts/ref-133.md",
+      "how": "arxiv-title-phrase",
+      "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+      "url": "https://arxiv.org/abs/2305.16291",
+      "why": "open-ended skill acquisition \u2014 lifelong agent learning",
+      "work_id": "arxiv:2305.16291",
+      "year": 2023
+    },
+    "REF-134": {
+      "accredited": true,
+      "extract": "research/extracts/ref-134.md",
+      "how": "crossref-title",
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "url": "https://doi.org/10.1145/3586183.3606763",
+      "why": "memory+reflection+planning agents \u2014 believable behavior",
+      "work_id": "doi:10.1145/3586183.3606763",
+      "year": 2023
+    },
+    "REF-135": {
+      "accredited": true,
+      "extract": "research/extracts/ref-135.md",
+      "how": "crossref-title",
+      "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+      "url": "https://doi.org/10.52202/079017-1601",
+      "why": "agent-computer interface design for real SWE tasks",
+      "work_id": "doi:10.52202/079017-1601",
+      "year": 2024
+    },
+    "REF-136": {
+      "accredited": false,
+      "extract": "research/extracts/ref-136.md",
+      "how": "arxiv-title-phrase",
+      "title": "Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets",
+      "url": "https://arxiv.org/abs/2201.02177",
+      "why": "delayed generalization \u2014 the grokking phenomenon",
+      "work_id": "arxiv:2201.02177",
+      "year": 2022
+    },
+    "REF-137": {
+      "accredited": false,
+      "extract": "research/extracts/ref-137.md",
+      "how": "arxiv-title-phrase",
+      "title": "In-context Learning and Induction Heads",
+      "url": "https://arxiv.org/abs/2209.11895",
+      "why": "the mechanistic account of in-context learning",
+      "work_id": "arxiv:2209.11895",
+      "year": 2022
+    },
+    "REF-138": {
+      "accredited": true,
+      "extract": "research/extracts/ref-138.md",
+      "how": "crossref-title",
+      "title": "Are Emergent Abilities of Large Language Models a Mirage?",
+      "url": "https://doi.org/10.52202/075280-2425",
+      "why": "the honest counterpoint: emergence as a metric artifact",
+      "work_id": "doi:10.52202/075280-2425",
+      "year": 2023
+    },
+    "REF-139": {
+      "accredited": true,
+      "extract": "research/extracts/ref-139.md",
+      "how": "crossref-title",
+      "title": "Mastering Atari, Go, chess and shogi by planning with a learned model",
+      "url": "https://doi.org/10.1038/s41586-020-03051-4",
+      "why": "MuZero \u2014 planning with a learned world model",
+      "work_id": "doi:10.1038/s41586-020-03051-4",
+      "year": 2020
+    },
+    "REF-140": {
+      "accredited": false,
+      "extract": "research/extracts/ref-140.md",
+      "how": "arxiv-title-phrase",
+      "title": "Decision Transformer: Reinforcement Learning via Sequence Modeling",
+      "url": "https://arxiv.org/abs/2106.01345",
+      "why": "RL as conditional sequence modeling",
+      "work_id": "arxiv:2106.01345",
+      "year": 2021
+    },
+    "REF-141": {
+      "accredited": false,
+      "extract": "research/extracts/ref-141.md",
+      "how": "arxiv-title-phrase",
+      "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+      "url": "https://arxiv.org/abs/2312.00752",
+      "why": "selective state spaces \u2014 a Transformer alternative",
+      "work_id": "arxiv:2312.00752",
+      "year": 2023
+    },
+    "REF-142": {
+      "accredited": false,
+      "extract": "research/extracts/ref-142.md",
+      "how": "arxiv-title-phrase",
+      "title": "Efficiently Modeling Long Sequences with Structured State Spaces",
+      "url": "https://arxiv.org/abs/2111.00396",
+      "why": "S4 \u2014 the state-space-model line for long context",
+      "work_id": "arxiv:2111.00396",
+      "year": 2021
+    },
+    "REF-143": {
+      "accredited": false,
+      "extract": "research/extracts/ref-143.md",
+      "how": "arxiv-title-phrase",
+      "title": "Learning Transferable Visual Models From Natural Language Supervision",
+      "url": "https://arxiv.org/abs/2103.00020",
+      "why": "CLIP \u2014 contrastive image-text representation",
+      "work_id": "arxiv:2103.00020",
+      "year": 2021
+    },
+    "REF-144": {
+      "accredited": false,
+      "extract": "research/extracts/ref-144.md",
+      "how": "arxiv-title-phrase",
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "url": "https://arxiv.org/abs/2010.11929",
+      "why": "ViT \u2014 transformers for vision",
+      "work_id": "arxiv:2010.11929",
+      "year": 2020
+    },
+    "REF-145": {
+      "accredited": true,
+      "extract": "research/extracts/ref-145.md",
+      "how": "crossref-title",
+      "title": "Flamingo: A Visual Language Model for Few-Shot Learning",
+      "url": "https://doi.org/10.52202/068431-1723",
+      "why": "few-shot multimodal in-context learning",
+      "work_id": "doi:10.52202/068431-1723",
+      "year": 2022
+    },
+    "REF-146": {
+      "accredited": false,
+      "extract": "research/extracts/ref-146.md",
+      "how": "arxiv-title-phrase",
+      "title": "Sparks of Artificial General Intelligence: Early experiments with GPT-4",
+      "url": "https://arxiv.org/abs/2303.12712",
+      "why": "the AGI-claims paper \u2014 read alongside REF-138's caution",
+      "work_id": "arxiv:2303.12712",
+      "year": 2023
+    },
+    "REF-147": {
+      "accredited": false,
+      "extract": "research/extracts/ref-147.md",
+      "how": "arxiv-title-phrase",
+      "title": "Levels of AGI for Operationalizing Progress on the Path to AGI",
+      "url": "https://arxiv.org/abs/2311.02462",
+      "why": "a taxonomy for AGI progress \u2014 capability x autonomy",
+      "work_id": "arxiv:2311.02462",
+      "year": 2023
+    },
+    "REF-148": {
+      "accredited": false,
+      "extract": "research/extracts/ref-148.md",
+      "how": "arxiv-title-phrase",
+      "title": "Discovering Language Model Behaviors with Model-Written Evaluations",
+      "url": "https://arxiv.org/abs/2212.09251",
+      "why": "scaling evals by having models write them",
+      "work_id": "arxiv:2212.09251",
+      "year": 2022
+    },
+    "REF-149": {
+      "accredited": false,
+      "extract": "research/extracts/ref-149.md",
+      "how": "arxiv-title-phrase",
+      "title": "Representation Engineering: A Top-Down Approach to AI Transparency",
+      "url": "https://arxiv.org/abs/2310.01405",
+      "why": "reading and steering internal representations",
+      "work_id": "arxiv:2310.01405",
+      "year": 2023
+    },
+    "REF-150": {
+      "accredited": false,
+      "extract": "research/extracts/ref-150.md",
+      "how": "arxiv-title-phrase",
+      "title": "Studying Large Language Model Generalization with Influence Functions",
+      "url": "https://arxiv.org/abs/2308.03296",
+      "why": "which training data drove a behavior \u2014 influence functions",
+      "work_id": "arxiv:2308.03296",
+      "year": 2023
+    },
+    "REF-151": {
+      "accredited": false,
+      "extract": "research/extracts/ref-151.md",
+      "how": "arxiv-title-phrase",
+      "title": "Measuring Progress on Scalable Oversight for Large Language Models",
+      "url": "https://arxiv.org/abs/2211.03540",
+      "why": "can humans supervise superhuman models? the sandwich method",
+      "work_id": "arxiv:2211.03540",
+      "year": 2022
+    },
+    "REF-152": {
+      "accredited": true,
+      "extract": "research/extracts/ref-152.md",
+      "how": "crossref-title",
+      "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models",
+      "url": "https://doi.org/10.1609/aaai.v38i16.29720",
+      "why": "reasoning as an arbitrary graph, not just a tree",
+      "work_id": "doi:10.1609/aaai.v38i16.29720",
+      "year": 2024
+    },
+    "REF-153": {
+      "accredited": false,
+      "extract": "research/extracts/ref-153.md",
+      "how": "arxiv-title-phrase",
+      "title": "The Platonic Representation Hypothesis",
+      "url": "https://arxiv.org/abs/2405.07987",
+      "why": "models converge to a shared representation of reality",
+      "work_id": "arxiv:2405.07987",
+      "year": 2024
+    },
+    "REF-154": {
+      "accredited": true,
+      "extract": "research/extracts/ref-154.md",
+      "how": "crossref-title",
+      "title": "Mastering diverse control tasks through world models",
+      "url": "https://doi.org/10.1038/s41586-025-08744-2",
+      "why": "DreamerV3 \u2014 one world-model agent across domains",
+      "work_id": "doi:10.1038/s41586-025-08744-2",
+      "year": 2025
+    },
+    "REF-155": {
+      "accredited": true,
+      "extract": "research/extracts/ref-155.md",
+      "how": "crossref-title",
+      "title": "RWKV: Reinventing RNNs for the Transformer Era",
+      "url": "https://doi.org/10.18653/v1/2023.findings-emnlp.936",
+      "why": "attention-free recurrence at transformer quality",
+      "work_id": "doi:10.18653/v1/2023.findings-emnlp.936",
+      "year": 2023
+    },
+    "REF-156": {
+      "accredited": false,
+      "extract": "research/extracts/ref-156.md",
+      "how": "arxiv-title-phrase",
+      "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+      "url": "https://arxiv.org/abs/2308.08155",
+      "why": "multi-agent conversation as an application framework",
+      "work_id": "arxiv:2308.08155",
+      "year": 2023
+    },
+    "REF-157": {
+      "accredited": true,
+      "extract": "research/extracts/ref-157.md",
+      "how": "crossref-title",
+      "title": "Chain-of-Thought Reasoning Without Prompting",
+      "url": "https://doi.org/10.52202/079017-2123",
+      "why": "eliciting latent reasoning by decoding, not prompting",
+      "work_id": "doi:10.52202/079017-2123",
+      "year": 2024
     }
   }
 }

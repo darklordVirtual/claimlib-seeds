@@ -3,7 +3,7 @@
   "artifact": "ml_foundations.json",
   "artifact_sha256": "95b0a08bc2e7e176befbfe93bb5d6ad71ac661ad549334c8b040c8452af81feb",
   "script": "python3 theorems/evidence_ml_foundations.py",
-  "git_commit": "0aaf1e8fa132ed7ec54ef1bac96ad96f591ab42c",
-  "generated_at": "2026-07-06T01:48:11.385016+00:00",
+  "git_commit": "b678d98650558d6cf8835f68b1768e9b87e674ec",
+  "generated_at": "2026-07-06T07:57:52.764490+00:00",
   "produced_by": "human"
 }
