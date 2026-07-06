@@ -1,0 +1,51 @@
+{
+  "control_objectives": 10,
+  "controls_approved": 14,
+  "controls_total": 14,
+  "coverage": {
+    "data_governance": [
+      "CTRL-AI-004",
+      "CTRL-AI-014"
+    ],
+    "fairness_nondiscrimination": [
+      "CTRL-AI-009"
+    ],
+    "governance_accountability": [
+      "CTRL-AI-001"
+    ],
+    "human_oversight": [
+      "CTRL-AI-003",
+      "CTRL-AI-006",
+      "CTRL-AI-011"
+    ],
+    "logging_traceability": [
+      "CTRL-AI-003",
+      "CTRL-AI-007",
+      "CTRL-AI-012"
+    ],
+    "monitoring_postmarket": [
+      "CTRL-AI-008",
+      "CTRL-AI-012",
+      "CTRL-AI-013"
+    ],
+    "privacy_dataprotection": [
+      "CTRL-AI-010"
+    ],
+    "risk_management": [
+      "CTRL-AI-002"
+    ],
+    "robustness_accuracy": [
+      "CTRL-AI-003",
+      "CTRL-AI-006",
+      "CTRL-AI-011",
+      "CTRL-AI-013",
+      "CTRL-AI-014"
+    ],
+    "transparency_documentation": [
+      "CTRL-AI-005"
+    ]
+  },
+  "min_controls_per_objective": 1,
+  "objectives_covered": 10,
+  "risk_tiers": 5
+}

@@ -1,0 +1,42 @@
+{
+  "_comment": "A structured assurance case (GSN-style) for ONE bounded system: an Enterprise Architecture Copilot. It is deliberately narrow — advisory, read-only, cannot approve a design or override policy — so the top claim is defensible. assurance_check.py verifies every evidence.ref resolves to a real control (controls.json) or claim (register.yaml / known external), every counterclaim is mitigated by a control or accepted in residual_risk, and the scope is fully bounded. This is the difference between a theory of assurance and a case a CISO can challenge.",
+  "id": "ASSURE-EA-COPILOT-001",
+  "top_claim": "The Enterprise Architecture Copilot is fit for the bounded purpose of answering architecture-governance questions with cited sources and disclosed gaps, without taking or approving any action.",
+  "scope": {
+    "use_case": "Architect asks e.g. 'can this agent write to a production system?'; the Copilot finds the relevant policy, building blocks, risk tier, control requirements and prior ADRs, and answers with sources and gaps.",
+    "risk_tier": "advisory",
+    "data_domain": "Internal architecture policies, control register, ADRs, building-block catalog — no customer or personal data.",
+    "model": "A hosted frontier chat model behind the org boundary; retrieval over the internal governance corpus.",
+    "permitted_action_types": ["recommendation"],
+    "prohibited_action_types": ["design_approval", "policy_override", "production_change", "access_change"]
+  },
+  "strategy": "Reduce risk by (a) restricting the Copilot to read-only advisory output, (b) grounding every answer in cited internal sources and refusing when unsupported, (c) requiring abstention/escalation under uncertainty, and (d) logging every answer for review — so the worst case is a wrong recommendation a human still owns, never an unauthorized action.",
+  "evidence": [
+    {"node": "grounded_refusal", "claim": "The Copilot answers only from cited internal sources and refuses when none support the answer.", "ref": "CLAIM-LIB-RAG-003", "kind": "claim"},
+    {"node": "abstention", "claim": "Low-confidence questions abstain and escalate to a human rather than answer.", "ref": "CTRL-AI-011", "kind": "control"},
+    {"node": "no_actions", "claim": "The Copilot has no tools that mutate state; prohibited action types are not wired.", "ref": "CTRL-AI-006", "kind": "control"},
+    {"node": "documentation", "claim": "A system card states purpose, data domain, limits and evaluation.", "ref": "CTRL-AI-005", "kind": "control"},
+    {"node": "logging", "claim": "Every answer and its sources are logged tamper-evident for review.", "ref": "CTRL-AI-007", "kind": "control"},
+    {"node": "injection_defense", "claim": "Injected instructions in retrieved content cannot escalate authority or bypass refusal.", "ref": "CTRL-AI-014", "kind": "control"},
+    {"node": "ownership", "claim": "The Copilot has a named accountable owner.", "ref": "CTRL-AI-001", "kind": "control"},
+    {"node": "honest_reporting", "claim": "Truthful confidence reporting is the optimal strategy under proper scoring, so a calibrated Copilot is rewarded for saying what it can support.", "ref": "THM-SCORE-001", "kind": "claim"}
+  ],
+  "assumptions": [
+    "The Copilot is used within its stated data domain (internal governance corpus only).",
+    "Policies and the control register it retrieves are kept current.",
+    "A human architect owns and reviews every recommendation before acting on it.",
+    "The model provider does not silently change behaviour beyond the evaluated envelope (monitored by CTRL-AI-008)."
+  ],
+  "counterclaims": [
+    {"claim": "Prompt injection in a retrieved policy could bias an answer.", "mitigation": "CTRL-AI-014"},
+    {"claim": "The model provider could change behaviour between releases.", "mitigation": "CTRL-AI-008"},
+    {"claim": "A confident-sounding but wrong recommendation could mislead an architect.", "mitigation": "CTRL-AI-011", "residual": true},
+    {"claim": "Retrieval could miss a relevant policy and answer from a partial view.", "mitigation": "CTRL-AI-005", "residual": true}
+  ],
+  "residual_risk": {
+    "description": "The Copilot can still produce a wrong or incomplete recommendation that a human accepts; and retrieval can miss a relevant source. Because the Copilot takes no action, the residual harm is a misinformed human decision, not an autonomous one.",
+    "accepted_by": "AI Governance Lead",
+    "accepted_for_tier": "advisory",
+    "review": "per_release"
+  }
+}

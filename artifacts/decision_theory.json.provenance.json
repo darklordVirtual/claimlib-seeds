@@ -3,7 +3,7 @@
   "artifact": "decision_theory.json",
   "artifact_sha256": "f1bc93115adee942937deda7f2360bc8ff50a18d70530b78f1755652adcb5dc7",
   "script": "python3 theorems/evidence_decision_theory.py",
-  "git_commit": "b678d98650558d6cf8835f68b1768e9b87e674ec",
-  "generated_at": "2026-07-06T07:57:54.827176+00:00",
+  "git_commit": "818e933969004c8735a6a4a5e97a20f1486db79d",
+  "generated_at": "2026-07-06T08:57:10.525734+00:00",
   "produced_by": "human"
 }

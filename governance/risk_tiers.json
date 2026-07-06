@@ -1,0 +1,61 @@
+{
+  "_comment": "Enterprise AI risk tiers — the decision-authority ladder. A system's tier determines its permitted autonomy, who may approve promotion to production, what evidence is required, how often it must be revalidated, and the mandatory fallback. Controls (controls.json) reference these tier ids in applicability.risk_tiers. Checked fail-closed by control_register.py.",
+  "tiers": [
+    {
+      "id": "informational",
+      "level": 0,
+      "example": "Internal text assistant, no sensitive data, no actions",
+      "permitted_autonomy": "Free suggestion; output is advisory text only",
+      "approval_authority": "Team lead",
+      "evidence_required": ["system_card"],
+      "revalidation": "annual",
+      "fallback": "Disable feature; manual work continues unaffected"
+    },
+    {
+      "id": "advisory",
+      "level": 1,
+      "example": "Internal RAG over documents",
+      "permitted_autonomy": "Read-only recommendation with citations; no actions",
+      "approval_authority": "Product owner",
+      "evidence_required": ["system_card", "evaluation_report"],
+      "revalidation": "semiannual",
+      "fallback": "Fall back to searchable documentation and human process"
+    },
+    {
+      "id": "draft_actions",
+      "level": 2,
+      "example": "Agent with limited tools; drafts only",
+      "permitted_autonomy": "Prepares drafts (e.g. work-order draft); NO irreversible actions",
+      "approval_authority": "Product owner + Security",
+      "evidence_required": ["system_card", "evaluation_report", "policy_test_result", "threat_model"],
+      "revalidation": "quarterly",
+      "fallback": "Suppress drafting; human authors the artifact"
+    },
+    {
+      "id": "high_impact",
+      "level": 3,
+      "example": "Can affect operations, finance, customers, safety or OT",
+      "permitted_autonomy": "May act only within policy; high-impact actions require human approval",
+      "approval_authority": "Cross-functional review (AI Governance Lead + Security + Legal + Process owner)",
+      "evidence_required": ["system_card", "evaluation_report", "policy_test_result", "threat_model", "security_review", "approval_records", "incident_runbook"],
+      "revalidation": "per_release",
+      "fallback": "Degraded mode: advisory-only, no irreversible actions; then manual"
+    },
+    {
+      "id": "critical",
+      "level": 4,
+      "example": "Production changes, safety-critical or regulatory decisions",
+      "permitted_autonomy": "No autonomous action; human control with dedicated approval for every action",
+      "approval_authority": "AI Architecture Council + accountable executive; recorded per action",
+      "evidence_required": ["system_card", "evaluation_report", "policy_test_result", "threat_model", "security_review", "red_team_report", "approval_records", "incident_runbook", "field_validation"],
+      "revalidation": "per_release_and_on_model_change",
+      "fallback": "Fail-closed to manual; no autonomous path exists"
+    }
+  ],
+  "kill_switch": {
+    "who_can_trigger": ["AI Governance Lead", "Security on-call", "Accountable executive"],
+    "effect": "Immediately disables the AI action path (PDP denies all); advisory/manual modes may remain",
+    "process": "Trigger -> PDP global-deny flag -> incident opened -> post-incident review before re-enable",
+    "test_frequency": "quarterly"
+  }
+}

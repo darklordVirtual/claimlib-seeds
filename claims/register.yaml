@@ -837,6 +837,70 @@ claims:
       verified deterministically at evidence time.
     reproduce: "python3 governance/evidence_framework_map.py governance/framework_map.py"
 
+  - id: CLAIM-CTRL-001
+    statement: >
+      Operative control register: 14 AI controls (all approved), each with a
+      named accountable owner, a test with a pass condition, required
+      evidence, an exception path and residual risk, cover all 10 control
+      objectives with fail-closed integrity — every objective served by >=1
+      control (min 1), and every framework mapping resolves to an element of
+      the CLAIM-GOV-001 crosswalk.
+    evidence_level: measured
+    artifact:
+      - "artifacts/control_register.json"
+    metrics:
+      controls_total: 14
+      controls_approved: 14
+      objectives_covered: 10
+    caveat: >
+      Makes the ten control objectives runnable: ownable, testable, mapped.
+      The checker verifies STRUCTURE and coverage, NOT that each control is
+      correctly IMPLEMENTED in a given system or that its test actually passes
+      there — that is per-deployment evidence (an assurance case, e.g. CLAIM-
+      ASSURE-001). Owners/roles are template names, not appointments. Seeded
+      and verified deterministically.
+    reproduce: "python3 governance/evidence_control_register.py governance/controls.json governance/risk_tiers.json"
+
+  - id: CLAIM-RISK-001
+    statement: >
+      Risk-tier decision ladder: 5 tiers (informational -> critical), each
+      defining permitted autonomy, the approval authority for production,
+      required evidence, revalidation cadence and mandatory fallback, plus a
+      kill-switch process — and every control's applicability references a
+      valid tier, checked fail-closed.
+    evidence_level: measured
+    artifact:
+      - "artifacts/control_register.json"
+    metrics:
+      risk_tiers: 5
+    caveat: >
+      A decision-authority template answering 'who may let THIS system go to
+      production'. It is a reusable structure, not an org-specific mandate;
+      actual authority is assigned by the adopting enterprise. Verified for
+      internal consistency against the control register.
+    reproduce: "python3 governance/evidence_control_register.py governance/controls.json governance/risk_tiers.json"
+
+  - id: CLAIM-ASSURE-001
+    statement: >
+      A structured assurance case for one bounded system (the Enterprise
+      Architecture Copilot, advisory tier) is complete and falsifiable: all 8
+      evidence nodes resolve to a real control or claim, all 4 counterclaims
+      are mitigated by a resolving control or accepted as residual risk, and
+      the scope, top claim and residual-risk acceptor are all present.
+    evidence_level: measured
+    artifact:
+      - "artifacts/assurance_ea_copilot.json"
+    metrics:
+      evidence_nodes: 8
+      counterclaims: 4
+    caveat: >
+      Proves the assurance case is STRUCTURALLY sound and every reference
+      resolves — NOT that the Copilot itself was built, tested in the field,
+      or is safe to deploy. It is a worked template for one narrow, read-only,
+      no-action scope; a production case needs the referenced controls
+      actually implemented and their tests actually passing.
+    reproduce: "python3 governance/evidence_assurance.py governance/assurance/ea_copilot.json"
+
   - id: THM-LEAN-001
     statement: >
       12 classical propositional theorems (identity, hypothetical syllogism,

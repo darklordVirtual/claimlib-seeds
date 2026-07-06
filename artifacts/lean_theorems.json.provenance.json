@@ -3,7 +3,7 @@
   "artifact": "lean_theorems.json",
   "artifact_sha256": "096040db8c29f68ca75fad96a2a1bc5649d826608604f58f206dea14d6eddc30",
   "script": "python3 theorems/evidence_lean.py",
-  "git_commit": "b678d98650558d6cf8835f68b1768e9b87e674ec",
-  "generated_at": "2026-07-06T07:57:59.505256+00:00",
+  "git_commit": "818e933969004c8735a6a4a5e97a20f1486db79d",
+  "generated_at": "2026-07-06T08:57:14.754217+00:00",
   "produced_by": "human"
 }

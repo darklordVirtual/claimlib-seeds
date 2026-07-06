@@ -1,0 +1,9 @@
+{
+  "schema": "vericlaim_provenance_v2",
+  "artifact": "assurance_ea_copilot.json",
+  "artifact_sha256": "148d6ac224b308db75097c530d6f2a39432e93c710398124cbca5c1d045df45f",
+  "script": "python3 governance/evidence_assurance.py",
+  "git_commit": "818e933969004c8735a6a4a5e97a20f1486db79d",
+  "generated_at": "2026-07-06T08:57:10.703010+00:00",
+  "produced_by": "human"
+}

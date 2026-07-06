@@ -1,0 +1,9 @@
+{
+  "counterclaims": 4,
+  "counterclaims_mitigated": 4,
+  "evidence_nodes": 8,
+  "evidence_resolved": 8,
+  "id": "ASSURE-EA-COPILOT-001",
+  "residual_accepted_by": "AI Governance Lead",
+  "risk_tier": "advisory"
+}
