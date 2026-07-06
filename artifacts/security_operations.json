@@ -1,0 +1,53 @@
+{
+  "control_objectives_with_operational_home": [
+    "data_governance",
+    "governance_accountability",
+    "human_oversight",
+    "logging_traceability",
+    "monitoring_postmarket",
+    "privacy_dataprotection",
+    "risk_management",
+    "robustness_accuracy"
+  ],
+  "domain_objectives": {
+    "detection_response": [
+      "human_oversight",
+      "monitoring_postmarket",
+      "risk_management"
+    ],
+    "itsm": [
+      "governance_accountability",
+      "monitoring_postmarket",
+      "risk_management"
+    ],
+    "logging_audit": [
+      "governance_accountability",
+      "logging_traceability"
+    ],
+    "observability": [
+      "monitoring_postmarket",
+      "robustness_accuracy"
+    ],
+    "pii_data_protection": [
+      "data_governance",
+      "privacy_dataprotection"
+    ],
+    "resilience_backup_dr": [
+      "risk_management",
+      "robustness_accuracy"
+    ],
+    "secrets_key_management": [
+      "governance_accountability",
+      "robustness_accuracy"
+    ],
+    "vulnerability_management": [
+      "risk_management",
+      "robustness_accuracy"
+    ]
+  },
+  "domains": 8,
+  "operational_objectives_covered": 8,
+  "practices": 33,
+  "required_domains": 6,
+  "standards": 13
+}

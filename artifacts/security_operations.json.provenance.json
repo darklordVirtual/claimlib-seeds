@@ -1,0 +1,9 @@
+{
+  "schema": "vericlaim_provenance_v2",
+  "artifact": "security_operations.json",
+  "artifact_sha256": "dfcb8349355b59213a099d075cc4dce046894a94d1385e5a238b8eccfb260c5e",
+  "script": "python3 governance/evidence_security_operations.py",
+  "git_commit": "2033c66ef483688e2938b1cb22cbc20872ccde58",
+  "generated_at": "2026-07-06T10:48:23.860463+00:00",
+  "produced_by": "human"
+}

@@ -38,6 +38,7 @@ def main() -> int:
     dt = json.loads((ROOT / "artifacts" / "decision_theory.json").read_text())
     gov = json.loads((ROOT / "artifacts" / "governance_map.json").read_text())
     coup = json.loads((ROOT / "artifacts" / "identity_coupling.json").read_text())
+    secops = json.loads((ROOT / "artifacts" / "security_operations.json").read_text())
     ctrl = json.loads((ROOT / "artifacts" / "control_register.json").read_text())
     assure = json.loads((ROOT / "artifacts" / "assurance_ea_copilot.json").read_text())
 
@@ -665,6 +666,66 @@ def main() -> int:
         ]
         out.append("    literature:")
         for source, rel in standards_lit:
+            sha = hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
+            out.append(f'      - source: "{source}"')
+            out.append(f"        sha256: {sha}")
+            out.append(f"        file: {rel}")
+        out.append("")
+
+    secops_claims = [
+        ("CLAIM-SECOPS-001", "measured",
+         f"Security-operations coverage crosswalk: {secops['domains']} operational "
+         f"domains (ITSM, observability, logging/audit, PII data protection, "
+         f"vulnerability management, detection & response, secrets/key management, "
+         f"resilience/backup-DR) — including all {secops['required_domains']} "
+         f"required domains — name {secops['practices']} concrete practices run "
+         f"against {secops['standards']} public standards (ISO/IEC 27001, 20000-1, "
+         f"27701, ITIL 4, NIST SP 800-53/61/92/137, CIS Controls v8, OWASP ASVS, "
+         f"MITRE ATT&CK, OpenTelemetry, GDPR), and every operational control "
+         f"objective ({secops['operational_objectives_covered']} of the shared "
+         f"ten) has at least one domain that keeps it — verified fail-closed.",
+         {"domains": secops["domains"],
+          "required_domains": secops["required_domains"],
+          "practices": secops["practices"],
+          "standards": secops["standards"]},
+         "A reusable building block that gives each governance control objective "
+         "an OPERATIONAL home: a program can check it actually runs the domain "
+         "(a log-management practice, a PII-scrubbing pipeline) behind each "
+         "objective it claims. It is a TRACEABILITY aid over the PUBLIC structure "
+         "of well-known operations standards — NOT an audit, NOT a certification, "
+         "and NOT evidence that any specific pipeline is correctly run; clause "
+         "specifics are out of scope and the standards are the authority "
+         "(preserved hash-locked as literature). Four objectives (transparency, "
+         "human oversight, fairness, accountability) are governance/disclosure "
+         "themes owned by the control register, not operational domains."),
+    ]
+    for cid, level, stmt, metrics, cav in secops_claims:
+        out.append(f"  - id: {cid}")
+        out.append(block("statement", stmt).rstrip())
+        out.append(f"    evidence_level: {level}")
+        out.append("    artifact:")
+        out.append('      - "artifacts/security_operations.json"')
+        out.append("    metrics:")
+        for k, v in metrics.items():
+            out.append(f"      {k}: {v}")
+        out.append(block("caveat", cav).rstrip())
+        out.append('    reproduce: "python3 governance/evidence_security_operations.py '
+                   'governance/security_operations.py"')
+        secops_lit = [
+            ("spec:iso-iec-27001", "refs/secops/iso-27001.md"),
+            ("spec:iso-iec-20000-1", "refs/secops/itsm-iso-20000-itil.md"),
+            ("spec:iso-iec-27701", "refs/secops/iso-27701-privacy.md"),
+            ("doi:10.6028/NIST.SP.800-92", "refs/secops/nist-800-92-log-management.md"),
+            ("doi:10.6028/NIST.SP.800-61", "refs/secops/nist-800-61-incident.md"),
+            ("doi:10.6028/NIST.SP.800-137", "refs/secops/nist-800-137-monitoring.md"),
+            ("doi:10.6028/NIST.SP.800-53r5", "refs/secops/nist-800-53.md"),
+            ("spec:cis-controls-v8", "refs/secops/cis-controls-v8.md"),
+            ("spec:owasp-asvs", "refs/secops/owasp-asvs.md"),
+            ("spec:mitre-attack", "refs/secops/mitre-attack.md"),
+            ("spec:opentelemetry", "refs/secops/opentelemetry-secops.md"),
+        ]
+        out.append("    literature:")
+        for source, rel in secops_lit:
             sha = hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
             out.append(f'      - source: "{source}"')
             out.append(f"        sha256: {sha}")

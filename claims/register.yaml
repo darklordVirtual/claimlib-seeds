@@ -899,6 +899,72 @@ claims:
         sha256: 1440118b2efab3ae5bd94417e37d5aa51d77850a7f932bbb46febf48087f3a29
         file: refs/standards/scim-rfc7643-7644.md
 
+  - id: CLAIM-SECOPS-001
+    statement: >
+      Security-operations coverage crosswalk: 8 operational domains (ITSM,
+      observability, logging/audit, PII data protection, vulnerability
+      management, detection & response, secrets/key management,
+      resilience/backup-DR) — including all 6 required domains — name 33
+      concrete practices run against 13 public standards (ISO/IEC 27001,
+      20000-1, 27701, ITIL 4, NIST SP 800-53/61/92/137, CIS Controls v8, OWASP
+      ASVS, MITRE ATT&CK, OpenTelemetry, GDPR), and every operational control
+      objective (8 of the shared ten) has at least one domain that keeps it —
+      verified fail-closed.
+    evidence_level: measured
+    artifact:
+      - "artifacts/security_operations.json"
+    metrics:
+      domains: 8
+      required_domains: 6
+      practices: 33
+      standards: 13
+    caveat: >
+      A reusable building block that gives each governance control objective
+      an OPERATIONAL home: a program can check it actually runs the domain (a
+      log-management practice, a PII-scrubbing pipeline) behind each objective
+      it claims. It is a TRACEABILITY aid over the PUBLIC structure of well-
+      known operations standards — NOT an audit, NOT a certification, and NOT
+      evidence that any specific pipeline is correctly run; clause specifics
+      are out of scope and the standards are the authority (preserved hash-
+      locked as literature). Four objectives (transparency, human oversight,
+      fairness, accountability) are governance/disclosure themes owned by the
+      control register, not operational domains.
+    reproduce: "python3 governance/evidence_security_operations.py governance/security_operations.py"
+    literature:
+      - source: "spec:iso-iec-27001"
+        sha256: 6255b1ff9afdc0033d657b824bf6e0a8667f355d3a9805a86bf66a8014a049a4
+        file: refs/secops/iso-27001.md
+      - source: "spec:iso-iec-20000-1"
+        sha256: 6860933c51fde8582c99074d2b257698189edcb01a454b1ec434d1094dd4cf61
+        file: refs/secops/itsm-iso-20000-itil.md
+      - source: "spec:iso-iec-27701"
+        sha256: 86a472776d3120422755b42598337f2475e4724030111747265fe3c729094a36
+        file: refs/secops/iso-27701-privacy.md
+      - source: "doi:10.6028/NIST.SP.800-92"
+        sha256: 3f17c8ffaa015bcac0b164a882cd222f6c4687cbca771deabb59d04d38111019
+        file: refs/secops/nist-800-92-log-management.md
+      - source: "doi:10.6028/NIST.SP.800-61"
+        sha256: 90e608282987e0f0792a916193707baf1c7f00c538ab136df50f068f5906aa68
+        file: refs/secops/nist-800-61-incident.md
+      - source: "doi:10.6028/NIST.SP.800-137"
+        sha256: a9dc5d0dd1841e14c1e3d211b2e7261e40319e31f2350cc0cb3f69a016f79369
+        file: refs/secops/nist-800-137-monitoring.md
+      - source: "doi:10.6028/NIST.SP.800-53r5"
+        sha256: 76043292caad6dca1f716c6e7317f1fb219b7ba79d4a0f040879d4047dc9b725
+        file: refs/secops/nist-800-53.md
+      - source: "spec:cis-controls-v8"
+        sha256: 71bb3f0850b1bf12ecc766605859de4eadd5439ce78f528577b4301fc78ef4f2
+        file: refs/secops/cis-controls-v8.md
+      - source: "spec:owasp-asvs"
+        sha256: 68a1c1c4ff57faaa9f3a920dbdfaf152ea8b72f2d47ae50116546dd31dd74ad7
+        file: refs/secops/owasp-asvs.md
+      - source: "spec:mitre-attack"
+        sha256: e7eeb6e82e81aebba3305f8a09cd08d56d2f47453d067a6068ebcae93357b00e
+        file: refs/secops/mitre-attack.md
+      - source: "spec:opentelemetry"
+        sha256: e5b85c548572f070f7b580b0b4bf15fbd7fbc752cd863f5763a621437bc5077b
+        file: refs/secops/opentelemetry-secops.md
+
   - id: CLAIM-CTRL-001
     statement: >
       Operative control register: 14 AI controls (all approved), each with a
