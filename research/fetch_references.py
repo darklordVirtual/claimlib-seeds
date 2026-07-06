@@ -185,6 +185,135 @@ SEEDS = [
      None, "abadi", 2016, "DP-SGD — private training in practice"),
     ("REF-073", "Understanding the Mirai Botnet",
      None, "antonakakis", 2017, "IoT botnet anatomy — context for the Luftfiber UDM incident class"),
+    # --- batch F: architecture landmarks, uncertainty, evaluation ---
+    ("REF-074", "Deep Residual Learning for Image Recognition",
+     None, "he", 2015, "ResNet — residual connections that made very deep nets trainable"),
+    ("REF-075", "Adam: A Method for Stochastic Optimization",
+     None, "kingma", 2014, "the default optimizer of deep learning"),
+    ("REF-076", "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+     None, "ioffe", 2015, "normalization that stabilized deep training"),
+    ("REF-077", "Denoising Diffusion Probabilistic Models",
+     None, "ho", 2020, "the diffusion generative baseline flow matching descends from"),
+    ("REF-078", "Auto-Encoding Variational Bayes",
+     None, "kingma", 2013, "the VAE — variational deep generative models"),
+    ("REF-079", "Generative Adversarial Networks",
+     None, "goodfellow", 2014, "GANs — adversarial generative modelling"),
+    ("REF-080", "Dropout: A Simple Way to Prevent Neural Networks from Overfitting",
+     None, "srivastava", 2014, "the canonical regularizer"),
+    ("REF-081", "Deep Reinforcement Learning from Human Preferences",
+     None, "christiano", 2017, "preference-based RL — the root of RLHF"),
+    ("REF-082", "Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles",
+     None, "lakshminarayanan", 2016, "deep ensembles — practical uncertainty for governance"),
+    ("REF-083", "Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning",
+     None, "gal", 2015, "MC-dropout — uncertainty from a trained net"),
+    # --- batch E (2026-07-06): the principal-AI-architect enterprise stack —
+    # NIST risk/OT security, AI auditing, MLOps, industrial digital twins,
+    # privacy engineering. EU law (GDPR, NIS2, AI Act, DPIA guidance) has no
+    # registrar records; those live as hash-locked web snapshots in the
+    # vericlaim literature catalog instead of dying here.
+    ("REF-084", "Guide to Operational Technology (OT) security",
+     "10.6028/nist.sp.800-82r3", "stouffer", 2023,
+     "the OT/ICS security baseline for industrial (e.g. energy) AI deployments"),
+    ("REF-085", "Closing the AI accountability gap",
+     "10.1145/3351095.3372873", "raji", 2020,
+     "internal algorithmic auditing framework — the enterprise AI audit playbook"),
+    ("REF-086", "Machine Learning Operations (MLOps): Overview, Definition, and Architecture",
+     "10.1109/access.2023.3262138", "kreuzberger", 2023,
+     "canonical MLOps reference architecture for production ML at enterprise scale"),
+    ("REF-087", "Digital Twin: Values, Challenges and Enablers From a Modeling Perspective",
+     "10.1109/access.2020.2970143", "rasheed", 2020,
+     "digital-twin foundations (NTNU/SINTEF lineage) — core for asset-heavy industry"),
+    ("REF-088", "Physics-informed machine learning",
+     "10.1038/s42254-021-00314-5", "karniadakis", 2021,
+     "physics-constrained ML — the honest way to model industrial processes"),
+    ("REF-089", "The Algorithmic Foundations of Differential Privacy",
+     "10.1561/0400000042", "dwork", 2014,
+     "the formal privacy foundation behind GDPR-grade data protection engineering"),
+    ("REF-090", "k-ANONYMITY: A MODEL FOR PROTECTING PRIVACY",
+     "10.1142/s0218488502001648", "sweeney", 2002,
+     "the classic re-identification result — why 'anonymized' data usually is not"),
+    # --- batch F (2026-07-06): frontier stack — training your own models,
+    # software engineering / SaaS-scale systems, marketing science, finance.
+    ("REF-091", "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+     None, "devlin", 2018, "bidirectional pretraining — the fine-tuning paradigm"),
+    ("REF-092", "Language Models are Few-Shot Learners",
+     None, "brown", 2020, "GPT-3 — in-context learning at scale"),
+    ("REF-093", "LLaMA: Open and Efficient Foundation Language Models",
+     None, "touvron", 2023, "the open foundation-model recipe (data + compute discipline)"),
+    ("REF-094", "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+     None, "dao", 2022, "IO-aware exact attention — the systems trick behind long context"),
+    ("REF-095", "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+     None, "shoeybi", 2019, "tensor/model parallelism for training at scale"),
+    ("REF-096", "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+     None, "rajbhandari", 2019, "optimizer-state sharding — how large training fits in memory"),
+    ("REF-097", "Mixed Precision Training",
+     None, "micikevicius", 2017, "fp16/loss-scaling — the efficiency baseline for training"),
+    ("REF-098", "QLoRA: Efficient Finetuning of Quantized LLMs",
+     None, "dettmers", 2023, "4-bit finetuning — own-model adaptation on modest hardware"),
+    ("REF-099", "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+     None, "shazeer", 2017, "conditional computation / MoE — frontier scaling pattern"),
+    ("REF-100", "Distilling the Knowledge in a Neural Network",
+     None, "hinton", 2015, "knowledge distillation — big teacher, deployable student"),
+    ("REF-101", "Neural Machine Translation of Rare Words with Subword Units",
+     None, "sennrich", 2015, "BPE tokenization — the vocabulary layer of every LLM"),
+    ("REF-102", "The Pile: An 800GB Dataset of Diverse Text for Language Modeling",
+     None, "gao", 2020, "curated pretraining data — composition documented and auditable"),
+    ("REF-103", "On the criteria to be used in decomposing systems into modules",
+     "10.1145/361598.361623", "parnas", 1972, "information hiding — the root of modular design"),
+    ("REF-104", "No Silver Bullet: Essence and Accidents of Software Engineering",
+     "10.1109/mc.1987.1663532", "brooks", 1987, "essence vs accident — why tooling alone cannot save you"),
+    ("REF-105", "Letters to the editor: go to statement considered harmful",
+     "10.1145/362929.362947", "dijkstra", 1968, "structured programming — reasoning over control flow"),
+    ("REF-106", "Communicating Sequential Processes",
+     "10.1145/359576.359585", "hoare", 1978, "CSP — the concurrency model behind Go channels et al."),
+    ("REF-107", "Dynamo",
+     "10.1145/1294261.1294281", "decandia", 2007, "eventual consistency in production — SaaS availability"),
+    ("REF-108", "MapReduce",
+     "10.1145/1327452.1327492", "dean", 2008, "the batch-compute abstraction that scaled the industry"),
+    ("REF-109", "Spanner",
+     "10.1145/2491245", "corbett", 2013, "globally consistent transactions — TrueTime"),
+    ("REF-110", "Borg, Omega, and Kubernetes",
+     "10.1145/2890784", "burns", 2016, "a decade of container orchestration lessons"),
+    ("REF-111", "A New Product Growth for Model Consumer Durables",
+     "10.1287/mnsc.15.5.215", "bass", 1969, "the Bass diffusion model — adoption curves"),
+    ("REF-112", "Counting Your Customers: Who Are They and What Will They Do Next?",
+     "10.1287/mnsc.33.1.1", "schmittlein", 1987, "Pareto/NBD — the probabilistic customer-base model"),
+    ("REF-113", "RFM and CLV: Using Iso-Value Curves for Customer Base Analysis",
+     "10.1509/jmkr.2005.42.4.415", "fader", 2005, "customer lifetime value from RFM — SaaS unit economics"),
+    ("REF-114", "Controlled experiments on the web: survey and practical guide",
+     "10.1007/s10618-008-0114-1", "kohavi", 2009, "A/B testing done right — the growth experimentation bible"),
+    ("REF-115", "Using Online Conversations to Study Word-of-Mouth Communication",
+     "10.1287/mksc.1040.0071", "godes", 2004, "measuring word-of-mouth — organic growth signal"),
+    ("REF-116", "Portfolio Selection",
+     "10.1111/j.1540-6261.1952.tb01525.x", "markowitz", 1952, "mean-variance portfolio theory"),
+    ("REF-117", "Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk",
+     "10.1111/j.1540-6261.1964.tb02865.x", "sharpe", 1964, "CAPM — priced risk vs diversifiable risk"),
+    ("REF-118", "The Pricing of Options and Corporate Liabilities",
+     "10.1086/260062", "black", 1973, "Black-Scholes option pricing"),
+    ("REF-119", "Efficient Capital Markets: A Review of Theory and Empirical Work",
+     "10.2307/2325486", "fama", 1970, "efficient-market hypothesis — the null you must beat"),
+    ("REF-120", "Prospect Theory: An Analysis of Decision under Risk",
+     "10.2307/1914185", "kahneman", 1979, "loss aversion — how decisions actually get made"),
+    ("REF-121", "A New Interpretation of Information Rate",
+     "10.1002/j.1538-7305.1956.tb03809.x", "kelly", 1956, "the Kelly criterion — information-theoretic bet sizing"),
+    # --- batch G (2026-07-06): capability via verification, not scale —
+    # the literature behind verify-route-abstain (THM-VOTE/THM-ROUTE math).
+    ("REF-122", "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+     None, "wang", 2022, "majority voting over samples — the Condorcet pattern in practice"),
+    ("REF-123", "Let's Verify Step by Step",
+     None, "lightman", 2023, "process supervision — verifiers over reasoning steps"),
+    ("REF-124", "STaR: Bootstrapping Reasoning With Reasoning",
+     None, "zelikman", 2022, "self-taught reasoning — verified traces become training data"),
+    ("REF-125", "Self-Refine: Iterative Refinement with Self-Feedback",
+     None, "madaan", 2023, "iterative self-feedback loops — and their limits (see REF-126)"),
+    ("REF-126", "Large Language Models Cannot Self-Correct Reasoning Yet",
+     None, "huang", 2023, "the honest limit: intrinsic self-correction does not work — external verification does"),
+    ("REF-127", "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
+     None, "chen", 2023, "LLM cascades — the cost side of THM-ROUTE-001"),
+    ("REF-128", "RouteLLM: Learning to Route LLMs with Preference Data",
+     None, "ong", 2024, "learned routing between weak and strong models"),
+    ("REF-129", "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+     None, "snell", 2024, "test-time compute beats parameter scale — capability another way"),
 ]
 
 
@@ -245,10 +374,24 @@ def _lookup(title: str, doi: str | None, surname: str, year: int):
 
 
 def main() -> int:
+    only_new = "--only-new" in sys.argv
     out_dir = Path(__file__).resolve().parent / "extracts"
     out_dir.mkdir(exist_ok=True)
     index, dropped = {}, []
+    prior_verified, prior_dropped = {}, {}
+    ref_path = out_dir.parent / "references.json"
+    if only_new and ref_path.exists():
+        prior = json.loads(ref_path.read_text())
+        prior_verified = prior.get("verified", {})
+        prior_dropped = {d["id"]: d for d in prior.get("dropped", [])}
     for rid, title, doi, surname, year, why in SEEDS:
+        if only_new and rid in prior_verified:
+            index[rid] = prior_verified[rid]
+            continue
+        if only_new and rid in prior_dropped:
+            d = prior_dropped[rid]
+            dropped.append((rid, d.get("seed_title", title), d["reason"]))
+            continue
         found, how = _lookup(title, doi, surname, year)
         if found is None:
             dropped.append((rid, title, how))

@@ -1,0 +1,29 @@
+{
+  "best_of_n": {
+    "identity_checks": 108,
+    "max_n": 12,
+    "p_grid": [
+      "1/10",
+      "1/5",
+      "3/10",
+      "2/5",
+      "1/2",
+      "3/5",
+      "7/10",
+      "4/5",
+      "9/10"
+    ]
+  },
+  "condorcet": {
+    "amplification_checks": 40,
+    "degradation_checks": 35,
+    "max_n": 15
+  },
+  "gated_cascade": {
+    "cost_big": "30",
+    "cost_identity_checks": 2046,
+    "cost_small": "1",
+    "dominance_tables_checked": 87380,
+    "max_items": 10
+  }
+}

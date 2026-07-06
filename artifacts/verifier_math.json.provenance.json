@@ -1,0 +1,9 @@
+{
+  "schema": "vericlaim_provenance_v2",
+  "artifact": "verifier_math.json",
+  "artifact_sha256": "5bcaedfc272005e1212511a7ac5313618ed14f1eec13afd74443d315a547b923",
+  "script": "python3 theorems/evidence_verifier_math.py",
+  "git_commit": "8786d69ec778b3955efae86b6283d952b55a0d18",
+  "generated_at": "2026-07-06T01:21:33.076533+00:00",
+  "produced_by": "human"
+}

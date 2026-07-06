@@ -64,6 +64,11 @@
       "id": "REF-073",
       "reason": "no registrar record with an agreeing title",
       "seed_title": "Understanding the Mirai Botnet"
+    },
+    {
+      "id": "REF-080",
+      "reason": "no registrar record with an agreeing title",
+      "seed_title": "Dropout: A Simple Way to Prevent Neural Networks from Overfitting"
     }
   ],
   "schema": "references_v2",
@@ -639,13 +644,13 @@
       "year": 2023
     },
     "REF-070": {
-      "accredited": true,
+      "accredited": false,
       "extract": "research/extracts/ref-070.md",
-      "how": "crossref-title",
-      "title": "Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
-      "url": "https://doi.org/10.1145/3605764.3623985",
+      "how": "arxiv-title-phrase",
+      "title": "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+      "url": "https://arxiv.org/abs/2302.12173",
       "why": "indirect prompt injection \u2014 the agent-security threat REMORA gates against",
-      "work_id": "doi:10.1145/3605764.3623985",
+      "work_id": "arxiv:2302.12173",
       "year": 2023
     },
     "REF-071": {
@@ -667,6 +672,556 @@
       "why": "DP-SGD \u2014 private training in practice",
       "work_id": "doi:10.1145/2976749.2978318",
       "year": 2016
+    },
+    "REF-074": {
+      "accredited": true,
+      "extract": "research/extracts/ref-074.md",
+      "how": "crossref-title",
+      "title": "Deep Residual Learning for Image Recognition",
+      "url": "https://doi.org/10.1109/cvpr.2016.90",
+      "why": "ResNet \u2014 residual connections that made very deep nets trainable",
+      "work_id": "doi:10.1109/cvpr.2016.90",
+      "year": 2016
+    },
+    "REF-075": {
+      "accredited": false,
+      "extract": "research/extracts/ref-075.md",
+      "how": "arxiv-title-phrase",
+      "title": "Adam: A Method for Stochastic Optimization",
+      "url": "https://arxiv.org/abs/1412.6980",
+      "why": "the default optimizer of deep learning",
+      "work_id": "arxiv:1412.6980",
+      "year": 2014
+    },
+    "REF-076": {
+      "accredited": false,
+      "extract": "research/extracts/ref-076.md",
+      "how": "arxiv-title-phrase",
+      "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+      "url": "https://arxiv.org/abs/1502.03167",
+      "why": "normalization that stabilized deep training",
+      "work_id": "arxiv:1502.03167",
+      "year": 2015
+    },
+    "REF-077": {
+      "accredited": false,
+      "extract": "research/extracts/ref-077.md",
+      "how": "arxiv-title-phrase",
+      "title": "Denoising Diffusion Probabilistic Models",
+      "url": "https://arxiv.org/abs/2006.11239",
+      "why": "the diffusion generative baseline flow matching descends from",
+      "work_id": "arxiv:2006.11239",
+      "year": 2020
+    },
+    "REF-078": {
+      "accredited": false,
+      "extract": "research/extracts/ref-078.md",
+      "how": "arxiv-title-phrase",
+      "title": "Auto-Encoding Variational Bayes",
+      "url": "https://arxiv.org/abs/1312.6114",
+      "why": "the VAE \u2014 variational deep generative models",
+      "work_id": "arxiv:1312.6114",
+      "year": 2013
+    },
+    "REF-079": {
+      "accredited": false,
+      "extract": "research/extracts/ref-079.md",
+      "how": "arxiv-title-phrase",
+      "title": "Generative Adversarial Networks",
+      "url": "https://arxiv.org/abs/1406.2661",
+      "why": "GANs \u2014 adversarial generative modelling",
+      "work_id": "arxiv:1406.2661",
+      "year": 2014
+    },
+    "REF-081": {
+      "accredited": false,
+      "extract": "research/extracts/ref-081.md",
+      "how": "arxiv-title-phrase",
+      "title": "Deep reinforcement learning from human preferences",
+      "url": "https://arxiv.org/abs/1706.03741",
+      "why": "preference-based RL \u2014 the root of RLHF",
+      "work_id": "arxiv:1706.03741",
+      "year": 2017
+    },
+    "REF-082": {
+      "accredited": false,
+      "extract": "research/extracts/ref-082.md",
+      "how": "arxiv-title-phrase",
+      "title": "Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles",
+      "url": "https://arxiv.org/abs/1612.01474",
+      "why": "deep ensembles \u2014 practical uncertainty for governance",
+      "work_id": "arxiv:1612.01474",
+      "year": 2016
+    },
+    "REF-083": {
+      "accredited": false,
+      "extract": "research/extracts/ref-083.md",
+      "how": "arxiv-title-phrase",
+      "title": "Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning",
+      "url": "https://arxiv.org/abs/1506.02142",
+      "why": "MC-dropout \u2014 uncertainty from a trained net",
+      "work_id": "arxiv:1506.02142",
+      "year": 2015
+    },
+    "REF-084": {
+      "accredited": false,
+      "extract": "research/extracts/ref-084.md",
+      "how": "doi",
+      "title": "Guide to Operational Technology (OT) security",
+      "url": "https://doi.org/10.6028/nist.sp.800-82r3",
+      "why": "the OT/ICS security baseline for industrial (e.g. energy) AI deployments",
+      "work_id": "doi:10.6028/nist.sp.800-82r3",
+      "year": 2023
+    },
+    "REF-085": {
+      "accredited": true,
+      "extract": "research/extracts/ref-085.md",
+      "how": "doi",
+      "title": "Closing the AI accountability gap",
+      "url": "https://doi.org/10.1145/3351095.3372873",
+      "why": "internal algorithmic auditing framework \u2014 the enterprise AI audit playbook",
+      "work_id": "doi:10.1145/3351095.3372873",
+      "year": 2020
+    },
+    "REF-086": {
+      "accredited": true,
+      "extract": "research/extracts/ref-086.md",
+      "how": "doi",
+      "title": "Machine Learning Operations (MLOps): Overview, Definition, and Architecture",
+      "url": "https://doi.org/10.1109/access.2023.3262138",
+      "why": "canonical MLOps reference architecture for production ML at enterprise scale",
+      "work_id": "doi:10.1109/access.2023.3262138",
+      "year": 2023
+    },
+    "REF-087": {
+      "accredited": true,
+      "extract": "research/extracts/ref-087.md",
+      "how": "doi",
+      "title": "Digital Twin: Values, Challenges and Enablers From a Modeling Perspective",
+      "url": "https://doi.org/10.1109/access.2020.2970143",
+      "why": "digital-twin foundations (NTNU/SINTEF lineage) \u2014 core for asset-heavy industry",
+      "work_id": "doi:10.1109/access.2020.2970143",
+      "year": 2020
+    },
+    "REF-088": {
+      "accredited": true,
+      "extract": "research/extracts/ref-088.md",
+      "how": "doi",
+      "title": "Physics-informed machine learning",
+      "url": "https://doi.org/10.1038/s42254-021-00314-5",
+      "why": "physics-constrained ML \u2014 the honest way to model industrial processes",
+      "work_id": "doi:10.1038/s42254-021-00314-5",
+      "year": 2021
+    },
+    "REF-089": {
+      "accredited": true,
+      "extract": "research/extracts/ref-089.md",
+      "how": "doi",
+      "title": "The Algorithmic Foundations of Differential Privacy",
+      "url": "https://doi.org/10.1561/0400000042",
+      "why": "the formal privacy foundation behind GDPR-grade data protection engineering",
+      "work_id": "doi:10.1561/0400000042",
+      "year": 2014
+    },
+    "REF-090": {
+      "accredited": true,
+      "extract": "research/extracts/ref-090.md",
+      "how": "doi",
+      "title": "k-ANONYMITY: A MODEL FOR PROTECTING PRIVACY",
+      "url": "https://doi.org/10.1142/s0218488502001648",
+      "why": "the classic re-identification result \u2014 why 'anonymized' data usually is not",
+      "work_id": "doi:10.1142/s0218488502001648",
+      "year": 2002
+    },
+    "REF-091": {
+      "accredited": false,
+      "extract": "research/extracts/ref-091.md",
+      "how": "arxiv-title-phrase",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "url": "https://arxiv.org/abs/1810.04805",
+      "why": "bidirectional pretraining \u2014 the fine-tuning paradigm",
+      "work_id": "arxiv:1810.04805",
+      "year": 2018
+    },
+    "REF-092": {
+      "accredited": false,
+      "extract": "research/extracts/ref-092.md",
+      "how": "arxiv-title-phrase",
+      "title": "Language Models are Few-Shot Learners",
+      "url": "https://arxiv.org/abs/2005.14165",
+      "why": "GPT-3 \u2014 in-context learning at scale",
+      "work_id": "arxiv:2005.14165",
+      "year": 2020
+    },
+    "REF-093": {
+      "accredited": false,
+      "extract": "research/extracts/ref-093.md",
+      "how": "arxiv-title-phrase",
+      "title": "LLaMA: Open and Efficient Foundation Language Models",
+      "url": "https://arxiv.org/abs/2302.13971",
+      "why": "the open foundation-model recipe (data + compute discipline)",
+      "work_id": "arxiv:2302.13971",
+      "year": 2023
+    },
+    "REF-094": {
+      "accredited": true,
+      "extract": "research/extracts/ref-094.md",
+      "how": "crossref-title",
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "url": "https://doi.org/10.52202/068431-1189",
+      "why": "IO-aware exact attention \u2014 the systems trick behind long context",
+      "work_id": "doi:10.52202/068431-1189",
+      "year": 2022
+    },
+    "REF-095": {
+      "accredited": false,
+      "extract": "research/extracts/ref-095.md",
+      "how": "arxiv-title-phrase",
+      "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+      "url": "https://arxiv.org/abs/1909.08053",
+      "why": "tensor/model parallelism for training at scale",
+      "work_id": "arxiv:1909.08053",
+      "year": 2019
+    },
+    "REF-096": {
+      "accredited": true,
+      "extract": "research/extracts/ref-096.md",
+      "how": "crossref-title",
+      "title": "ZeRO: Memory optimizations Toward Training Trillion Parameter Models",
+      "url": "https://doi.org/10.1109/sc41405.2020.00024",
+      "why": "optimizer-state sharding \u2014 how large training fits in memory",
+      "work_id": "doi:10.1109/sc41405.2020.00024",
+      "year": 2020
+    },
+    "REF-097": {
+      "accredited": false,
+      "extract": "research/extracts/ref-097.md",
+      "how": "arxiv-title-phrase",
+      "title": "Mixed Precision Training",
+      "url": "https://arxiv.org/abs/1710.03740",
+      "why": "fp16/loss-scaling \u2014 the efficiency baseline for training",
+      "work_id": "arxiv:1710.03740",
+      "year": 2017
+    },
+    "REF-098": {
+      "accredited": true,
+      "extract": "research/extracts/ref-098.md",
+      "how": "crossref-title",
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "url": "https://doi.org/10.52202/075280-0441",
+      "why": "4-bit finetuning \u2014 own-model adaptation on modest hardware",
+      "work_id": "doi:10.52202/075280-0441",
+      "year": 2023
+    },
+    "REF-099": {
+      "accredited": false,
+      "extract": "research/extracts/ref-099.md",
+      "how": "arxiv-title-phrase",
+      "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+      "url": "https://arxiv.org/abs/1701.06538",
+      "why": "conditional computation / MoE \u2014 frontier scaling pattern",
+      "work_id": "arxiv:1701.06538",
+      "year": 2017
+    },
+    "REF-100": {
+      "accredited": false,
+      "extract": "research/extracts/ref-100.md",
+      "how": "arxiv-title-phrase",
+      "title": "Distilling the Knowledge in a Neural Network",
+      "url": "https://arxiv.org/abs/1503.02531",
+      "why": "knowledge distillation \u2014 big teacher, deployable student",
+      "work_id": "arxiv:1503.02531",
+      "year": 2015
+    },
+    "REF-101": {
+      "accredited": true,
+      "extract": "research/extracts/ref-101.md",
+      "how": "crossref-title",
+      "title": "Neural Machine Translation of Rare Words with Subword Units",
+      "url": "https://doi.org/10.18653/v1/p16-1162",
+      "why": "BPE tokenization \u2014 the vocabulary layer of every LLM",
+      "work_id": "doi:10.18653/v1/p16-1162",
+      "year": 2016
+    },
+    "REF-102": {
+      "accredited": false,
+      "extract": "research/extracts/ref-102.md",
+      "how": "arxiv-title-phrase",
+      "title": "The Pile: An 800GB Dataset of Diverse Text for Language Modeling",
+      "url": "https://arxiv.org/abs/2101.00027",
+      "why": "curated pretraining data \u2014 composition documented and auditable",
+      "work_id": "arxiv:2101.00027",
+      "year": 2020
+    },
+    "REF-103": {
+      "accredited": true,
+      "extract": "research/extracts/ref-103.md",
+      "how": "doi",
+      "title": "On the criteria to be used in decomposing systems into modules",
+      "url": "https://doi.org/10.1145/361598.361623",
+      "why": "information hiding \u2014 the root of modular design",
+      "work_id": "doi:10.1145/361598.361623",
+      "year": 1972
+    },
+    "REF-104": {
+      "accredited": true,
+      "extract": "research/extracts/ref-104.md",
+      "how": "doi",
+      "title": "No Silver Bullet Essence and Accidents of Software Engineering",
+      "url": "https://doi.org/10.1109/mc.1987.1663532",
+      "why": "essence vs accident \u2014 why tooling alone cannot save you",
+      "work_id": "doi:10.1109/mc.1987.1663532",
+      "year": 1987
+    },
+    "REF-105": {
+      "accredited": true,
+      "extract": "research/extracts/ref-105.md",
+      "how": "doi",
+      "title": "Letters to the editor: go to statement considered harmful",
+      "url": "https://doi.org/10.1145/362929.362947",
+      "why": "structured programming \u2014 reasoning over control flow",
+      "work_id": "doi:10.1145/362929.362947",
+      "year": 1968
+    },
+    "REF-106": {
+      "accredited": true,
+      "extract": "research/extracts/ref-106.md",
+      "how": "doi",
+      "title": "Communicating sequential processes",
+      "url": "https://doi.org/10.1145/359576.359585",
+      "why": "CSP \u2014 the concurrency model behind Go channels et al.",
+      "work_id": "doi:10.1145/359576.359585",
+      "year": 1978
+    },
+    "REF-107": {
+      "accredited": true,
+      "extract": "research/extracts/ref-107.md",
+      "how": "doi",
+      "title": "Dynamo",
+      "url": "https://doi.org/10.1145/1294261.1294281",
+      "why": "eventual consistency in production \u2014 SaaS availability",
+      "work_id": "doi:10.1145/1294261.1294281",
+      "year": 2007
+    },
+    "REF-108": {
+      "accredited": true,
+      "extract": "research/extracts/ref-108.md",
+      "how": "doi",
+      "title": "MapReduce",
+      "url": "https://doi.org/10.1145/1327452.1327492",
+      "why": "the batch-compute abstraction that scaled the industry",
+      "work_id": "doi:10.1145/1327452.1327492",
+      "year": 2008
+    },
+    "REF-109": {
+      "accredited": true,
+      "extract": "research/extracts/ref-109.md",
+      "how": "doi",
+      "title": "Spanner",
+      "url": "https://doi.org/10.1145/2491245",
+      "why": "globally consistent transactions \u2014 TrueTime",
+      "work_id": "doi:10.1145/2491245",
+      "year": 2013
+    },
+    "REF-110": {
+      "accredited": true,
+      "extract": "research/extracts/ref-110.md",
+      "how": "doi",
+      "title": "Borg, Omega, and Kubernetes",
+      "url": "https://doi.org/10.1145/2890784",
+      "why": "a decade of container orchestration lessons",
+      "work_id": "doi:10.1145/2890784",
+      "year": 2016
+    },
+    "REF-111": {
+      "accredited": true,
+      "extract": "research/extracts/ref-111.md",
+      "how": "doi",
+      "title": "A New Product Growth for Model Consumer Durables",
+      "url": "https://doi.org/10.1287/mnsc.15.5.215",
+      "why": "the Bass diffusion model \u2014 adoption curves",
+      "work_id": "doi:10.1287/mnsc.15.5.215",
+      "year": 1969
+    },
+    "REF-112": {
+      "accredited": true,
+      "extract": "research/extracts/ref-112.md",
+      "how": "doi",
+      "title": "Counting Your Customers: Who-Are They and What Will They Do Next?",
+      "url": "https://doi.org/10.1287/mnsc.33.1.1",
+      "why": "Pareto/NBD \u2014 the probabilistic customer-base model",
+      "work_id": "doi:10.1287/mnsc.33.1.1",
+      "year": 1987
+    },
+    "REF-113": {
+      "accredited": true,
+      "extract": "research/extracts/ref-113.md",
+      "how": "doi",
+      "title": "RFM and CLV: Using Iso-Value Curves for Customer Base Analysis",
+      "url": "https://doi.org/10.1509/jmkr.2005.42.4.415",
+      "why": "customer lifetime value from RFM \u2014 SaaS unit economics",
+      "work_id": "doi:10.1509/jmkr.2005.42.4.415",
+      "year": 2005
+    },
+    "REF-114": {
+      "accredited": true,
+      "extract": "research/extracts/ref-114.md",
+      "how": "doi",
+      "title": "Controlled experiments on the web: survey and practical guide",
+      "url": "https://doi.org/10.1007/s10618-008-0114-1",
+      "why": "A/B testing done right \u2014 the growth experimentation bible",
+      "work_id": "doi:10.1007/s10618-008-0114-1",
+      "year": 2008
+    },
+    "REF-115": {
+      "accredited": true,
+      "extract": "research/extracts/ref-115.md",
+      "how": "doi",
+      "title": "Using Online Conversations to Study Word-of-Mouth Communication",
+      "url": "https://doi.org/10.1287/mksc.1040.0071",
+      "why": "measuring word-of-mouth \u2014 organic growth signal",
+      "work_id": "doi:10.1287/mksc.1040.0071",
+      "year": 2004
+    },
+    "REF-116": {
+      "accredited": true,
+      "extract": "research/extracts/ref-116.md",
+      "how": "doi",
+      "title": "PORTFOLIO SELECTION*",
+      "url": "https://doi.org/10.1111/j.1540-6261.1952.tb01525.x",
+      "why": "mean-variance portfolio theory",
+      "work_id": "doi:10.1111/j.1540-6261.1952.tb01525.x",
+      "year": 1952
+    },
+    "REF-117": {
+      "accredited": true,
+      "extract": "research/extracts/ref-117.md",
+      "how": "doi",
+      "title": "CAPITAL ASSET PRICES: A THEORY OF MARKET EQUILIBRIUM UNDER CONDITIONS OF RISK*",
+      "url": "https://doi.org/10.1111/j.1540-6261.1964.tb02865.x",
+      "why": "CAPM \u2014 priced risk vs diversifiable risk",
+      "work_id": "doi:10.1111/j.1540-6261.1964.tb02865.x",
+      "year": 1964
+    },
+    "REF-118": {
+      "accredited": true,
+      "extract": "research/extracts/ref-118.md",
+      "how": "doi",
+      "title": "The Pricing of Options and Corporate Liabilities",
+      "url": "https://doi.org/10.1086/260062",
+      "why": "Black-Scholes option pricing",
+      "work_id": "doi:10.1086/260062",
+      "year": 1973
+    },
+    "REF-119": {
+      "accredited": true,
+      "extract": "research/extracts/ref-119.md",
+      "how": "doi",
+      "title": "Efficient Capital Markets: A Review of Theory and Empirical Work",
+      "url": "https://doi.org/10.2307/2325486",
+      "why": "efficient-market hypothesis \u2014 the null you must beat",
+      "work_id": "doi:10.2307/2325486",
+      "year": 1970
+    },
+    "REF-120": {
+      "accredited": true,
+      "extract": "research/extracts/ref-120.md",
+      "how": "doi",
+      "title": "Prospect Theory: An Analysis of Decision under Risk",
+      "url": "https://doi.org/10.2307/1914185",
+      "why": "loss aversion \u2014 how decisions actually get made",
+      "work_id": "doi:10.2307/1914185",
+      "year": 1979
+    },
+    "REF-121": {
+      "accredited": true,
+      "extract": "research/extracts/ref-121.md",
+      "how": "doi",
+      "title": "A New Interpretation of Information Rate",
+      "url": "https://doi.org/10.1002/j.1538-7305.1956.tb03809.x",
+      "why": "the Kelly criterion \u2014 information-theoretic bet sizing",
+      "work_id": "doi:10.1002/j.1538-7305.1956.tb03809.x",
+      "year": 1956
+    },
+    "REF-122": {
+      "accredited": false,
+      "extract": "research/extracts/ref-122.md",
+      "how": "arxiv-title-phrase",
+      "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+      "url": "https://arxiv.org/abs/2203.11171",
+      "why": "majority voting over samples \u2014 the Condorcet pattern in practice",
+      "work_id": "arxiv:2203.11171",
+      "year": 2022
+    },
+    "REF-123": {
+      "accredited": false,
+      "extract": "research/extracts/ref-123.md",
+      "how": "arxiv-title-phrase",
+      "title": "Let's Verify Step by Step",
+      "url": "https://arxiv.org/abs/2305.20050",
+      "why": "process supervision \u2014 verifiers over reasoning steps",
+      "work_id": "arxiv:2305.20050",
+      "year": 2023
+    },
+    "REF-124": {
+      "accredited": true,
+      "extract": "research/extracts/ref-124.md",
+      "how": "crossref-title",
+      "title": "STaR: Bootstrapping Reasoning with Reasoning",
+      "url": "https://doi.org/10.52202/068431-1126",
+      "why": "self-taught reasoning \u2014 verified traces become training data",
+      "work_id": "doi:10.52202/068431-1126",
+      "year": 2022
+    },
+    "REF-125": {
+      "accredited": true,
+      "extract": "research/extracts/ref-125.md",
+      "how": "crossref-title",
+      "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+      "url": "https://doi.org/10.52202/075280-2019",
+      "why": "iterative self-feedback loops \u2014 and their limits (see REF-126)",
+      "work_id": "doi:10.52202/075280-2019",
+      "year": 2023
+    },
+    "REF-126": {
+      "accredited": false,
+      "extract": "research/extracts/ref-126.md",
+      "how": "arxiv-title-phrase",
+      "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+      "url": "https://arxiv.org/abs/2310.01798",
+      "why": "the honest limit: intrinsic self-correction does not work \u2014 external verification does",
+      "work_id": "arxiv:2310.01798",
+      "year": 2023
+    },
+    "REF-127": {
+      "accredited": false,
+      "extract": "research/extracts/ref-127.md",
+      "how": "arxiv-title-phrase",
+      "title": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
+      "url": "https://arxiv.org/abs/2305.05176",
+      "why": "LLM cascades \u2014 the cost side of THM-ROUTE-001",
+      "work_id": "arxiv:2305.05176",
+      "year": 2023
+    },
+    "REF-128": {
+      "accredited": false,
+      "extract": "research/extracts/ref-128.md",
+      "how": "arxiv-title-phrase",
+      "title": "RouteLLM: Learning to Route LLMs with Preference Data",
+      "url": "https://arxiv.org/abs/2406.18665",
+      "why": "learned routing between weak and strong models",
+      "work_id": "arxiv:2406.18665",
+      "year": 2024
+    },
+    "REF-129": {
+      "accredited": false,
+      "extract": "research/extracts/ref-129.md",
+      "how": "arxiv-title-phrase",
+      "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+      "url": "https://arxiv.org/abs/2408.03314",
+      "why": "test-time compute beats parameter scale \u2014 capability another way",
+      "work_id": "arxiv:2408.03314",
+      "year": 2024
     }
   }
 }

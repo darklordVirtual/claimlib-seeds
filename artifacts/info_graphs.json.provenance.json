@@ -3,7 +3,7 @@
   "artifact": "info_graphs.json",
   "artifact_sha256": "6bf462450533c8749fc559a2604939719ede0770b52a910d3a3e2cbb935e0c55",
   "script": "python3 theorems/evidence_info_graphs.py",
-  "git_commit": "63eeb3bda0b1f970e869e67a39533056beb4c8fa",
-  "generated_at": "2026-07-04T23:43:48.762444+00:00",
+  "git_commit": "8786d69ec778b3955efae86b6283d952b55a0d18",
+  "generated_at": "2026-07-06T01:21:32.164401+00:00",
   "produced_by": "human"
 }

@@ -659,6 +659,78 @@ claims:
       computation at evidence time.
     reproduce: "python3 theorems/evidence_conformal.py theorems/conformal.py"
 
+  - id: THM-VOTE-001
+    statement: >
+      Best-of-n identity: with n independent attempts each succeeding with
+      probability p, P(at least one success) equals 1-(1-p)^n — verified by
+      full 2^n outcome enumeration in exact rational arithmetic for all n <=
+      12 and nine p values (108 identity checks), and success strictly
+      increases with every added attempt.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/verifier_math.json"
+    metrics:
+      identity_checks: 108
+      max_n: 12
+    caveat: >
+      The exact mathematics of drawing candidates until a verifier accepts one
+      — the amplification route to capability without model scale.
+      INDEPENDENCE of attempts and a sound verifier are model assumptions;
+      correlated attempts or a rubber-stamp verifier void the guarantee.
+      Verification/routing literature: REF-114-class experimentation
+      discipline and the process-supervision line (Lightman et al.). Seeded
+      from model knowledge; verified by deterministic computation at evidence
+      time.
+    reproduce: "python3 theorems/evidence_verifier_math.py theorems/verifier_math.py"
+
+  - id: THM-VOTE-002
+    statement: >
+      Condorcet amplification instance: for p > 1/2, the majority of n
+      independent voters is at least as reliable as one voter and strictly
+      improves as n grows — verified in exact arithmetic for all odd n <= 15
+      and five p values (40 checks); and for p < 1/2 the majority DEGRADES
+      below the single voter in all 35 converse checks.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/verifier_math.json"
+    metrics:
+      amplification_checks: 40
+      degradation_checks: 35
+      max_n: 15
+    caveat: >
+      Self-consistency voting amplifies only what is already better than
+      chance — below 1/2 it makes things worse, which is why voting never
+      substitutes for verification. Bounded exhaustive instance of the
+      classical jury theorem; independence is a model assumption. Seeded from
+      model knowledge; verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_verifier_math.py theorems/verifier_math.py"
+
+  - id: THM-ROUTE-001
+    statement: >
+      Verifier-gated cascade dominance: routing each item to a big model
+      exactly when a perfect verifier rejects the small model's answer never
+      yields more errors than running the big model alone — verified over
+      every (small,big)-correctness table for up to 8 items (87380 exhaustive
+      tables); and the expected-cost identity cost = c_small +
+      defer_rate*c_big matches literal enumeration in all 2046 defer sets up
+      to 10 items.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/verifier_math.json"
+    metrics:
+      dominance_tables_checked: 87380
+      cost_identity_checks: 2046
+    caveat: >
+      The routing contract behind FrugalGPT-style cascades and TrustGate-style
+      gates: with a PERFECT verifier the cascade is never worse than the big
+      model and usually far cheaper. Real verifiers are imperfect — their
+      false-accept rate is exactly the term a deployment must measure
+      (conformal risk control, CLAIM-011/THM-CONF-004-class machinery) before
+      trusting the dominance. The reusable implementation ships in this
+      bundle's code/ (verifier_math.py). Seeded from model knowledge; verified
+      by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_verifier_math.py theorems/verifier_math.py"
+
   - id: THM-LEAN-001
     statement: >
       12 classical propositional theorems (identity, hypothetical syllogism,
@@ -1884,11 +1956,11 @@ claims:
 
   - id: REF-070
     statement: >
-      Not What You've Signed Up For: Compromising Real-World LLM-Integrated
+      Not what you've signed up for: Compromising Real-World LLM-Integrated
       Applications with Indirect Prompt Injection (2023) is a registrar-
-      verified work (doi:10.1145/3605764.3623985) whose abstract extract is
-      preserved hash-locked in this repository. Curation note: indirect prompt
-      injection — the agent-security threat REMORA gates against.
+      verified work (arxiv:2302.12173) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: indirect prompt injection
+      — the agent-security threat REMORA gates against.
     evidence_level: theoretical
     artifact:
       - "research/extracts/ref-070.md"
@@ -1899,8 +1971,8 @@ claims:
       reviewed venue version may exist but is not asserted. Title was Fable-
       seeded; metadata is registrar-fetched.
     literature:
-      - source: "doi:10.1145/3605764.3623985 — https://doi.org/10.1145/3605764.3623985"
-        sha256: c827db30345c37555e805193b5b2e32b51f49bf7947716289805e0e567f6fb13
+      - source: "arxiv:2302.12173 — https://arxiv.org/abs/2302.12173"
+        sha256: fb9bed3110a5b240771156e5690f1cfc1de1504900552cadc432aeffe5adec31
         file: "research/extracts/ref-070.md"
 
   - id: REF-071
@@ -1942,4 +2014,1109 @@ claims:
       - source: "doi:10.1145/2976749.2978318 — https://doi.org/10.1145/2976749.2978318"
         sha256: fd5c66ea83f9894631d7642e986f70597df9927032dd70ecbea6294c8378d20e
         file: "research/extracts/ref-072.md"
+
+  - id: REF-074
+    statement: >
+      Deep Residual Learning for Image Recognition (2016) is a registrar-
+      verified work (doi:10.1109/cvpr.2016.90) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: ResNet —
+      residual connections that made very deep nets trainable.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-074.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1109/cvpr.2016.90 — https://doi.org/10.1109/cvpr.2016.90"
+        sha256: 5ecd87a70774d053b43b028817253125fae4f1d617978bbdf9b7184199d361ee
+        file: "research/extracts/ref-074.md"
+
+  - id: REF-075
+    statement: >
+      Adam: A Method for Stochastic Optimization (2014) is a registrar-
+      verified work (arxiv:1412.6980) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: the default optimizer of
+      deep learning.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-075.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1412.6980 — https://arxiv.org/abs/1412.6980"
+        sha256: 07056fea6012a8456f9d4a79f78e8cdcfa6536b51b2b5d8fa479742018a66c48
+        file: "research/extracts/ref-075.md"
+
+  - id: REF-076
+    statement: >
+      Batch Normalization: Accelerating Deep Network Training by Reducing
+      Internal Covariate Shift (2015) is a registrar-verified work
+      (arxiv:1502.03167) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: normalization that stabilized deep
+      training.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-076.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1502.03167 — https://arxiv.org/abs/1502.03167"
+        sha256: 578f0e4e6c321e2225df972ddbcb88cbac6c12fcee409d1a908078f91aa9631e
+        file: "research/extracts/ref-076.md"
+
+  - id: REF-077
+    statement: >
+      Denoising Diffusion Probabilistic Models (2020) is a registrar-verified
+      work (arxiv:2006.11239) whose abstract extract is preserved hash-locked
+      in this repository. Curation note: the diffusion generative baseline
+      flow matching descends from.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-077.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2006.11239 — https://arxiv.org/abs/2006.11239"
+        sha256: 793c355aa5bd2790969d528cdee8f397c17c6832ed4cba87e2cc41d87463ae21
+        file: "research/extracts/ref-077.md"
+
+  - id: REF-078
+    statement: >
+      Auto-Encoding Variational Bayes (2013) is a registrar-verified work
+      (arxiv:1312.6114) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: the VAE — variational deep generative
+      models.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-078.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1312.6114 — https://arxiv.org/abs/1312.6114"
+        sha256: d85992d7e259ee12bd695bf2ec3804298ea88d9133cea38dbd4d95a688177e40
+        file: "research/extracts/ref-078.md"
+
+  - id: REF-079
+    statement: >
+      Generative Adversarial Networks (2014) is a registrar-verified work
+      (arxiv:1406.2661) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: GANs — adversarial generative modelling.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-079.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1406.2661 — https://arxiv.org/abs/1406.2661"
+        sha256: 876d8f6bebe48563619edbcd0240d2cd374b7027223b854d14b602abf4987b48
+        file: "research/extracts/ref-079.md"
+
+  - id: REF-081
+    statement: >
+      Deep reinforcement learning from human preferences (2017) is a
+      registrar-verified work (arxiv:1706.03741) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: preference-
+      based RL — the root of RLHF.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-081.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1706.03741 — https://arxiv.org/abs/1706.03741"
+        sha256: fb4a58c9630a1e7541c30ad92a7032d7a2a908eba9b803e105e872ecb44b1327
+        file: "research/extracts/ref-081.md"
+
+  - id: REF-082
+    statement: >
+      Simple and Scalable Predictive Uncertainty Estimation using Deep
+      Ensembles (2016) is a registrar-verified work (arxiv:1612.01474) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: deep ensembles — practical uncertainty for governance.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-082.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1612.01474 — https://arxiv.org/abs/1612.01474"
+        sha256: a90bdfbcd18a93fe744817e9e3fa34f5353badba8b1525ee8591c7b4f8079afa
+        file: "research/extracts/ref-082.md"
+
+  - id: REF-083
+    statement: >
+      Dropout as a Bayesian Approximation: Representing Model Uncertainty in
+      Deep Learning (2015) is a registrar-verified work (arxiv:1506.02142)
+      whose abstract extract is preserved hash-locked in this repository.
+      Curation note: MC-dropout — uncertainty from a trained net.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-083.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1506.02142 — https://arxiv.org/abs/1506.02142"
+        sha256: 02a4f6eb199a2fe8f55fad3257cc1d10d22daec61a34b25cc005b47ff31ec0ed
+        file: "research/extracts/ref-083.md"
+
+  - id: REF-084
+    statement: >
+      Guide to Operational Technology (OT) security (2023) is a registrar-
+      verified work (doi:10.6028/nist.sp.800-82r3) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: the OT/ICS
+      security baseline for industrial (e.g. energy) AI deployments.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-084.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.6028/nist.sp.800-82r3 — https://doi.org/10.6028/nist.sp.800-82r3"
+        sha256: 7995a9e2d3804e8b28295416e48cb9a22667a373d4d126a0c76f03b21a8fa8b5
+        file: "research/extracts/ref-084.md"
+
+  - id: REF-085
+    statement: >
+      Closing the AI accountability gap (2020) is a registrar-verified work
+      (doi:10.1145/3351095.3372873) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: internal algorithmic auditing
+      framework — the enterprise AI audit playbook.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-085.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/3351095.3372873 — https://doi.org/10.1145/3351095.3372873"
+        sha256: 731e338c763d1b6bd1c23ddd3d0387624a5567f50dd21a1951fc4afc68bc9f0a
+        file: "research/extracts/ref-085.md"
+
+  - id: REF-086
+    statement: >
+      Machine Learning Operations (MLOps): Overview, Definition, and
+      Architecture (2023) is a registrar-verified work
+      (doi:10.1109/access.2023.3262138) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: canonical MLOps reference
+      architecture for production ML at enterprise scale.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-086.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1109/access.2023.3262138 — https://doi.org/10.1109/access.2023.3262138"
+        sha256: 98f73144a355eb8a023929c10011fba1e446f7d5460320043231d2c155d29c07
+        file: "research/extracts/ref-086.md"
+
+  - id: REF-087
+    statement: >
+      Digital Twin: Values, Challenges and Enablers From a Modeling
+      Perspective (2020) is a registrar-verified work
+      (doi:10.1109/access.2020.2970143) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: digital-twin foundations
+      (NTNU/SINTEF lineage) — core for asset-heavy industry.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-087.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1109/access.2020.2970143 — https://doi.org/10.1109/access.2020.2970143"
+        sha256: cc5eb8b9ff8e2ff2715de446657aee996c036447d7d8e015fc38fa8c541c5529
+        file: "research/extracts/ref-087.md"
+
+  - id: REF-088
+    statement: >
+      Physics-informed machine learning (2021) is a registrar-verified work
+      (doi:10.1038/s42254-021-00314-5) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: physics-constrained ML —
+      the honest way to model industrial processes.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-088.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1038/s42254-021-00314-5 — https://doi.org/10.1038/s42254-021-00314-5"
+        sha256: fa3ffe7515b39753adf682ddd928fb3e4b8e65299e0b26c4588ffe982dc06fe6
+        file: "research/extracts/ref-088.md"
+
+  - id: REF-089
+    statement: >
+      The Algorithmic Foundations of Differential Privacy (2014) is a
+      registrar-verified work (doi:10.1561/0400000042) whose abstract extract
+      is preserved hash-locked in this repository. Curation note: the formal
+      privacy foundation behind GDPR-grade data protection engineering.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-089.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1561/0400000042 — https://doi.org/10.1561/0400000042"
+        sha256: f1049774a61901372105980e6112a7f804ebc673afa85d4092105eb370cf5ec9
+        file: "research/extracts/ref-089.md"
+
+  - id: REF-090
+    statement: >
+      k-ANONYMITY: A MODEL FOR PROTECTING PRIVACY (2002) is a registrar-
+      verified work (doi:10.1142/s0218488502001648) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: the classic re-
+      identification result — why 'anonymized' data usually is not.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-090.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1142/s0218488502001648 — https://doi.org/10.1142/s0218488502001648"
+        sha256: b6ce4874deeac790f0314b847c39a6c005d2b10e2a596f8b19450a7d64f4e85c
+        file: "research/extracts/ref-090.md"
+
+  - id: REF-091
+    statement: >
+      BERT: Pre-training of Deep Bidirectional Transformers for Language
+      Understanding (2018) is a registrar-verified work (arxiv:1810.04805)
+      whose abstract extract is preserved hash-locked in this repository.
+      Curation note: bidirectional pretraining — the fine-tuning paradigm.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-091.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1810.04805 — https://arxiv.org/abs/1810.04805"
+        sha256: aa1526ceaadeace8f5328a8a24ca61b42608751228fdc47250bb3815235c031f
+        file: "research/extracts/ref-091.md"
+
+  - id: REF-092
+    statement: >
+      Language Models are Few-Shot Learners (2020) is a registrar-verified
+      work (arxiv:2005.14165) whose abstract extract is preserved hash-locked
+      in this repository. Curation note: GPT-3 — in-context learning at scale.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-092.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2005.14165 — https://arxiv.org/abs/2005.14165"
+        sha256: 080e696b80cd4ebcd87cc49e2738bc88f202bb0e8d338089bd6a262021542a4e
+        file: "research/extracts/ref-092.md"
+
+  - id: REF-093
+    statement: >
+      LLaMA: Open and Efficient Foundation Language Models (2023) is a
+      registrar-verified work (arxiv:2302.13971) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: the open
+      foundation-model recipe (data + compute discipline).
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-093.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2302.13971 — https://arxiv.org/abs/2302.13971"
+        sha256: 75a71571de0d48004196d9db45ac39bb32a5ec462cc863c5214a138707f48683
+        file: "research/extracts/ref-093.md"
+
+  - id: REF-094
+    statement: >
+      FlashAttention: Fast and Memory-Efficient Exact Attention with IO-
+      Awareness (2022) is a registrar-verified work (doi:10.52202/068431-1189)
+      whose abstract extract is preserved hash-locked in this repository.
+      Curation note: IO-aware exact attention — the systems trick behind long
+      context.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-094.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/068431-1189 — https://doi.org/10.52202/068431-1189"
+        sha256: 24d5189492105653cab4eb2651131eefe87c0e33e859399a864ea049c8b7892c
+        file: "research/extracts/ref-094.md"
+
+  - id: REF-095
+    statement: >
+      Megatron-LM: Training Multi-Billion Parameter Language Models Using
+      Model Parallelism (2019) is a registrar-verified work (arxiv:1909.08053)
+      whose abstract extract is preserved hash-locked in this repository.
+      Curation note: tensor/model parallelism for training at scale.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-095.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1909.08053 — https://arxiv.org/abs/1909.08053"
+        sha256: a2c7ca6291bec569b4c105351299d23a1a0afed7153c7b23cd9c9e616d5608fa
+        file: "research/extracts/ref-095.md"
+
+  - id: REF-096
+    statement: >
+      ZeRO: Memory optimizations Toward Training Trillion Parameter Models
+      (2020) is a registrar-verified work (doi:10.1109/sc41405.2020.00024)
+      whose abstract extract is preserved hash-locked in this repository.
+      Curation note: optimizer-state sharding — how large training fits in
+      memory.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-096.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1109/sc41405.2020.00024 — https://doi.org/10.1109/sc41405.2020.00024"
+        sha256: c41cacf6e81006712f379253d730da03153ac2af9b73d458334c90f3192463c6
+        file: "research/extracts/ref-096.md"
+
+  - id: REF-097
+    statement: >
+      Mixed Precision Training (2017) is a registrar-verified work
+      (arxiv:1710.03740) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: fp16/loss-scaling — the efficiency
+      baseline for training.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-097.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1710.03740 — https://arxiv.org/abs/1710.03740"
+        sha256: 7dc52d6dec13f0d79d7d86d2188e2af3447d80ace69259b058ebf441a5493d4f
+        file: "research/extracts/ref-097.md"
+
+  - id: REF-098
+    statement: >
+      QLoRA: Efficient Finetuning of Quantized LLMs (2023) is a registrar-
+      verified work (doi:10.52202/075280-0441) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: 4-bit
+      finetuning — own-model adaptation on modest hardware.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-098.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/075280-0441 — https://doi.org/10.52202/075280-0441"
+        sha256: f2588d440023d98e399cc76d9149cf23a9602113e21560486e0d78ab8d941054
+        file: "research/extracts/ref-098.md"
+
+  - id: REF-099
+    statement: >
+      Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-
+      Experts Layer (2017) is a registrar-verified work (arxiv:1701.06538)
+      whose abstract extract is preserved hash-locked in this repository.
+      Curation note: conditional computation / MoE — frontier scaling pattern.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-099.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1701.06538 — https://arxiv.org/abs/1701.06538"
+        sha256: da7541bb4298b59f088f5a3d17159d80d809e6e286c825e56b81cab16675b992
+        file: "research/extracts/ref-099.md"
+
+  - id: REF-100
+    statement: >
+      Distilling the Knowledge in a Neural Network (2015) is a registrar-
+      verified work (arxiv:1503.02531) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: knowledge distillation —
+      big teacher, deployable student.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-100.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:1503.02531 — https://arxiv.org/abs/1503.02531"
+        sha256: 1974aff75bc7b425fae6f2679d9490f6a8fa3c3ac6549f12e5c81ea050413c9e
+        file: "research/extracts/ref-100.md"
+
+  - id: REF-101
+    statement: >
+      Neural Machine Translation of Rare Words with Subword Units (2016) is a
+      registrar-verified work (doi:10.18653/v1/p16-1162) whose abstract
+      extract is preserved hash-locked in this repository. Curation note: BPE
+      tokenization — the vocabulary layer of every LLM.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-101.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.18653/v1/p16-1162 — https://doi.org/10.18653/v1/p16-1162"
+        sha256: 2670120875574979ff64afa4c1382bbb2d64258fc0047deb5a59f5ea6c6caa92
+        file: "research/extracts/ref-101.md"
+
+  - id: REF-102
+    statement: >
+      The Pile: An 800GB Dataset of Diverse Text for Language Modeling (2020)
+      is a registrar-verified work (arxiv:2101.00027) whose abstract extract
+      is preserved hash-locked in this repository. Curation note: curated
+      pretraining data — composition documented and auditable.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-102.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2101.00027 — https://arxiv.org/abs/2101.00027"
+        sha256: 4cb35d5e881823d7f44daabb7fcd3e48434e86c38df4aaf655d62d4c4976dfcd
+        file: "research/extracts/ref-102.md"
+
+  - id: REF-103
+    statement: >
+      On the criteria to be used in decomposing systems into modules (1972) is
+      a registrar-verified work (doi:10.1145/361598.361623) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      information hiding — the root of modular design.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-103.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/361598.361623 — https://doi.org/10.1145/361598.361623"
+        sha256: a503c57ce9092a53e1fd535eb4d222e949605996a181a56de3f4219189db1a91
+        file: "research/extracts/ref-103.md"
+
+  - id: REF-104
+    statement: >
+      No Silver Bullet Essence and Accidents of Software Engineering (1987) is
+      a registrar-verified work (doi:10.1109/mc.1987.1663532) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      essence vs accident — why tooling alone cannot save you.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-104.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1109/mc.1987.1663532 — https://doi.org/10.1109/mc.1987.1663532"
+        sha256: 2abde4892192c24c474eba1ae8163f11ad2dcb2608beba9ffe926bbc08426eed
+        file: "research/extracts/ref-104.md"
+
+  - id: REF-105
+    statement: >
+      Letters to the editor: go to statement considered harmful (1968) is a
+      registrar-verified work (doi:10.1145/362929.362947) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      structured programming — reasoning over control flow.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-105.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/362929.362947 — https://doi.org/10.1145/362929.362947"
+        sha256: 297dc810ba990d3b90e29bc0713990ccf95ddd8057b87e5e4f62e6703e1d9ee5
+        file: "research/extracts/ref-105.md"
+
+  - id: REF-106
+    statement: >
+      Communicating sequential processes (1978) is a registrar-verified work
+      (doi:10.1145/359576.359585) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: CSP — the concurrency model
+      behind Go channels et al..
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-106.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/359576.359585 — https://doi.org/10.1145/359576.359585"
+        sha256: 62d133b4093b7c3f8407f4e3951f8cf2507a6ff7815ec4f2fe98faab73e09937
+        file: "research/extracts/ref-106.md"
+
+  - id: REF-107
+    statement: >
+      Dynamo (2007) is a registrar-verified work (doi:10.1145/1294261.1294281)
+      whose abstract extract is preserved hash-locked in this repository.
+      Curation note: eventual consistency in production — SaaS availability.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-107.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/1294261.1294281 — https://doi.org/10.1145/1294261.1294281"
+        sha256: 347f47d6a1708e1941dd674c25af4f87ef3bb05394f0956e67ad3e1d3aa75a70
+        file: "research/extracts/ref-107.md"
+
+  - id: REF-108
+    statement: >
+      MapReduce (2008) is a registrar-verified work
+      (doi:10.1145/1327452.1327492) whose abstract extract is preserved hash-
+      locked in this repository. Curation note: the batch-compute abstraction
+      that scaled the industry.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-108.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/1327452.1327492 — https://doi.org/10.1145/1327452.1327492"
+        sha256: 508454abd53314ff55f683a3a9adca7477da533e75fac4b0e0c11649fde9f0ed
+        file: "research/extracts/ref-108.md"
+
+  - id: REF-109
+    statement: >
+      Spanner (2013) is a registrar-verified work (doi:10.1145/2491245) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: globally consistent transactions — TrueTime.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-109.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/2491245 — https://doi.org/10.1145/2491245"
+        sha256: db9931195a5bae5e96167efa3b98e7f11689cc95735d0cb4342311926d5e864a
+        file: "research/extracts/ref-109.md"
+
+  - id: REF-110
+    statement: >
+      Borg, Omega, and Kubernetes (2016) is a registrar-verified work
+      (doi:10.1145/2890784) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: a decade of container orchestration
+      lessons.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-110.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1145/2890784 — https://doi.org/10.1145/2890784"
+        sha256: 4a81e94e0408458b5e7030bff049b76994f88ce61b5f0430c71ebcc322984f0e
+        file: "research/extracts/ref-110.md"
+
+  - id: REF-111
+    statement: >
+      A New Product Growth for Model Consumer Durables (1969) is a registrar-
+      verified work (doi:10.1287/mnsc.15.5.215) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: the Bass
+      diffusion model — adoption curves.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-111.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1287/mnsc.15.5.215 — https://doi.org/10.1287/mnsc.15.5.215"
+        sha256: 876193fff7a23361cd86c5703b288c249045e62d37c35b0796d06c17a3de8ab6
+        file: "research/extracts/ref-111.md"
+
+  - id: REF-112
+    statement: >
+      Counting Your Customers: Who-Are They and What Will They Do Next? (1987)
+      is a registrar-verified work (doi:10.1287/mnsc.33.1.1) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      Pareto/NBD — the probabilistic customer-base model.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-112.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1287/mnsc.33.1.1 — https://doi.org/10.1287/mnsc.33.1.1"
+        sha256: 47e1ca834877970cd26c0f24cd319f4f6abb94e890573e8b90b66c1bd84645e3
+        file: "research/extracts/ref-112.md"
+
+  - id: REF-113
+    statement: >
+      RFM and CLV: Using Iso-Value Curves for Customer Base Analysis (2005) is
+      a registrar-verified work (doi:10.1509/jmkr.2005.42.4.415) whose
+      abstract extract is preserved hash-locked in this repository. Curation
+      note: customer lifetime value from RFM — SaaS unit economics.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-113.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1509/jmkr.2005.42.4.415 — https://doi.org/10.1509/jmkr.2005.42.4.415"
+        sha256: 6717d618e464b5ca4a1e629d8146744579bd911ccefeffcca6aa810643c22422
+        file: "research/extracts/ref-113.md"
+
+  - id: REF-114
+    statement: >
+      Controlled experiments on the web: survey and practical guide (2008) is
+      a registrar-verified work (doi:10.1007/s10618-008-0114-1) whose abstract
+      extract is preserved hash-locked in this repository. Curation note: A/B
+      testing done right — the growth experimentation bible.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-114.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1007/s10618-008-0114-1 — https://doi.org/10.1007/s10618-008-0114-1"
+        sha256: 3f6251ebb81da92f428d6fec117ce6b09cebcf3b0881fff0eb1996a4022c8a6a
+        file: "research/extracts/ref-114.md"
+
+  - id: REF-115
+    statement: >
+      Using Online Conversations to Study Word-of-Mouth Communication (2004)
+      is a registrar-verified work (doi:10.1287/mksc.1040.0071) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      measuring word-of-mouth — organic growth signal.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-115.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1287/mksc.1040.0071 — https://doi.org/10.1287/mksc.1040.0071"
+        sha256: ccfbe93379cd4ab7b33e67af68490dd88a5b28d1d38f9e7ea574086bb76e28bb
+        file: "research/extracts/ref-115.md"
+
+  - id: REF-116
+    statement: >
+      PORTFOLIO SELECTION* (1952) is a registrar-verified work
+      (doi:10.1111/j.1540-6261.1952.tb01525.x) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: mean-variance
+      portfolio theory.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-116.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1111/j.1540-6261.1952.tb01525.x — https://doi.org/10.1111/j.1540-6261.1952.tb01525.x"
+        sha256: 98ba4bb4b3b15541ae5b44760f0e401faf349ec61faba3bd117b04c2bb2b13ff
+        file: "research/extracts/ref-116.md"
+
+  - id: REF-117
+    statement: >
+      CAPITAL ASSET PRICES: A THEORY OF MARKET EQUILIBRIUM UNDER CONDITIONS OF
+      RISK* (1964) is a registrar-verified work
+      (doi:10.1111/j.1540-6261.1964.tb02865.x) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: CAPM — priced
+      risk vs diversifiable risk.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-117.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1111/j.1540-6261.1964.tb02865.x — https://doi.org/10.1111/j.1540-6261.1964.tb02865.x"
+        sha256: 3509f026306479c260330eced742fa55c38326c2f8d07923e1f350f4449b0ec3
+        file: "research/extracts/ref-117.md"
+
+  - id: REF-118
+    statement: >
+      The Pricing of Options and Corporate Liabilities (1973) is a registrar-
+      verified work (doi:10.1086/260062) whose abstract extract is preserved
+      hash-locked in this repository. Curation note: Black-Scholes option
+      pricing.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-118.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1086/260062 — https://doi.org/10.1086/260062"
+        sha256: bdb05b7378c6fab949dc43763f96f933d6da0d1d35ed0c48f7caa445f47e2781
+        file: "research/extracts/ref-118.md"
+
+  - id: REF-119
+    statement: >
+      Efficient Capital Markets: A Review of Theory and Empirical Work (1970)
+      is a registrar-verified work (doi:10.2307/2325486) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      efficient-market hypothesis — the null you must beat.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-119.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.2307/2325486 — https://doi.org/10.2307/2325486"
+        sha256: e266d81351f07d806815b8260d9ab1544c7878653f274cd8c104797208ecf3fd
+        file: "research/extracts/ref-119.md"
+
+  - id: REF-120
+    statement: >
+      Prospect Theory: An Analysis of Decision under Risk (1979) is a
+      registrar-verified work (doi:10.2307/1914185) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: loss aversion —
+      how decisions actually get made.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-120.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.2307/1914185 — https://doi.org/10.2307/1914185"
+        sha256: 9a80a7d12fab8e9671a6f388ab67a0b87f333eba1419dd47515e90555640dc65
+        file: "research/extracts/ref-120.md"
+
+  - id: REF-121
+    statement: >
+      A New Interpretation of Information Rate (1956) is a registrar-verified
+      work (doi:10.1002/j.1538-7305.1956.tb03809.x) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: the Kelly
+      criterion — information-theoretic bet sizing.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-121.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.1002/j.1538-7305.1956.tb03809.x — https://doi.org/10.1002/j.1538-7305.1956.tb03809.x"
+        sha256: c2833c7c25f48fbadb058e5eda2188fda7dddf23350d8d7cd4ed6e601e8a5d1d
+        file: "research/extracts/ref-121.md"
+
+  - id: REF-122
+    statement: >
+      Self-Consistency Improves Chain of Thought Reasoning in Language Models
+      (2022) is a registrar-verified work (arxiv:2203.11171) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      majority voting over samples — the Condorcet pattern in practice.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-122.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2203.11171 — https://arxiv.org/abs/2203.11171"
+        sha256: 1dc5ff22d69863bd43a1fcb724a746e8c16ce7cb2e1457c5594c79bda9c71ec7
+        file: "research/extracts/ref-122.md"
+
+  - id: REF-123
+    statement: >
+      Let's Verify Step by Step (2023) is a registrar-verified work
+      (arxiv:2305.20050) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: process supervision — verifiers over
+      reasoning steps.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-123.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2305.20050 — https://arxiv.org/abs/2305.20050"
+        sha256: e94a382efc0d2f9fa561501012d28aa62deb3a24f6c9e821cf7d2a0933145a27
+        file: "research/extracts/ref-123.md"
+
+  - id: REF-124
+    statement: >
+      STaR: Bootstrapping Reasoning with Reasoning (2022) is a registrar-
+      verified work (doi:10.52202/068431-1126) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: self-taught
+      reasoning — verified traces become training data.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-124.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/068431-1126 — https://doi.org/10.52202/068431-1126"
+        sha256: 447100e9b2685a8e6f806e19c4239b1145946b704e5853a03dbd50f35303e89a
+        file: "research/extracts/ref-124.md"
+
+  - id: REF-125
+    statement: >
+      Self-Refine: Iterative Refinement with Self-Feedback (2023) is a
+      registrar-verified work (doi:10.52202/075280-2019) whose abstract
+      extract is preserved hash-locked in this repository. Curation note:
+      iterative self-feedback loops — and their limits (see REF-126).
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-125.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "doi:10.52202/075280-2019 — https://doi.org/10.52202/075280-2019"
+        sha256: 57e69c856f7d0428254a8588dc01bd3d448775c55c320a52b2bf4e46f20a77bc
+        file: "research/extracts/ref-125.md"
+
+  - id: REF-126
+    statement: >
+      Large Language Models Cannot Self-Correct Reasoning Yet (2023) is a
+      registrar-verified work (arxiv:2310.01798) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: the honest
+      limit: intrinsic self-correction does not work — external verification
+      does.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-126.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2310.01798 — https://arxiv.org/abs/2310.01798"
+        sha256: 95cb282fb921b0c7154900ceeb548cd87845785526976c8177e59992ade6dcc3
+        file: "research/extracts/ref-126.md"
+
+  - id: REF-127
+    statement: >
+      FrugalGPT: How to Use Large Language Models While Reducing Cost and
+      Improving Performance (2023) is a registrar-verified work
+      (arxiv:2305.05176) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: LLM cascades — the cost side of THM-
+      ROUTE-001.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-127.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2305.05176 — https://arxiv.org/abs/2305.05176"
+        sha256: bb0a6bd549ae35c9729edfd60274d5d87dd4b7321aa00202a2792adee059843e
+        file: "research/extracts/ref-127.md"
+
+  - id: REF-128
+    statement: >
+      RouteLLM: Learning to Route LLMs with Preference Data (2024) is a
+      registrar-verified work (arxiv:2406.18665) whose abstract extract is
+      preserved hash-locked in this repository. Curation note: learned routing
+      between weak and strong models.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-128.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2406.18665 — https://arxiv.org/abs/2406.18665"
+        sha256: c9891caa8da98ef8238cdb3d980acb92773036b72e8f1079d87ff4e6b798004d
+        file: "research/extracts/ref-128.md"
+
+  - id: REF-129
+    statement: >
+      Scaling LLM Test-Time Compute Optimally can be More Effective than
+      Scaling Model Parameters (2024) is a registrar-verified work
+      (arxiv:2408.03314) whose abstract extract is preserved hash-locked in
+      this repository. Curation note: test-time compute beats parameter scale
+      — capability another way.
+    evidence_level: theoretical
+    artifact:
+      - "research/extracts/ref-129.md"
+    caveat: >
+      A bibliographic claim only: the registrar record exists and the
+      committed extract is hash-locked. Asserts NOTHING about the correctness
+      of the work's results; the arXiv record is a preprint snapshot — a peer-
+      reviewed venue version may exist but is not asserted. Title was Fable-
+      seeded; metadata is registrar-fetched.
+    literature:
+      - source: "arxiv:2408.03314 — https://arxiv.org/abs/2408.03314"
+        sha256: 79ee5bad944563035e856c189761abe62b2d399e8e7aae959220de5482b946aa
+        file: "research/extracts/ref-129.md"
 

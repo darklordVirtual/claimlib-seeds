@@ -3,7 +3,7 @@
   "artifact": "hilbert.json",
   "artifact_sha256": "b8c2fcbc899070f5d8b93af04fc5dccec89758275898bd18e4340b47cdc33996",
   "script": "python3 theorems/evidence_hilbert.py",
-  "git_commit": "63eeb3bda0b1f970e869e67a39533056beb4c8fa",
-  "generated_at": "2026-07-04T23:43:47.540478+00:00",
+  "git_commit": "8786d69ec778b3955efae86b6283d952b55a0d18",
+  "generated_at": "2026-07-06T01:21:30.981200+00:00",
   "produced_by": "human"
 }
