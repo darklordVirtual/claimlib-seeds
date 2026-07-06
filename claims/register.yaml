@@ -731,6 +731,83 @@ claims:
       by deterministic computation at evidence time.
     reproduce: "python3 theorems/evidence_verifier_math.py theorems/verifier_math.py"
 
+  - id: THM-SCORE-001
+    statement: >
+      Brier properness: reporting your TRUE probabilities uniquely minimizes
+      expected Brier score — every other report on the grid scores strictly
+      worse, verified in exact rational arithmetic over 1028 (true-
+      distribution, alternative-report) pairs across 55 true distributions.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/decision_theory.json"
+    metrics:
+      strict_better_checks: 1028
+    caveat: >
+      The formal reason honest calibration beats confident guessing: a proper
+      scoring rule makes truthfulness the optimum, so a model rewarded by
+      Brier score is rewarded for saying what it actually believes. Exhaustive
+      for k in {2,3} outcomes on denominator-4/6 grids only; the general
+      continuous statement is literature. Seeded from model knowledge;
+      verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_decision_theory.py theorems/decision_theory.py"
+
+  - id: THM-STOP-001
+    statement: >
+      Secretary optimality: the backward-induction DP win probability equals
+      the best threshold rule's exact win probability for every n <= 20 (20
+      checks), so 'reject the first t*, then take the first record' is optimal
+      — e.g. n=8 gives 459/1120 at threshold 3, exact.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/decision_theory.json"
+    metrics:
+      dp_equals_threshold_checks: 20
+      max_n: 20
+    caveat: >
+      The exact mathematics of explore-then-commit under uncertainty (the 1/e
+      law): optimal stopping without a second chance. Verified exactly for n
+      <= 20 by DP against the closed-form threshold value; the asymptotic 1/e
+      result is literature. Seeded from model knowledge; verified by
+      deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_decision_theory.py theorems/decision_theory.py"
+
+  - id: THM-GAME-001
+    statement: >
+      Minimax equals maximin: for every 2x2 zero-sum game with integer payoffs
+      in [-4,4] (6561 games) the row player's guaranteed (maximin) value
+      equals the game value equals the column player's (minimax) value, in
+      exact rational arithmetic.
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/decision_theory.json"
+    metrics:
+      games_checked: 6561
+    caveat: >
+      The core of adversarial reasoning: a single value both sides can secure,
+      so worst-case planning is well-defined. Exhaustive for 2x2 integer-
+      payoff games in the stated range; the general minimax theorem (von
+      Neumann, any finite game) is literature. Seeded from model knowledge;
+      verified by deterministic computation at evidence time.
+    reproduce: "python3 theorems/evidence_decision_theory.py theorems/decision_theory.py"
+
+  - id: THM-JENSEN-001
+    statement: >
+      Jensen for x^2: E[X^2] - (E[X])^2 >= 0 (variance is non-negative) for
+      every rational weight/point configuration on the grid (3125 checks),
+      with equality exactly when X is constant (125 degenerate cases).
+    evidence_level: machine_checked
+    artifact:
+      - "artifacts/decision_theory.json"
+    metrics:
+      nonneg_checks: 3125
+    caveat: >
+      The inequality behind every expectation bound and the bias-variance
+      identity. Exhaustive over the stated rational grid for the convex
+      function x^2; general Jensen (any convex function) is literature. Seeded
+      from model knowledge; verified by deterministic computation at evidence
+      time.
+    reproduce: "python3 theorems/evidence_decision_theory.py theorems/decision_theory.py"
+
   - id: THM-LEAN-001
     statement: >
       12 classical propositional theorems (identity, hypothetical syllogism,

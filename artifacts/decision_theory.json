@@ -1,0 +1,40 @@
+{
+  "brier_properness": {
+    "grids": "k in {2,3}, denom in {4,6}",
+    "strict_better_checks": 1028,
+    "true_distributions": 55
+  },
+  "jensen_sq": {
+    "equality_when_constant": 125,
+    "nonneg_checks": 3125
+  },
+  "secretary": {
+    "dp_equals_threshold_checks": 20,
+    "max_n": 20,
+    "samples": {
+      "20": {
+        "best_threshold": 7,
+        "win_prob": "3407275/8868288"
+      },
+      "3": {
+        "best_threshold": 1,
+        "win_prob": "1/2"
+      },
+      "4": {
+        "best_threshold": 1,
+        "win_prob": "11/24"
+      },
+      "8": {
+        "best_threshold": 3,
+        "win_prob": "459/1120"
+      }
+    }
+  },
+  "zero_sum_games": {
+    "games_checked": 6561,
+    "payoff_range": [
+      -4,
+      4
+    ]
+  }
+}

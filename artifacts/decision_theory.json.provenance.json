@@ -1,0 +1,9 @@
+{
+  "schema": "vericlaim_provenance_v2",
+  "artifact": "decision_theory.json",
+  "artifact_sha256": "f1bc93115adee942937deda7f2360bc8ff50a18d70530b78f1755652adcb5dc7",
+  "script": "python3 theorems/evidence_decision_theory.py",
+  "git_commit": "0aaf1e8fa132ed7ec54ef1bac96ad96f591ab42c",
+  "generated_at": "2026-07-06T01:48:13.568674+00:00",
+  "produced_by": "human"
+}

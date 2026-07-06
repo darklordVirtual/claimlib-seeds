@@ -65,14 +65,14 @@ def verify_huffman(denom: int = 8) -> dict:
     n, checked = 4, 0
     # all candidate prefix-code length profiles obeying Kraft's inequality
     profiles = [ls for ls in product(range(1, 7), repeat=n)
-                if sum(Fraction(1, 2 ** l) for l in ls) <= 1]
+                if sum(Fraction(1, 2 ** li) for li in ls) <= 1]
     for c in product(range(1, denom + 1), repeat=n):
         if sum(c) != denom:
             continue
         probs = [Fraction(x, denom) for x in c]
         hl = _huffman_lengths(probs)
-        h_avg = sum(p * l for p, l in zip(probs, hl))
-        best = min(sum(p * l for p, l in zip(probs, ls)) for ls in profiles)
+        h_avg = sum(p * li for p, li in zip(probs, hl))
+        best = min(sum(p * li for p, li in zip(probs, ls)) for ls in profiles)
         if h_avg != best:
             raise AssertionError(f"Huffman NOT optimal for {c}")
         checked += 1
