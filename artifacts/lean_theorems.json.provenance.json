@@ -1,9 +1,9 @@
 {
   "schema": "vericlaim_provenance_v2",
   "artifact": "lean_theorems.json",
-  "artifact_sha256": "096040db8c29f68ca75fad96a2a1bc5649d826608604f58f206dea14d6eddc30",
+  "artifact_sha256": "17cdcc83c59d4392ab78e6ab9d4e030f90189d4cc9b6e2824a16b3e9655a4f80",
   "script": "python3 theorems/evidence_lean.py",
-  "git_commit": "818e933969004c8735a6a4a5e97a20f1486db79d",
-  "generated_at": "2026-07-06T08:57:14.754217+00:00",
+  "git_commit": "9fcb103d40347d877e669b1daa47b22962794583",
+  "generated_at": "2026-07-11T03:02:48.490049+00:00",
   "produced_by": "human"
 }

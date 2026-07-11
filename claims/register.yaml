@@ -1041,7 +1041,7 @@ claims:
       - "artifacts/lean_theorems.json"
       - "theorems/lean/Theorems.lean"
     metrics:
-      n_theorems: 12
+      n_propositional: 12
     caveat: >
       Universally quantified over Prop — no longer bounded instances. Checked
       by the Lean 4 kernel — an independently developed, widely audited
@@ -1063,7 +1063,7 @@ claims:
       - "artifacts/lean_theorems.json"
       - "theorems/lean/Theorems.lean"
     metrics:
-      n_theorems: 5
+      n_quantifier: 5
     caveat: >
       First-order quantifier reasoning over arbitrary types; the drinker
       paradox and not-forall direction are classical (Classical.choice in the
@@ -1087,7 +1087,7 @@ claims:
       - "artifacts/lean_theorems.json"
       - "theorems/lean/Theorems.lean"
     metrics:
-      n_theorems: 3
+      n_nat_induction: 3
     caveat: >
       Proved by induction over the whole of Nat — an infinite domain, which no
       bounded battery could cover. Checked by the Lean 4 kernel — an

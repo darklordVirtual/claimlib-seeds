@@ -28,6 +28,20 @@ AXIOM_RE = re.compile(
     r"'ClaimLib\.([A-Za-z0-9_]+)' (?:does not depend on any axioms|"
     r"depends on axioms: \[([^\]]*)\])")
 
+# The claim families partition the battery; recorded in the artifact so the
+# per-claim counts are established by the evidence, not by the register.
+CATEGORIES: dict[str, list[str]] = {
+    "propositional": [
+        "identity", "hyp_syllogism", "contraposition",
+        "contraposition_converse", "double_negation", "excluded_middle",
+        "peirce", "de_morgan_or", "de_morgan_and", "material_implication",
+        "exportation", "and_distrib_or"],
+    "quantifier": [
+        "not_exists_iff_forall_not", "not_forall_iff_exists_not",
+        "forall_and", "exists_or", "drinker"],
+    "nat_induction": ["nat_add_comm", "nat_add_assoc", "sum_odds_eq_square"],
+}
+
 
 def main() -> int:
     if not LEAN.exists():
@@ -54,6 +68,10 @@ def main() -> int:
     if len(theorems) != 20:
         print(f"[FAIL] expected 20 axiom reports, parsed {len(theorems)}")
         return 1
+    cat_names = [n for names in CATEGORIES.values() for n in names]
+    if sorted(cat_names) != sorted(theorems):
+        print("[FAIL] category lists do not partition the parsed theorems")
+        return 1
 
     artifact = {
         "schema": "lean_theorems_v1",
@@ -62,6 +80,10 @@ def main() -> int:
         "source": "theorems/lean/Theorems.lean",
         "n_theorems": len(theorems),
         "n_constructive": sum(1 for t in theorems.values() if t["constructive"]),
+        "categories": CATEGORIES,
+        "n_propositional": len(CATEGORIES["propositional"]),
+        "n_quantifier": len(CATEGORIES["quantifier"]),
+        "n_nat_induction": len(CATEGORIES["nat_induction"]),
         "theorems": theorems,
     }
     out_path = HERE.parent / "artifacts" / "lean_theorems.json"

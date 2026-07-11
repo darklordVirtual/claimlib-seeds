@@ -798,13 +798,9 @@ def main() -> int:
         out.append("")
 
     lt = lean["theorems"]
-    prop_names = ["identity", "hyp_syllogism", "contraposition",
-                  "contraposition_converse", "double_negation",
-                  "excluded_middle", "peirce", "de_morgan_or", "de_morgan_and",
-                  "material_implication", "exportation", "and_distrib_or"]
-    fol_names = ["not_exists_iff_forall_not", "not_forall_iff_exists_not",
-                 "forall_and", "exists_or", "drinker"]
-    nat_names = ["nat_add_comm", "nat_add_assoc", "sum_odds_eq_square"]
+    prop_names = lean["categories"]["propositional"]
+    fol_names = lean["categories"]["quantifier"]
+    nat_names = lean["categories"]["nat_induction"]
     lean_claims = [
         ("THM-LEAN-001",
          f"{len(prop_names)} classical propositional theorems (identity, "
@@ -814,14 +810,14 @@ def main() -> int:
          f"for ALL propositions and accepted by the Lean 4 kernel; "
          f"{sum(1 for n in prop_names if lt[n]['constructive'])} of them "
          f"fully constructively.",
-         {"n_theorems": len(prop_names)}, prop_names,
+         {"n_propositional": len(prop_names)}, prop_names,
          "Universally quantified over Prop — no longer bounded instances. "),
         ("THM-LEAN-002",
          f"{len(fol_names)} quantifier theorems — the quantifier-negation "
          f"dualities, forall/exists distribution, and the drinker paradox — "
          f"are proved for all types and predicates and accepted by the "
          f"Lean 4 kernel.",
-         {"n_theorems": len(fol_names)}, fol_names,
+         {"n_quantifier": len(fol_names)}, fol_names,
          "First-order quantifier reasoning over arbitrary types; the "
          "drinker paradox and not-forall direction are classical "
          "(Classical.choice in the recorded footprint). "),
@@ -830,7 +826,7 @@ def main() -> int:
          f"commutativity and associativity of addition proved by induction, "
          f"and the sum of the first n odd numbers equals n^2 — accepted by "
          f"the Lean 4 kernel.",
-         {"n_theorems": len(nat_names)}, nat_names,
+         {"n_nat_induction": len(nat_names)}, nat_names,
          "Proved by induction over the whole of Nat — an infinite domain, "
          "which no bounded battery could cover. "),
     ]

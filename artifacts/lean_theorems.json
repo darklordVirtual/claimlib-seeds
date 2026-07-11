@@ -1,7 +1,38 @@
 {
+  "categories": {
+    "nat_induction": [
+      "nat_add_comm",
+      "nat_add_assoc",
+      "sum_odds_eq_square"
+    ],
+    "propositional": [
+      "identity",
+      "hyp_syllogism",
+      "contraposition",
+      "contraposition_converse",
+      "double_negation",
+      "excluded_middle",
+      "peirce",
+      "de_morgan_or",
+      "de_morgan_and",
+      "material_implication",
+      "exportation",
+      "and_distrib_or"
+    ],
+    "quantifier": [
+      "not_exists_iff_forall_not",
+      "not_forall_iff_exists_not",
+      "forall_and",
+      "exists_or",
+      "drinker"
+    ]
+  },
   "checker": "Lean 4 kernel (core, no mathlib)",
   "lean_version": "Lean (version 4.31.0, arm64-apple-darwin24.6.0, commit 68218e876d2a38b1985b8590fff244a83c321783, Release)",
   "n_constructive": 10,
+  "n_nat_induction": 3,
+  "n_propositional": 12,
+  "n_quantifier": 5,
   "n_theorems": 20,
   "schema": "lean_theorems_v1",
   "source": "theorems/lean/Theorems.lean",
